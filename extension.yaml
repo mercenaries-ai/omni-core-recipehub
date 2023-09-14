@@ -1,0 +1,7 @@
+title: Template extension
+version: 0.0.1
+description: This is a template extension
+author: Anonymous
+origin: <Your git repository here, ex) git@github.com:your-github-id/your-github-repo.git>
+client:
+  addToWorkbench: true
