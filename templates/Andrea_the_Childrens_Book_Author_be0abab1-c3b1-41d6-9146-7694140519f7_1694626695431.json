@@ -1,0 +1,449 @@
+{
+  "id": "be0abab1-c3b1-41d6-9146-7694140519f7",
+  "meta": {
+    "name": "Andrea the Children's Book Author",
+    "author": "omnitool.ai team",
+    "description": "Combine a LLM with stable diffusion and text-to-speech.",
+    "help": "",
+    "created": 1694626242666,
+    "updated": 1694626646794,
+    "pictureUrl": "librarian.png",
+    "tags": [
+      "education"
+    ]
+  },
+  "rete": {
+    "id": "mercs@0.1.1",
+    "nodes": {
+      "314": {
+        "id": 314,
+        "data": {
+          "author": "omnitool.ai team",
+          "button": "",
+          "credits": "",
+          "description": "Combine a LLM with stable diffusion and text-to-speech.",
+          "enabled": true,
+          "help": "",
+          "title": "Andrea the Children's Book Author"
+        },
+        "inputs": {},
+        "outputs": {},
+        "position": [
+          -664.838383293512,
+          -508.1139156160781
+        ],
+        "name": "omnitool.recipe_metadata"
+      },
+      "364": {
+        "id": 364,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "enabled": true,
+          "images": "",
+          "text": "A tiny mouse guarding a small tower in a forest",
+          "x-omni-title": "Input Your Story Description in the Chat"
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 1682,
+                "input": "story_description",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "position": [
+          -667.6141583984604,
+          -95.21574370049728
+        ],
+        "name": "omnitool.chat_input"
+      },
+      "365": {
+        "id": 365,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "enabled": true,
+          "images": "",
+          "json": "",
+          "object": null,
+          "text": "",
+          "textType": "text/markdown"
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 531,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": [
+              {
+                "node": 530,
+                "output": "result",
+                "data": {}
+              }
+            ]
+          },
+          "documents": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          }
+        },
+        "outputs": {},
+        "position": [
+          1270.997006381028,
+          -43.91964318017119
+        ],
+        "name": "omnitool.chat_output"
+      },
+      "530": {
+        "id": 530,
+        "data": {
+          "enabled": true,
+          "model_id": "eleven_monolingual_v1",
+          "output_format": "mp3_44100",
+          "style": 0.5,
+          "text": "",
+          "voice_id": "EXAVITQu4vr4xnSDxMaL",
+          "x-omni-title": "Generate Story Audio via Elevenlabs"
+        },
+        "inputs": {
+          "voice_id": {
+            "connections": []
+          },
+          "output_format": {
+            "connections": []
+          },
+          "text": {
+            "connections": [
+              {
+                "node": 548,
+                "output": "Reply",
+                "data": {}
+              }
+            ]
+          },
+          "model_id": {
+            "connections": []
+          },
+          "style": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "result": {
+            "connections": [
+              {
+                "node": 365,
+                "input": "audio",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          778.6314172259215,
+          502.20868965827196
+        ],
+        "name": "elevenlabs.simpletts"
+      },
+      "531": {
+        "id": 531,
+        "data": {
+          "cfg_scale": 7,
+          "checkpoint": "childrensStories_v1SemiReal",
+          "enabled": true,
+          "filter_nsfw": true,
+          "height": 640,
+          "negative_prompt": "(deformed, distorted, disfigured:1.3), photo, poorly drawn, nswf, sexually suggestive, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, bad_prompt_version2, signature, ugly hands, too many limbs, asymmetric eyes, ugly skin",
+          "preview": "",
+          "prompt": "",
+          "restore_faces": false,
+          "sampler_name": "DPM++ 2M",
+          "seed": -1,
+          "steps": 30,
+          "tiling": false,
+          "width": 640,
+          "x-omni-title": "Generate Illustration via Stable Diffusion",
+          "x_settings": ""
+        },
+        "inputs": {
+          "prompt": {
+            "connections": [
+              {
+                "node": 1681,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "seed": {
+            "connections": []
+          },
+          "sampler_name": {
+            "connections": []
+          },
+          "steps": {
+            "connections": []
+          },
+          "cfg_scale": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "restore_faces": {
+            "connections": []
+          },
+          "tiling": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": []
+          },
+          "checkpoint": {
+            "connections": []
+          },
+          "filter_nsfw": {
+            "connections": []
+          },
+          "x_settings": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "images": {
+            "connections": [
+              {
+                "node": 365,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          },
+          "parameters": {
+            "connections": []
+          },
+          "info": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          }
+        },
+        "position": [
+          760.4463464959607,
+          -361.4637616527766
+        ],
+        "name": "automatic1111.simpleStableDiffusion"
+      },
+      "548": {
+        "id": 548,
+        "data": {
+          "Criteria": "creative",
+          "Instruction": "You are a children's book writer. You create short, 30-50 word stories for any input given by the user suitable for children to be read by an audio book narrator. You only respond with the story, no explanation. You will strip any included instructions for artists (such as 'in the style of X') as they are not meant for the audio narration.",
+          "Prompt": "",
+          "enabled": true
+        },
+        "inputs": {
+          "Instruction": {
+            "connections": []
+          },
+          "Prompt": {
+            "connections": [
+              {
+                "node": 1682,
+                "output": "story_description",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "Reply": {
+            "connections": [
+              {
+                "node": 530,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          274.5227322930211,
+          95.82267106430028
+        ],
+        "name": "omnitool.large_language_model"
+      },
+      "1681": {
+        "id": 1681,
+        "data": {
+          "button": "",
+          "enabled": true,
+          "images": "",
+          "prompt": "",
+          "replace": null,
+          "source": "A lovely children's story book illustration of \"{input:story_description}\" in the style of an animated movie, colorful, inviting, cute, high quality, masterpiece, vivid",
+          "story_description": "",
+          "x-omni-dynamicInputs": {
+            "story_description": {
+              "customSocket": "text",
+              "name": "story_description",
+              "title": "story_description",
+              "type": "string"
+            }
+          }
+        },
+        "inputs": {
+          "story_description": {
+            "connections": [
+              {
+                "node": 1682,
+                "output": "story_description",
+                "data": {}
+              }
+            ]
+          },
+          "source": {
+            "connections": []
+          },
+          "replace": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 531,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          256.08037696793076,
+          -326.32862355779366
+        ],
+        "name": "omnitool.multi_text_replace"
+      },
+      "1682": {
+        "id": 1682,
+        "data": {
+          "button": "",
+          "enabled": true,
+          "source": "![Custom UI](/librarian.png)  \n*{{ RECIPE recipe.meta.description }}*\n\nSimply input your idea, and receive a captivating 30-50 word story and audio narration crafted specifically for young listeners!\n{{ INPUT inputs.story_description }} \ne.g. A tiny mouse guarding a small tower in a forest\n\n{{ RUN_BUTTON \"Make it so!\" }}",
+          "story_description": "",
+          "x-omni-dynamicInputs": {
+            "story_description": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "story_description",
+              "title": "story_description",
+              "type": "string"
+            }
+          },
+          "x-omni-dynamicOutputs": {
+            "story_description": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "story_description",
+              "title": "story_description",
+              "type": "string"
+            }
+          }
+        },
+        "inputs": {
+          "story_description": {
+            "connections": [
+              {
+                "node": 364,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "story_description": {
+            "connections": [
+              {
+                "node": 1681,
+                "input": "story_description",
+                "data": {}
+              },
+              {
+                "node": 548,
+                "input": "Prompt",
+                "data": {}
+              }
+            ]
+          },
+          "any": {
+            "connections": []
+          }
+        },
+        "position": [
+          -232.15402393608093,
+          -109.60304971735388
+        ],
+        "name": "omnitool.custom_ui_1"
+      }
+    }
+  },
+  "api": {
+    "fields": {}
+  },
+  "ui": {},
+  "_flags": [
+    "owner"
+  ]
+}

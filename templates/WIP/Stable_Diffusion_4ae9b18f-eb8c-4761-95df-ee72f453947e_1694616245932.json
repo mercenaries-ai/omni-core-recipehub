@@ -1,0 +1,417 @@
+{
+  "id": "4ae9b18f-eb8c-4761-95df-ee72f453947e",
+  "meta": {
+    "name": "Stable Diffusion",
+    "author": "Anonymous",
+    "description": "A simple Image Generation Demo using Stable Diffusion and Upscaling",
+    "help": "",
+    "created": 1694616199579,
+    "updated": 1694616234383,
+    "tags": []
+  },
+  "rete": {
+    "id": "mercs@0.1.1",
+    "nodes": {
+      "1": {
+        "id": 1,
+        "data": {
+          "author": "Anonymous",
+          "button": "",
+          "credits": "",
+          "description": "A simple Image Generation Demo using Stable Diffusion and Upscaling",
+          "enabled": true,
+          "help": "",
+          "title": "Stable Diffusion"
+        },
+        "inputs": {},
+        "outputs": {},
+        "position": [
+          -1716.191830554913,
+          -617.438605543388
+        ],
+        "name": "omnitool.recipe_metadata"
+      },
+      "4": {
+        "id": 4,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "enabled": true,
+          "images": "",
+          "object": null,
+          "text": "",
+          "textType": "text/markdown"
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 78,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          }
+        },
+        "outputs": {},
+        "position": [
+          140.53526299776317,
+          220.66172682999155
+        ],
+        "name": "omnitool.chat_output"
+      },
+      "5": {
+        "id": 5,
+        "data": {
+          "cfg_scale": 7,
+          "checkpoint": "icbinpICantBelieveIts_final",
+          "enabled": true,
+          "filter_nsfw": true,
+          "height": 768,
+          "negative_prompt": "",
+          "preview": "",
+          "prompt": "",
+          "restore_faces": true,
+          "sampler_name": "UniPC",
+          "seed": -1,
+          "steps": 22,
+          "tiling": false,
+          "width": 768,
+          "x_settings": ""
+        },
+        "inputs": {
+          "prompt": {
+            "connections": [
+              {
+                "node": 91,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "seed": {
+            "connections": []
+          },
+          "sampler_name": {
+            "connections": []
+          },
+          "steps": {
+            "connections": []
+          },
+          "cfg_scale": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "restore_faces": {
+            "connections": []
+          },
+          "tiling": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": [
+              {
+                "node": 6,
+                "output": "negative_prompt",
+                "data": {}
+              }
+            ]
+          },
+          "checkpoint": {
+            "connections": []
+          },
+          "filter_nsfw": {
+            "connections": []
+          },
+          "x_settings": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "images": {
+            "connections": [
+              {
+                "node": 78,
+                "input": "imageList",
+                "data": {}
+              }
+            ]
+          },
+          "parameters": {
+            "connections": []
+          },
+          "info": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          }
+        },
+        "position": [
+          -768.5138450624687,
+          127.48397481338615
+        ],
+        "name": "automatic1111.simpleStableDiffusion"
+      },
+      "6": {
+        "id": 6,
+        "data": {
+          "button": "",
+          "enabled": true,
+          "height": 660,
+          "image_type": "time magazine cover photograph, SRAW, National Geographic Contest Winner, exceptional quality, 4k",
+          "negative_prompt": "ugly, deformed, lowres, missing limbs, FastNegativeV2",
+          "prompt": "Ya'll Qaeda on the Barbie Set",
+          "source": "### Image Generation Demo\n*{{ RECIPE recipe.meta.description }}*\n{{ INPUT inputs.prompt}}  \n💡Hint: The input text (aka Prompt) is used to shape the generation of the image. Brackets can be used to increase the weight of a particular subject, e.g. (sunny) - with more brackets further increasing the weight.\n\n{{ INPUT inputs.image_type}}  \n💡Hint: Use this field to define general properties of the image here such as  'high definition photograph' or 'pencil illustration'\n\n{{ INPUT inputs.negative_prompt }}  \n💡Hint: The **negative prompt** allows you to define subjects you do not want in the image. For example, adding 'people, crowd' would bias the generation towards generating imaged devoid of people. \n\n{{ RUN_BUTTON \"Generate my Image\" }}",
+          "text": "A cat with a hat, masterpiece painting by HR Giger",
+          "width": 684,
+          "x-omni-dynamicInputs": {
+            "image_type": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "image_type",
+              "title": "image_type",
+              "type": "string"
+            },
+            "negative_prompt": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "name": "negative_prompt",
+              "title": "Negative Prompt",
+              "type": "string"
+            },
+            "prompt": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "prompt",
+              "type": "string"
+            }
+          },
+          "x-omni-dynamicOutputs": {
+            "image_type": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "image_type",
+              "title": "image_type",
+              "type": "string"
+            },
+            "negative_prompt": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "name": "negative_prompt",
+              "title": "Negative Prompt",
+              "type": "string"
+            },
+            "prompt": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "prompt",
+              "type": "string"
+            }
+          }
+        },
+        "inputs": {
+          "image_type": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "image_type": {
+            "connections": [
+              {
+                "node": 91,
+                "input": "image_type",
+                "data": {}
+              }
+            ]
+          },
+          "negative_prompt": {
+            "connections": [
+              {
+                "node": 5,
+                "input": "negative_prompt",
+                "data": {}
+              }
+            ]
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 91,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          },
+          "any": {
+            "connections": []
+          }
+        },
+        "position": [
+          -1863.0447861471143,
+          354.96222085910557
+        ],
+        "name": "omnitool.custom_ui_1"
+      },
+      "78": {
+        "id": 78,
+        "data": {
+          "enabled": true,
+          "imageList": "",
+          "upscaler_1": "SwinIR_4x",
+          "upscaling_resize": 2
+        },
+        "inputs": {
+          "upscaling_resize": {
+            "connections": []
+          },
+          "upscaler_1": {
+            "connections": []
+          },
+          "imageList": {
+            "connections": [
+              {
+                "node": 5,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "html_info": {
+            "connections": []
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 4,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -306.4498843359327,
+          -82.22363004907294
+        ],
+        "name": "automatic1111.simpleUpscale"
+      },
+      "91": {
+        "id": 91,
+        "data": {
+          "button": "",
+          "enabled": true,
+          "image_type": "",
+          "images": "",
+          "prompt": "",
+          "replace": null,
+          "source": "{input:prompt} {input:image_type}",
+          "x-omni-comment": "*Some text*\n\n![](https://media.tenor.com/yheo1GGu3FwAAAAM/rick-roll-rick-ashley.gif).",
+          "x-omni-dynamicInputs": {
+            "image_type": {
+              "customSocket": "text",
+              "name": "image_type",
+              "title": "image_type",
+              "type": "string"
+            },
+            "prompt": {
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "prompt",
+              "type": "string"
+            }
+          }
+        },
+        "inputs": {
+          "image_type": {
+            "connections": [
+              {
+                "node": 6,
+                "output": "image_type",
+                "data": {}
+              }
+            ]
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 6,
+                "output": "prompt",
+                "data": {}
+              }
+            ]
+          },
+          "source": {
+            "connections": []
+          },
+          "replace": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 5,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -1245.9150223405895,
+          -121.95601442141503
+        ],
+        "name": "omnitool.multi_text_replace"
+      }
+    }
+  },
+  "api": {
+    "fields": {}
+  },
+  "ui": {},
+  "_flags": [
+    "owner"
+  ]
+}

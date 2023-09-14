@@ -1,0 +1,457 @@
+{
+  "id": "85a0457a-b3b8-4360-8687-50b108d3d1ac",
+  "version": "draft",
+  "meta": {
+    "created": 1691659904335,
+    "description": "Send a picture and a name and this mercenary will do their best to replace the subject in the picture with your desired subject.",
+    "name": "Verbal Image Editing",
+    "pictureUrl": "switch.png",
+    "tags": ["photography","art & design"],
+    "updated": 1692261477149
+  },
+  "rete": {
+    "id": "mercs@0.1.1",
+    "nodes": {
+      "17": {
+        "id": 17,
+        "data": {
+          "image": "",
+          "model": "clip"
+        },
+        "inputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 295,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          },
+          "model": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "caption": {
+            "connections": [
+              {
+                "node": 20,
+                "input": "replace",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -356.1409868094284,
+          510.34173613473405
+        ],
+        "name": "automatic1111.interrogate"
+      },
+      "19": {
+        "id": 19,
+        "data": {
+          "text": "You are a helpful assistant turning image descriptions for the vision impaired into prompts for a generative diffusion model.\n\nIn addition you personalize the description by replacing any mention of the main subject (a person, a pet, name, etc) in the description with the user's provided subject. \n\nYou will encase the name of the user's subject in parenthesis, for example ((Joe Blow))\n\nThis is the image description:\n\nDESCRIPTION"
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 20,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -810.9368418302528,
+          700.1717088472578
+        ],
+        "name": "omnitool.input_text"
+      },
+      "20": {
+        "id": 20,
+        "data": {
+          "match": "DESCRIPTION",
+          "replace": "",
+          "text": ""
+        },
+        "inputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 19,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "match": {
+            "connections": []
+          },
+          "replace": {
+            "connections": [
+              {
+                "node": 17,
+                "output": "caption",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 375,
+                "input": "instruction",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -300.83163521287776,
+          862.3598730270393
+        ],
+        "name": "omnitool.text_replace"
+      },
+      "63": {
+        "id": 63,
+        "data": {
+          "image": ""
+        },
+        "inputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 295,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 366,
+                "input": "init_images",
+                "data": {}
+              }
+            ]
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "size": {
+            "connections": []
+          },
+          "mimeType": {
+            "connections": []
+          },
+          "ext": {
+            "connections": []
+          },
+          "fid": {
+            "connections": []
+          },
+          "url": {
+            "connections": []
+          }
+        },
+        "position": [
+          -307.1422662443537,
+          -49.71751100979509
+        ],
+        "name": "omnitool.image_info"
+      },
+      "295": {
+        "id": 295,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "images": "",
+          "text": "Joan Baez"
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 375,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 63,
+                "input": "image",
+                "data": {}
+              },
+              {
+                "node": 17,
+                "input": "image",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "position": [
+          -893.2490729837585,
+          137.70271887003992
+        ],
+        "name": "omnitool.chat_input"
+      },
+      "296": {
+        "id": 296,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "images": "",
+          "json": "",
+          "object": "",
+          "text": "",
+          "textType": "text/markdown"
+        },
+        "inputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 375,
+                "output": "answer_text",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 366,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          }
+        },
+        "outputs": {},
+        "position": [
+          936.0103572485094,
+          152.61869424277364
+        ],
+        "name": "omnitool.chat_output"
+      },
+      "366": {
+        "id": 366,
+        "data": {
+          "cfg_scale": 9.5,
+          "checkpoint": "v1-5-pruned-emaonly",
+          "denoising_strength": 0.75,
+          "height": 512,
+          "init_images": "",
+          "mask": "",
+          "n_iter": 1,
+          "negative_prompt": "",
+          "preview": "",
+          "prompt": "",
+          "sampler_name": "DPM++ 2M",
+          "seed": -1,
+          "steps": 65,
+          "width": 512,
+          "x_settings": ""
+        },
+        "inputs": {
+          "init_images": {
+            "connections": [
+              {
+                "node": 63,
+                "output": "image",
+                "data": {}
+              }
+            ]
+          },
+          "denoising_strength": {
+            "connections": []
+          },
+          "mask": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          },
+          "sampler_name": {
+            "connections": []
+          },
+          "n_iter": {
+            "connections": []
+          },
+          "steps": {
+            "connections": []
+          },
+          "cfg_scale": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": []
+          },
+          "checkpoint": {
+            "connections": []
+          },
+          "x_settings": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "images": {
+            "connections": [
+              {
+                "node": 296,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          },
+          "parameters": {
+            "connections": []
+          },
+          "info": {
+            "connections": []
+          }
+        },
+        "position": [
+          319.4878291481932,
+          -609.9949163415984
+        ],
+        "name": "automatic1111.simpleImage2Image"
+      },
+      "375": {
+        "id": 375,
+        "data": {
+          "functions": "",
+          "instruction": "You are a helpful bot.  You can help people by answering their questions.",
+          "model": "gpt-3.5-turbo",
+          "prompt": "",
+          "temperature": 0.3,
+          "top_p": 1
+        },
+        "inputs": {
+          "model": {
+            "connections": []
+          },
+          "functions": {
+            "connections": []
+          },
+          "temperature": {
+            "connections": []
+          },
+          "top_p": {
+            "connections": []
+          },
+          "instruction": {
+            "connections": [
+              {
+                "node": 20,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 295,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "answer_text": {
+            "connections": [
+              {
+                "node": 296,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          },
+          "function_call": {
+            "connections": []
+          },
+          "function_arguments_string": {
+            "connections": []
+          },
+          "function_arguments": {
+            "connections": []
+          },
+          "function_name": {
+            "connections": []
+          }
+        },
+        "position": [
+          248.22001817472375,
+          420.31566327770184
+        ],
+        "name": "openai.advancedChatGPT"
+      }
+    }
+  },
+  "api": {
+    "fields": {}
+  },
+  "_flags": [
+    "owner"
+  ]
+}

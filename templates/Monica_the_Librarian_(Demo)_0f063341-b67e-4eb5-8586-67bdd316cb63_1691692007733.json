@@ -1,0 +1,195 @@
+{
+  "id": "0f063341-b67e-4eb5-8586-67bdd316cb63",
+  "version": "draft",
+  "meta": {
+    "created": 1691661366559,
+    "description": "Show her a picture and she will recommend you a novel to read.",
+    "name": "Monica the Librarian",
+    "pictureUrl": "monica.png",
+    "tags": ["lifestyle", "books & reference"],
+    "updated": 1691692004806
+  },
+  "rete": {
+    "id": "mercs@0.1.1",
+    "nodes": {
+      "64": {
+        "id": 64,
+        "data": {
+          "image": "",
+          "model": "clip"
+        },
+        "inputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 145,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          },
+          "model": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "caption": {
+            "connections": [
+              {
+                "node": 65,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -472.7826747963564,
+          247.669531620239
+        ],
+        "name": "automatic1111.interrogate"
+      },
+      "65": {
+        "id": 65,
+        "data": {
+          "instruction": "You are a literary connoisseur named \"Monica the Librarian\".\n\nYou are vivacious, sarcastic and superfluously eloquent. But above all, you are helpful! You will always recommend a good book, even if you personally dislike aspects of your recommendation.\n\nYou will receive a programmatically created description of an image.\n(There will be additional words and numbers in brackets, just ignore those.)\nYou will use the content of that description to recommend a novel, book or short story that fits the overall theme of the image.\n\nAlways start your answer with an introduction like: \"Cordial greetings from Monica, your digital bookworm companion\" or \"You are now graced by the communicative presence of Monica\" or \"Salutations from Monica, your humble Librarian, about to guide you like a lighthouse through the fogs of fiction.\", \"I, Monica, a veritable bastion of bookish knowledge and wisdom...\"\n\nHowever, keep your responses brief and succinct.\n\nIf you are absolutely certain the book is definitely available on Project Gutenberg, provide a direct link like so:\n* [Flatland: A Romance of Many Dimensions](https://www.gutenberg.org/ebooks/97)\nIf you are in any doubt if the book is on Project Gutenberg, instead, invent an amusing hard to locate place in your library where the book may be found instead.\n\nMonica, Stay in character.",
+          "model": "gpt-3.5-turbo",
+          "prompt": "",
+          "temperature": 1
+        },
+        "inputs": {
+          "model": {
+            "connections": []
+          },
+          "temperature": {
+            "connections": []
+          },
+          "instruction": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 64,
+                "output": "caption",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 146,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -22.99189414559953,
+          -323.7044927708341
+        ],
+        "name": "openai.simpleChatGPT"
+      },
+      "145": {
+        "id": 145,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "images": "",
+          "text": ""
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 64,
+                "input": "image",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "json": {
+            "connections": []
+          }
+        },
+        "position": [
+          -976.4691063957773,
+          84.8210097218132
+        ],
+        "name": "omnitool.chat_input"
+      },
+      "146": {
+        "id": 146,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "images": "",
+          "json": "",
+          "text": ""
+        },
+        "inputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 65,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "json": {
+            "connections": []
+          }
+        },
+        "outputs": {},
+        "position": [
+          497.93610167135427,
+          74.84460768510385
+        ],
+        "name": "omnitool.chat_output"
+      }
+    }
+  },
+  "api": {
+    "fields": {}
+  },
+  "_flags": [
+    "owner"
+  ]
+}

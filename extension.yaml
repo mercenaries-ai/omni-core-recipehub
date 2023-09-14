@@ -1,7 +1,8 @@
-title: Template extension
+title: Recipe Hub
 version: 0.0.1
-description: This is a template extension
-author: Anonymous
-origin: <Your git repository here, ex) git@github.com:your-github-id/your-github-repo.git>
+description: A centralized repository for managing a curated collection of featured recipe templates.
+author: Mercenaries.ai team
+origin: https://github.com/mercenaries-ai/omni-core-recipehub
 client:
-  addToWorkbench: true
+  addToWorkbench: false
+  singleton: true

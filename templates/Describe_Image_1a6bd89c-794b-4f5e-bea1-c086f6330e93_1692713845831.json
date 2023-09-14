@@ -1,0 +1,175 @@
+{
+  "id": "1a6bd89c-794b-4f5e-bea1-c086f6330e93",
+  "meta": {
+    "name": "Describe Image",
+    "author": "omnitool.ai team",
+    "description": "Generate textual descriptions usable with a image generation systems for images.",
+    "help": "",
+    "created": 1694515149216,
+    "updated": 1694516008600,
+    "pictureUrl": "eye.png",
+    "tags": [
+      "art & design"
+    ]
+  },
+  "rete": {
+    "id": "mercs@0.1.1",
+    "nodes": {
+      "14": {
+        "id": 14,
+        "data": {
+          "enabled": true,
+          "image": "",
+          "model": "clip",
+          "x-omni-title": "Generate Image Description"
+        },
+        "inputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 378,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          },
+          "model": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "caption": {
+            "connections": [
+              {
+                "node": 379,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          481.3522814917413,
+          -48.35642073597878
+        ],
+        "name": "automatic1111.interrogate"
+      },
+      "111": {
+        "id": 111,
+        "data": {
+          "author": "omnitool.ai team",
+          "button": "",
+          "credits": "",
+          "description": "Generate textual descriptions usable with a image generation systems for images.",
+          "enabled": true,
+          "help": "",
+          "title": "Describe Image"
+        },
+        "inputs": {},
+        "outputs": {},
+        "position": [
+          -0.000970244663350224,
+          -0.0019021633997761429
+        ],
+        "name": "omnitool.recipe_metadata"
+      },
+      "378": {
+        "id": 378,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "enabled": true,
+          "images": "",
+          "text": "",
+          "x-omni-title": "Upload an Image in the Chat"
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 14,
+                "input": "image",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "position": [
+          8.726307202322323,
+          -395.0978273166058
+        ],
+        "name": "omnitool.chat_input"
+      },
+      "379": {
+        "id": 379,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "enabled": true,
+          "images": "",
+          "json": "",
+          "object": null,
+          "text": "",
+          "textType": "text/markdown"
+        },
+        "inputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 14,
+                "output": "caption",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          }
+        },
+        "outputs": {},
+        "position": [
+          974.3673441044645,
+          192.71260589565884
+        ],
+        "name": "omnitool.chat_output"
+      }
+    }
+  },
+  "api": {
+    "fields": {}
+  },
+  "ui": {},
+  "_flags": []
+}

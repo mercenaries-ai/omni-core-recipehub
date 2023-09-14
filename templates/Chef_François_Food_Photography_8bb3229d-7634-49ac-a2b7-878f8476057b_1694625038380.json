@@ -1,0 +1,450 @@
+{
+  "id": "8bb3229d-7634-49ac-a2b7-878f8476057b",
+  "meta": {
+    "name": "Chef François Food Photography",
+    "author": "omnitool.ai team",
+    "description": "Food photography with flourishing presentation and delivery.",
+    "help": "",
+    "created": 1694624611558,
+    "updated": 1694625034907,
+    "pictureUrl": "chef.png",
+    "tags": [
+      "photography"
+    ]
+  },
+  "rete": {
+    "id": "mercs@0.1.1",
+    "nodes": {
+      "10": {
+        "id": 10,
+        "data": {
+          "cfg_scale": 7.75,
+          "checkpoint": "deliberate_v2",
+          "enabled": true,
+          "filter_nsfw": true,
+          "height": 640,
+          "negative_prompt": "burger, (smoke), mist, AuroraNegative, plastic, grainy,",
+          "preview": "",
+          "prompt": "",
+          "restore_faces": false,
+          "sampler_name": "DPM++ 2M",
+          "seed": -1,
+          "steps": 28,
+          "tiling": false,
+          "width": 896,
+          "x-omni-title": "Generate Food Photo via Stable Diffusion",
+          "x_settings": ""
+        },
+        "inputs": {
+          "prompt": {
+            "connections": [
+              {
+                "node": 1459,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "seed": {
+            "connections": []
+          },
+          "sampler_name": {
+            "connections": []
+          },
+          "steps": {
+            "connections": []
+          },
+          "cfg_scale": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "restore_faces": {
+            "connections": []
+          },
+          "tiling": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": []
+          },
+          "checkpoint": {
+            "connections": []
+          },
+          "filter_nsfw": {
+            "connections": []
+          },
+          "x_settings": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "images": {
+            "connections": [
+              {
+                "node": 23,
+                "input": "imageList",
+                "data": {}
+              }
+            ]
+          },
+          "parameters": {
+            "connections": []
+          },
+          "info": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          }
+        },
+        "position": [
+          376.2775997906532,
+          141.21336270904737
+        ],
+        "name": "automatic1111.simpleStableDiffusion"
+      },
+      "23": {
+        "id": 23,
+        "data": {
+          "enabled": true,
+          "imageList": "",
+          "upscaler_1": "SwinIR_4x",
+          "upscaling_resize": 2
+        },
+        "inputs": {
+          "upscaling_resize": {
+            "connections": []
+          },
+          "upscaler_1": {
+            "connections": []
+          },
+          "imageList": {
+            "connections": [
+              {
+                "node": 10,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "html_info": {
+            "connections": []
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 28,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          882.5229476601176,
+          459.36539139219116
+        ],
+        "name": "automatic1111.simpleUpscale"
+      },
+      "26": {
+        "id": 26,
+        "data": {
+          "enabled": true,
+          "instruction": "You are a helpful copywriter, you write small flourish text for a restaurant menu based on the user's input text.\n\nFor example, if the input text is \"peking duck\", you may write a one sentence summary about the origin and tradition of peking duck, followed by a one sentence summary about the dish in the restaurant. \n\nYou write flourishing, text fit for a high class five star gourmet restaurant",
+          "model": "gpt-3.5-turbo",
+          "prompt": "",
+          "temperature": 1,
+          "x-omni-title": "Generate flourish text for the dish via ChatGPT"
+        },
+        "inputs": {
+          "model": {
+            "connections": []
+          },
+          "temperature": {
+            "connections": []
+          },
+          "instruction": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 27,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 28,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          810.2748331913385,
+          -33.53098255182027
+        ],
+        "name": "openai.simpleChatGPT"
+      },
+      "27": {
+        "id": 27,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "enabled": true,
+          "images": "",
+          "text": "Macarons and espresso.",
+          "x-omni-title": "Input the Dish Name in the Chat"
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 26,
+                "input": "prompt",
+                "data": {}
+              },
+              {
+                "node": 1458,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "position": [
+          -593.2347194086921,
+          121.3284375433287
+        ],
+        "name": "omnitool.chat_input"
+      },
+      "28": {
+        "id": 28,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "enabled": true,
+          "images": "",
+          "json": "",
+          "object": null,
+          "text": "",
+          "textType": "text/markdown"
+        },
+        "inputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 26,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 23,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          }
+        },
+        "outputs": {},
+        "position": [
+          1385.4893268093047,
+          410.4893271856622
+        ],
+        "name": "omnitool.chat_output"
+      },
+      "711": {
+        "id": 711,
+        "data": {
+          "author": "omnitool.ai team",
+          "button": "",
+          "credits": "",
+          "description": "Food photography with flourishing presentation and delivery.",
+          "enabled": true,
+          "help": "",
+          "title": "Chef François Food Photography"
+        },
+        "inputs": {},
+        "outputs": {},
+        "position": [
+          -996.554086707223,
+          -264.90402307832477
+        ],
+        "name": "omnitool.recipe_metadata"
+      },
+      "1458": {
+        "id": 1458,
+        "data": {
+          "button": "",
+          "enabled": true,
+          "prompt": "",
+          "source": "![Custom UI](/chef.png)  \n*{{ RECIPE recipe.meta.description }}*\n{{ INPUT inputs.prompt }}  \n💡Hint: \nEnter your culinary idea! e.g. Macarons and espresso.\n\n{{ RUN_BUTTON \"Make it so!\" }}",
+          "x-omni-dynamicInputs": {
+            "prompt": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "PROMPT",
+              "type": "string"
+            }
+          },
+          "x-omni-dynamicOutputs": {
+            "prompt": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "PROMPT",
+              "type": "string"
+            }
+          }
+        },
+        "inputs": {
+          "prompt": {
+            "connections": [
+              {
+                "node": 27,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "prompt": {
+            "connections": [
+              {
+                "node": 1459,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          },
+          "any": {
+            "connections": []
+          }
+        },
+        "position": [
+          -590.7743805394443,
+          556.0077142887063
+        ],
+        "name": "omnitool.custom_ui_1"
+      },
+      "1459": {
+        "id": 1459,
+        "data": {
+          "button": "",
+          "enabled": true,
+          "images": "",
+          "prompt": "",
+          "replace": null,
+          "source": "{input:PROMPT}, unreal engine 5 render, food art, food photography, realistic render, dramatic lighting, cinematic lighting, rule of thirds, depth of field, cinematic bloom, vfx, art by fodm4st3r <lyco:fodm4st3r:0.6> <lora:add_detail:0.9> <lora:LowRA:0.5>",
+          "x-omni-dynamicInputs": {
+            "prompt": {
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "PROMPT",
+              "type": "string"
+            }
+          }
+        },
+        "inputs": {
+          "prompt": {
+            "connections": [
+              {
+                "node": 1458,
+                "output": "prompt",
+                "data": {}
+              }
+            ]
+          },
+          "source": {
+            "connections": []
+          },
+          "replace": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 10,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -99.16572487394959,
+          -102.92968540312438
+        ],
+        "name": "omnitool.multi_text_replace"
+      }
+    }
+  },
+  "api": {
+    "fields": {}
+  },
+  "ui": {},
+  "_flags": [
+    "owner"
+  ]
+}

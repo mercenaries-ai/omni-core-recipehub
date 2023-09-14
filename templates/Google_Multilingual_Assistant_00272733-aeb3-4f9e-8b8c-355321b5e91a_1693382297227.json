@@ -1,0 +1,236 @@
+{
+  "id": "00272733-aeb3-4f9e-8b8c-355321b5e91a",
+  "version": "draft",
+  "meta": {
+    "author": "Minhye Kim",
+    "created": 1693321281500,
+    "description": "Translate and speak in different languages with google-translate and google-tts blocks",
+    "help": "1. **Text Translation:**\n   - Choose the `Source Language` and `Target Language` from the \"Translate Text\" block.\n\n2. **Text-to-Speech Conversion:**\n   - In the \"Text to Speech\" block, select the language code that matches the `Target Language` you chose earlier.\n\n3. **Chat Functionality:**\n   - Type messages in the chat box using the language you selected as your `Source Language` in the \"Translate Text\" section.\n\nBy following these steps, your text will be translated and converted into an audio file in your desired language.",
+    "name": "Google Multilingual Assistant",
+    "tags": ["productivity", "communication"],
+    "updated": 1693382197371
+  },
+  "rete": {
+    "id": "mercs@0.1.1",
+    "nodes": {
+      "540": {
+        "id": 540,
+        "data": {
+          "author": "Minhye Kim",
+          "button": "",
+          "credits": "",
+          "description": "Translate and speak in different languages with google-translate and google-tts blocks",
+          "help": "1. **Text Translation:**\n   - Choose the `Source Language` and `Target Language` from the \"Translate Text\" block.\n\n2. **Text-to-Speech Conversion:**\n   - In the \"Text to Speech\" block, select the language code that matches the `Target Language` you chose earlier.\n\n3. **Chat Functionality:**\n   - Type messages in the chat box using the language you selected as your `Source Language` in the \"Translate Text\" section.\n\nBy following these steps, your text will be translated and converted into an audio file in your desired language.",
+          "title": "Google Multilingual Assistant"
+        },
+        "inputs": {},
+        "outputs": {},
+        "position": [
+          281.7719316182189,
+          346.78890994827384
+        ],
+        "name": "omnitool.recipe_metadata"
+      },
+      "541": {
+        "id": 541,
+        "data": {
+          "projectsId": "causal-rite-386205",
+          "sourceLanguageCode": "en",
+          "targetLanguageCode": "ko",
+          "text": ""
+        },
+        "inputs": {
+          "projectsId": {
+            "connections": []
+          },
+          "sourceLanguageCode": {
+            "connections": []
+          },
+          "targetLanguageCode": {
+            "connections": []
+          },
+          "text": {
+            "connections": [
+              {
+                "node": 542,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "translatedText": {
+            "connections": [
+              {
+                "node": 543,
+                "input": "text",
+                "data": {}
+              },
+              {
+                "node": 544,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          697.6940419299694,
+          -207.40188141863257
+        ],
+        "name": "google-translate.translate_projects_translateText_omni"
+      },
+      "542": {
+        "id": 542,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "images": "",
+          "text": ""
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 541,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "position": [
+          260.30737526330273,
+          -86.70854808529924
+        ],
+        "name": "omnitool.chat_input"
+      },
+      "543": {
+        "id": 543,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "images": "",
+          "object": null,
+          "text": "",
+          "textType": "text/markdown"
+        },
+        "inputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 541,
+                "output": "translatedText",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": [
+              {
+                "node": 544,
+                "output": "audioContent",
+                "data": {}
+              }
+            ]
+          },
+          "documents": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          }
+        },
+        "outputs": {},
+        "position": [
+          1271.8807085966362,
+          -105.96188141863257
+        ],
+        "name": "omnitool.chat_output"
+      },
+      "544": {
+        "id": 544,
+        "data": {
+          "audioEncoding": "MP3",
+          "languageCode": "ko",
+          "ssmlGender": "SSML_VOICE_GENDER_UNSPECIFIED",
+          "text": "Omnitool is your AI Lab in a box.",
+          "voice_name": ""
+        },
+        "inputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 541,
+                "output": "translatedText",
+                "data": {}
+              }
+            ]
+          },
+          "languageCode": {
+            "connections": []
+          },
+          "ssmlGender": {
+            "connections": []
+          },
+          "audioEncoding": {
+            "connections": []
+          },
+          "voice_name": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "audioContent": {
+            "connections": [
+              {
+                "node": 543,
+                "input": "audio",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          776.4673752633028,
+          330.4647852480341
+        ],
+        "name": "google-tts.texttospeech_text_synthesize_omni"
+      }
+    }
+  },
+  "api": {
+    "fields": {}
+  },
+  "ui": {},
+  "_flags": [
+    "owner"
+  ]
+}
