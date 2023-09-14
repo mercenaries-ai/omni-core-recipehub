@@ -4,7 +4,7 @@ const path = require('node:path');
 async function run() {
     const files = fs.readdirSync(process.cwd());
     const outFile = 'published_recipes.json';
-    const outputDirectory = path.join(process.cwd(), '../../mercs/setup/');
+    const outputDirectory = path.join(process.cwd(), '../../../../../setup/');
     const outputPath = path.join(outputDirectory, outFile);
 
     // Ensure the directory exists
