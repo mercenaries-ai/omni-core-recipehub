@@ -1,15 +1,16 @@
 {
-  "id": "4ae13940-c80e-4e12-80f2-6f0efef0763f",
-  "version": "draft",
+  "id": "ccf35003-b723-4f00-bb19-1893508af9fa",
   "meta": {
-    "author": "Anonymous",
-    "created": 1693839249391,
-    "description": "A Omnitool smoke test recipe",
-    "help": "# Prerequisites\n\nBefore proceeding, ensure you have the following in place:\n\n1. **Stability DreamStudio Key**\n   - Alternatively, you can replace the Text To Image block with a static image or another image generation block.\n\n2. **Google TTS Oauth**\n   - To leverage the Google Text-to-Speech service, ensure you've passed google-tts OAuth in the Settings page. Alternatively, you can replace this with a static audio file or another audio generation block.\n\n3. **OpenAI Key**\n   - Ensure you have a valid API key for integrating with OpenAI services.",
     "name": "Socket Test (Internal QA)",
+    "author": "Nick Yang",
+    "description": "A Omnitool smoke test recipe",
+    "help": "# Prerequisites\n\nBefore proceeding, ensure you have the following in place:\n\n1. **Automatic1111 host**\n   - Alternatively, you can replace the *Text To Image* block with a static image or another image generation block.\n\n2. **Google TTS Oauth**\n   - To leverage the *Google Text-to-Speech* service, ensure you've passed *google-tts* OAuth in the *Settings* page. Alternatively, you can replace this with a static audio file or another audio generation block.\n\n3. **OpenAI Key**\n   - Ensure you have a valid API key for integrating with OpenAI services.",
+    "created": 1694458802674,
+    "updated": 1694745509589,
     "pictureUrl": "omni.png",
-    "tags": ["quality assurance"],
-    "updated": 1693839249785
+    "tags": [
+      "quality assurance"
+    ]
   },
   "rete": {
     "id": "mercs@0.1.1",
@@ -21,15 +22,15 @@
           "button": "",
           "credits": "",
           "description": "A Omnitool smoke test recipe",
-          "help": "# Prerequisites\n\nBefore proceeding, ensure you have the following in place:\n\n1. **Stability DreamStudio Key**\n   - Alternatively, you can replace the Text To Image block with a static image or another image generation block.\n\n2. **Google TTS Oauth**\n   - To leverage the Google Text-to-Speech service, ensure you've passed google-tts OAuth in the Settings page. Alternatively, you can replace this with a static audio file or another audio generation block.\n\n3. **OpenAI Key**\n   - Ensure you have a valid API key for integrating with OpenAI services.",
-          "title": "Socket Test (Internal QA)",
-          "enabled": true
+          "enabled": true,
+          "help": "# Prerequisites\n\nBefore proceeding, ensure you have the following in place:\n\n1. **Automatic1111 host**\n   - Alternatively, you can replace the *Text To Image* block with a static image or another image generation block.\n\n2. **Google TTS Oauth**\n   - To leverage the *Google Text-to-Speech* service, ensure you've passed *google-tts* OAuth in the *Settings* page. Alternatively, you can replace this with a static audio file or another audio generation block.\n\n3. **OpenAI Key**\n   - Ensure you have a valid API key for integrating with OpenAI services.",
+          "title": "Socket Test (Internal QA) (WIP)"
         },
         "inputs": {},
         "outputs": {},
         "position": [
-          556.4712258076042,
-          -2654.607220435009
+          412.3969035896496,
+          -2631.4384462039025
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -38,12 +39,12 @@
         "data": {
           "audio": "",
           "documents": "",
+          "enabled": true,
           "images": "",
           "object": null,
           "text": "",
           "textType": "text/plain",
-          "x-omni-title": "Chat Output (text/plain)",
-          "enabled": true
+          "x-omni-title": "Chat Output (text/plain)"
         },
         "inputs": {
           "text": {
@@ -132,6 +133,7 @@
       "567": {
         "id": 567,
         "data": {
+          "Assert": null,
           "audio": "",
           "audioArray": "",
           "boolean": true,
@@ -139,6 +141,7 @@
           "cdnObjectArray": null,
           "document": "",
           "documentArray": "",
+          "enabled": true,
           "float": 3.5,
           "image": "",
           "imageArray": "",
@@ -170,30 +173,71 @@
             "text array 3rd item",
             "text array 4th item"
           ],
-          "valueSelector": "",
-          "enabled": true
+          "valueSelector": ""
         },
         "inputs": {
           "text": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2343,
+                "output": "text",
+                "data": {}
+              }
+            ]
           },
           "string": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2343,
+                "output": "string",
+                "data": {}
+              }
+            ]
           },
           "number": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2343,
+                "output": "number",
+                "data": {}
+              }
+            ]
           },
           "integer": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2343,
+                "output": "integer",
+                "data": {}
+              }
+            ]
           },
           "float": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2343,
+                "output": "float",
+                "data": {}
+              }
+            ]
           },
           "boolean": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2343,
+                "output": "boolean",
+                "data": {}
+              }
+            ]
           },
           "object": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2343,
+                "output": "object",
+                "data": {}
+              }
+            ]
           },
           "cdnObject": {
             "connections": []
@@ -201,8 +245,8 @@
           "image": {
             "connections": [
               {
-                "node": 581,
-                "output": "image",
+                "node": 2245,
+                "output": "images",
                 "data": {}
               }
             ]
@@ -232,22 +276,28 @@
             "connections": []
           },
           "objectArray": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2343,
+                "output": "objectArray",
+                "data": {}
+              }
+            ]
           },
           "cdnObjectArray": {
             "connections": []
           },
           "imageArray": {
+            "connections": []
+          },
+          "audioArray": {
             "connections": [
               {
-                "node": 577,
-                "output": "data",
+                "node": 569,
+                "output": "audioContent",
                 "data": {}
               }
             ]
-          },
-          "audioArray": {
-            "connections": []
           },
           "documentArray": {
             "connections": [
@@ -266,6 +316,15 @@
           },
           "stringSelector": {
             "connections": []
+          },
+          "Assert": {
+            "connections": [
+              {
+                "node": 2343,
+                "output": "Assert",
+                "data": {}
+              }
+            ]
           }
         },
         "outputs": {
@@ -357,11 +416,6 @@
             "connections": [
               {
                 "node": 566,
-                "input": "object",
-                "data": {}
-              },
-              {
-                "node": 574,
                 "input": "object",
                 "data": {}
               }
@@ -440,13 +494,7 @@
             ]
           },
           "cdnObjectArray": {
-            "connections": [
-              {
-                "node": 573,
-                "input": "images",
-                "data": {}
-              }
-            ]
+            "connections": []
           },
           "imageArray": {
             "connections": [
@@ -483,11 +531,14 @@
                 "data": {}
               }
             ]
+          },
+          "testReport": {
+            "connections": []
           }
         },
         "position": [
-          1964.3712673079638,
-          -2137.7214316419304
+          1729.88297794035,
+          -2533.402725832929
         ],
         "name": "omnitool.socket_test"
       },
@@ -495,11 +546,11 @@
         "id": 569,
         "data": {
           "audioEncoding": "MP3",
+          "enabled": true,
           "languageCode": "en-GB",
           "ssmlGender": "SSML_VOICE_GENDER_UNSPECIFIED",
           "text": "this is audio socket test. You have to do google-tts's OAuth in setting page first with your mercenaries account.",
-          "voice_name": "",
-          "enabled": true
+          "voice_name": ""
         },
         "inputs": {
           "text": {
@@ -525,13 +576,18 @@
                 "node": 567,
                 "input": "audio",
                 "data": {}
+              },
+              {
+                "node": 567,
+                "input": "audioArray",
+                "data": {}
               }
             ]
           }
         },
         "position": [
-          1310.5117408871597,
-          -1682.0004135657377
+          1143.4952107510526,
+          -1751.4891607143097
         ],
         "name": "google-tts.texttospeech_text_synthesize_omni"
       },
@@ -540,12 +596,12 @@
         "data": {
           "audio": "",
           "documents": "",
+          "enabled": true,
           "images": "",
           "object": null,
           "text": "",
           "textType": "text/markdown",
-          "x-omni-title": "Chat Output (Array)",
-          "enabled": true
+          "x-omni-title": "Chat Output (Array)"
         },
         "inputs": {
           "text": {
@@ -564,16 +620,21 @@
                 "node": 621,
                 "output": "text",
                 "data": {}
+              },
+              {
+                "node": 623,
+                "output": "validationReport",
+                "data": {}
+              },
+              {
+                "node": 676,
+                "output": "validationReport",
+                "data": {}
               }
             ]
           },
           "images": {
             "connections": [
-              {
-                "node": 567,
-                "output": "cdnObjectArray",
-                "data": {}
-              },
               {
                 "node": 567,
                 "output": "imageArray",
@@ -611,8 +672,8 @@
         },
         "outputs": {},
         "position": [
-          3524.296947045527,
-          -680.2223955385924
+          3646.8112912927986,
+          -646.0330914091879
         ],
         "name": "omnitool.chat_output"
       },
@@ -621,12 +682,12 @@
         "data": {
           "audio": "",
           "documents": "",
+          "enabled": true,
           "images": "",
           "object": null,
           "text": "",
           "textType": "text/markdown",
-          "x-omni-title": "Chat Output (markdown)",
-          "enabled": true
+          "x-omni-title": "Chat Output (markdown)"
         },
         "inputs": {
           "text": {
@@ -696,19 +757,13 @@
             ]
           },
           "object": {
-            "connections": [
-              {
-                "node": 567,
-                "output": "object",
-                "data": {}
-              }
-            ]
+            "connections": []
           }
         },
         "outputs": {},
         "position": [
-          3528.071261408741,
-          -1813.8552624769873
+          3518.503840141506,
+          -1813.1513957789914
         ],
         "name": "omnitool.chat_output"
       },
@@ -717,12 +772,12 @@
         "data": {
           "audio": "",
           "documents": "",
+          "enabled": true,
           "images": "",
           "object": null,
           "text": "",
           "textType": "text/markdown-code",
-          "x-omni-title": "Chat Output (markdown code)",
-          "enabled": true
+          "x-omni-title": "Chat Output (markdown code)"
         },
         "inputs": {
           "text": {
@@ -754,56 +809,13 @@
         ],
         "name": "omnitool.chat_output"
       },
-      "577": {
-        "id": 577,
-        "data": {
-          "n": 3,
-          "prompt": "pictures of OpenAI DALLE2.",
-          "size": "256x256",
-          "user": "",
-          "enabled": true
-        },
-        "inputs": {
-          "prompt": {
-            "connections": []
-          },
-          "n": {
-            "connections": []
-          },
-          "size": {
-            "connections": []
-          },
-          "user": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "created": {
-            "connections": []
-          },
-          "data": {
-            "connections": [
-              {
-                "node": 567,
-                "input": "imageArray",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "position": [
-          1320.891051691898,
-          -1262.2797508049964
-        ],
-        "name": "openai.simpleDalle"
-      },
       "578": {
         "id": 578,
         "data": {
+          "enabled": true,
           "object": null,
           "transform": "$[2]",
-          "x-omni-title": "JSONata Transformation for TextArray",
-          "enabled": true
+          "x-omni-title": "JSONata Transformation for TextArray"
         },
         "inputs": {
           "transform": {
@@ -826,6 +838,11 @@
                 "node": 573,
                 "input": "object",
                 "data": {}
+              },
+              {
+                "node": 623,
+                "input": "string",
+                "data": {}
               }
             ]
           },
@@ -840,16 +857,16 @@
           }
         },
         "position": [
-          2737.3197836759696,
-          -303.6836075637276
+          2177.5471455524184,
+          -640.4669772235234
         ],
         "name": "omnitool.jsonata"
       },
       "580": {
         "id": 580,
         "data": {
-          "text": "### this is markdown test",
-          "enabled": true
+          "enabled": true,
+          "text": "### this is markdown test"
         },
         "inputs": {
           "text": {
@@ -873,92 +890,11 @@
         ],
         "name": "omnitool.input_text"
       },
-      "581": {
-        "id": 581,
-        "data": {
-          "Accept": "application/json",
-          "Organization": "",
-          "cfg_scale": 7,
-          "clip_guidance_preset": "NONE",
-          "height": 512,
-          "prompts": "ironman",
-          "sampler": "",
-          "samples": 1,
-          "seed": 0,
-          "steps": 50,
-          "style_preset": "3d-model",
-          "width": 512,
-          "enabled": true
-        },
-        "inputs": {
-          "Accept": {
-            "connections": []
-          },
-          "Organization": {
-            "connections": []
-          },
-          "height": {
-            "connections": []
-          },
-          "width": {
-            "connections": []
-          },
-          "cfg_scale": {
-            "connections": []
-          },
-          "clip_guidance_preset": {
-            "connections": []
-          },
-          "sampler": {
-            "connections": []
-          },
-          "samples": {
-            "connections": []
-          },
-          "seed": {
-            "connections": []
-          },
-          "steps": {
-            "connections": []
-          },
-          "prompts": {
-            "connections": []
-          },
-          "style_preset": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "json": {
-            "connections": []
-          },
-          "image": {
-            "connections": [
-              {
-                "node": 567,
-                "input": "image",
-                "data": {}
-              }
-            ]
-          },
-          "seed": {
-            "connections": []
-          },
-          "finishReason": {
-            "connections": []
-          }
-        },
-        "position": [
-          1308.7714202803827,
-          -2407.0741730951713
-        ],
-        "name": "stability.simpleDreamStudioTextToImage"
-      },
       "582": {
         "id": 582,
         "data": {
-          "text": "this is plain text test",
-          "enabled": true
+          "enabled": true,
+          "text": "this is plain text test"
         },
         "inputs": {
           "text": {
@@ -985,8 +921,8 @@
       "583": {
         "id": 583,
         "data": {
-          "text": "```javascript\n// This is markdown code test, this should display as code block\nfunction testFunction(a, b) {\n    return a + b;\n}\n\n// Example usage:\nlet result = testFunction(5, 3);\nconsole.log(result);  // Outputs: 8\n```",
-          "enabled": true
+          "enabled": true,
+          "text": "```javascript\n// This is markdown code test, this should display as code block\nfunction testFunction(a, b) {\n    return a + b;\n}\n\n// Example usage:\nlet result = testFunction(5, 3);\nconsole.log(result);  // Outputs: 8\n```"
         },
         "inputs": {
           "text": {
@@ -1013,9 +949,9 @@
       "584": {
         "id": 584,
         "data": {
+          "enabled": true,
           "object": null,
-          "transform": "$[2].objectArray",
-          "enabled": true
+          "transform": "$[2].objectArray"
         },
         "inputs": {
           "transform": {
@@ -1033,7 +969,13 @@
         },
         "outputs": {
           "object": {
-            "connections": []
+            "connections": [
+              {
+                "node": 676,
+                "input": "object",
+                "data": {}
+              }
+            ]
           },
           "text": {
             "connections": [
@@ -1046,19 +988,19 @@
           }
         },
         "position": [
-          2731.559683799641,
-          -34.34517867068524
+          2211.6107837387126,
+          -188.9348790536522
         ],
         "name": "omnitool.jsonata"
       },
       "586": {
         "id": 586,
         "data": {
+          "enabled": true,
           "fileName": "this_is_md_test_doc",
           "storageType": "Permanent",
-          "text": "### this is document test\nthis is a file created by test document writer and save as a markdown file",
-          "textType": "text/markdown",
-          "enabled": true
+          "text": "### this is document test\nthis is a file created by test document writer and save as a markdown file\n\n# H1\n## H2\n### H3\n\n**bold text**\n\n*italicized text*\n\n> blockquote\n\n1. First item\n2. Second item\n3. Third item\n\n- First item\n- Second item\n- Third item\n\n`code`\n\n---\n\n[link](https://omnitool.ai/)\n\n![alt text](https://omnitool.ai/favicon.jpg)\n\n| Syntax | Description |\n| ----------- | ----------- |\n| Header | Title |\n| Paragraph | Text |\n\n```\n{\n  \"firstName\": \"John\",\n  \"lastName\": \"Smith\",\n  \"age\": 25\n}\n```\n\nHere's a sentence with a footnote. [^1]\n\nThat is so funny! :joy:\n\nI need to highlight these ==very important words==.\n\n[^1]: This is the footnote.",
+          "textType": "text/markdown"
         },
         "inputs": {
           "text": {
@@ -1085,8 +1027,8 @@
           }
         },
         "position": [
-          1322.6252716157562,
-          -885.6015108257635
+          1151.844071353645,
+          -1252.6938271977033
         ],
         "name": "omnitool.write_document"
       },
@@ -1095,12 +1037,12 @@
         "data": {
           "audio": "",
           "documents": "",
+          "enabled": true,
           "images": "",
           "object": null,
           "text": "",
           "textType": "text/markdown",
-          "x-omni-title": "Chat Output (B64)",
-          "enabled": true
+          "x-omni-title": "Chat Output (B64)"
         },
         "inputs": {
           "text": {
@@ -1130,7 +1072,13 @@
             "connections": []
           },
           "documents": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2322,
+                "output": "document",
+                "data": {}
+              }
+            ]
           },
           "object": {
             "connections": []
@@ -1194,10 +1142,623 @@
           }
         },
         "position": [
-          2952.5910649178804,
-          -785.6702286470726
+          2938.8827257428975,
+          -833.2584601708178
         ],
         "name": "omnitool.input_text"
+      },
+      "623": {
+        "id": 623,
+        "data": {
+          "array": null,
+          "assert": {
+            "string": "text array 3rd item"
+          },
+          "boolean": false,
+          "enabled": true,
+          "number": 0,
+          "object": null,
+          "string": ""
+        },
+        "inputs": {
+          "string": {
+            "connections": [
+              {
+                "node": 578,
+                "output": "object",
+                "data": {}
+              }
+            ]
+          },
+          "boolean": {
+            "connections": []
+          },
+          "number": {
+            "connections": []
+          },
+          "array": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          },
+          "assert": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "validationReport": {
+            "connections": [
+              {
+                "node": 573,
+                "input": "text",
+                "data": {}
+              },
+              {
+                "node": 2322,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          2739.2035630388764,
+          -493.02481303089746
+        ],
+        "name": "omnitool.validator"
+      },
+      "676": {
+        "id": 676,
+        "data": {
+          "array": null,
+          "assert": {
+            "object": {
+              "objectArray": "object3"
+            }
+          },
+          "boolean": false,
+          "enabled": true,
+          "number": 0,
+          "object": null,
+          "string": ""
+        },
+        "inputs": {
+          "string": {
+            "connections": []
+          },
+          "boolean": {
+            "connections": []
+          },
+          "number": {
+            "connections": []
+          },
+          "array": {
+            "connections": []
+          },
+          "object": {
+            "connections": [
+              {
+                "node": 584,
+                "output": "object",
+                "data": {}
+              }
+            ]
+          },
+          "assert": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "validationReport": {
+            "connections": [
+              {
+                "node": 573,
+                "input": "text",
+                "data": {}
+              },
+              {
+                "node": 2322,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          2719.5220340101946,
+          82.6396095605536
+        ],
+        "name": "omnitool.validator"
+      },
+      "2245": {
+        "id": 2245,
+        "data": {
+          "cfg_scale": 7,
+          "checkpoint": "v1-5-pruned-emaonly",
+          "enabled": true,
+          "filter_nsfw": true,
+          "height": 512,
+          "negative_prompt": "",
+          "preview": "",
+          "prompt": "Urban portrait of a skateboarder in mid-jump, graffiti walls background, high shutter speed.",
+          "restore_faces": false,
+          "sampler_name": "DPM++ 2M",
+          "seed": -1,
+          "steps": 30,
+          "tiling": false,
+          "width": 512,
+          "x_settings": ""
+        },
+        "inputs": {
+          "prompt": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          },
+          "sampler_name": {
+            "connections": []
+          },
+          "steps": {
+            "connections": []
+          },
+          "cfg_scale": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "restore_faces": {
+            "connections": []
+          },
+          "tiling": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": []
+          },
+          "checkpoint": {
+            "connections": []
+          },
+          "filter_nsfw": {
+            "connections": []
+          },
+          "x_settings": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "images": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "image",
+                "data": {}
+              }
+            ]
+          },
+          "parameters": {
+            "connections": []
+          },
+          "info": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          }
+        },
+        "position": [
+          1137.108984342172,
+          -2565.45068502461
+        ],
+        "name": "automatic1111.simpleStableDiffusion"
+      },
+      "2322": {
+        "id": 2322,
+        "data": {
+          "enabled": true,
+          "fileName": "validation_report",
+          "storageType": "Temporary",
+          "text": "",
+          "textType": "text/markdown"
+        },
+        "inputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 623,
+                "output": "validationReport",
+                "data": {}
+              },
+              {
+                "node": 676,
+                "output": "validationReport",
+                "data": {}
+              }
+            ]
+          },
+          "fileName": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "document": {
+            "connections": [
+              {
+                "node": 587,
+                "input": "documents",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          3286.937538187971,
+          -139.6555734325434
+        ],
+        "name": "omnitool.write_document"
+      },
+      "2343": {
+        "id": 2343,
+        "data": {
+          "Assert": null,
+          "boolean": true,
+          "button": "",
+          "enabled": true,
+          "float": 3.14159,
+          "integer": 3000,
+          "number": 42,
+          "object": {
+            "object": "this is single object test"
+          },
+          "objectArray": [
+            {
+              "objectArray": "object1"
+            },
+            {
+              "objectArray": "object2"
+            },
+            {
+              "objectArray": "object3"
+            }
+          ],
+          "source": "*{{ RECIPE recipe.meta.description \"banner\" }}*\n{{ INPUT inputs.text }}  \n{{ INPUT inputs.string }}  \n{{ INPUT inputs.number }}  \n{{ INPUT inputs.integer }}  \n{{ INPUT inputs.float }}  \n{{ INPUT inputs.boolean \"boolean\"}}  \n{{ INPUT inputs.object }}  \n{{ INPUT inputs.textArray }}  \n{{ INPUT inputs.objectArray }}  \n{{ INPUT inputs.Assert }}  \n{{ RUN_BUTTON \"Run\" }}",
+          "string": "this is string input",
+          "text": "this is text input",
+          "textArray": [
+            "text array 1st item",
+            "text array 2nd item",
+            "text array 3rd item",
+            "text array 4th item"
+          ],
+          "x-omni-dynamicInputs": {
+            "Assert": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "description": "An object containing expected values for each output type to assert the output values against",
+              "name": "Assert",
+              "socketOpts": {},
+              "title": "Test Assert",
+              "type": "object"
+            },
+            "boolean": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "boolean",
+              "name": "boolean",
+              "socketOpts": {},
+              "title": "boolean",
+              "type": "boolean"
+            },
+            "float": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "float",
+              "name": "float",
+              "socketOpts": {},
+              "title": "float",
+              "type": "number"
+            },
+            "integer": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "integer",
+              "name": "integer",
+              "socketOpts": {},
+              "title": "integer",
+              "type": "number"
+            },
+            "number": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "number",
+              "name": "number",
+              "socketOpts": {},
+              "title": "number",
+              "type": "number"
+            },
+            "object": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "object",
+              "name": "object",
+              "socketOpts": {},
+              "title": "object",
+              "type": "object"
+            },
+            "objectArray": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "object",
+              "name": "objectArray",
+              "socketOpts": {
+                "array": true
+              },
+              "title": "objectArray",
+              "type": "object"
+            },
+            "string": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "string",
+              "name": "string",
+              "socketOpts": {},
+              "title": "string",
+              "type": "string"
+            },
+            "text": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "text",
+              "socketOpts": {},
+              "title": "text",
+              "type": "string"
+            },
+            "textArray": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "textArray",
+              "socketOpts": {
+                "array": true
+              },
+              "title": "textArray",
+              "type": "object"
+            }
+          },
+          "x-omni-dynamicOutputs": {
+            "Assert": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "description": "An object containing expected values for each output type to assert the output values against",
+              "name": "Assert",
+              "socketOpts": {},
+              "title": "Test Assert",
+              "type": "object"
+            },
+            "boolean": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "boolean",
+              "name": "boolean",
+              "socketOpts": {},
+              "title": "boolean",
+              "type": "boolean"
+            },
+            "float": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "float",
+              "name": "float",
+              "socketOpts": {},
+              "title": "float",
+              "type": "number"
+            },
+            "integer": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "integer",
+              "name": "integer",
+              "socketOpts": {},
+              "title": "integer",
+              "type": "number"
+            },
+            "number": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "number",
+              "name": "number",
+              "socketOpts": {},
+              "title": "number",
+              "type": "number"
+            },
+            "object": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "object",
+              "name": "object",
+              "socketOpts": {},
+              "title": "object",
+              "type": "object"
+            },
+            "objectArray": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "object",
+              "name": "objectArray",
+              "socketOpts": {
+                "array": true
+              },
+              "title": "objectArray",
+              "type": "object"
+            },
+            "string": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "string",
+              "name": "string",
+              "socketOpts": {},
+              "title": "string",
+              "type": "string"
+            },
+            "text": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "text",
+              "socketOpts": {},
+              "title": "text",
+              "type": "string"
+            }
+          }
+        },
+        "inputs": {
+          "Assert": {
+            "connections": []
+          },
+          "boolean": {
+            "connections": []
+          },
+          "float": {
+            "connections": []
+          },
+          "integer": {
+            "connections": []
+          },
+          "number": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          },
+          "objectArray": {
+            "connections": []
+          },
+          "string": {
+            "connections": []
+          },
+          "text": {
+            "connections": []
+          },
+          "textArray": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "Assert": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "Assert",
+                "data": {}
+              }
+            ]
+          },
+          "boolean": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "boolean",
+                "data": {}
+              }
+            ]
+          },
+          "float": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "float",
+                "data": {}
+              }
+            ]
+          },
+          "integer": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "integer",
+                "data": {}
+              }
+            ]
+          },
+          "number": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "number",
+                "data": {}
+              }
+            ]
+          },
+          "object": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "object",
+                "data": {}
+              }
+            ]
+          },
+          "objectArray": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "objectArray",
+                "data": {}
+              }
+            ]
+          },
+          "string": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "string",
+                "data": {}
+              }
+            ]
+          },
+          "text": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          },
+          "any": {
+            "connections": []
+          }
+        },
+        "position": [
+          545.2122904869027,
+          -1638.9556833448974
+        ],
+        "name": "omnitool.custom_ui_1"
       }
     }
   },

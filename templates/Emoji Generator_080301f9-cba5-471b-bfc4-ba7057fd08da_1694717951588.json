@@ -1,0 +1,507 @@
+{
+  "id": "080301f9-cba5-471b-bfc4-ba7057fd08da",
+  "meta": {
+    "name": "Emoji Generator",
+    "author": "omnitool.ai team",
+    "description": "Generate High Definition Apple Style Emojis for any subject, with optional background removal.",
+    "help": "",
+    "created": 1694707332548,
+    "updated": 1694717816649,
+    "tags": []
+  },
+  "rete": {
+    "id": "mercs@0.1.1",
+    "nodes": {
+      "498": {
+        "id": 498,
+        "data": {
+          "author": "omnitool.ai team",
+          "button": "",
+          "credits": "Uses fofr/sdxl-emoji via Replicate.",
+          "description": "Generate High Definition Apple Style Emojis for any subject, with optional background removal.",
+          "enabled": true,
+          "help": "",
+          "title": "Emoji Generator"
+        },
+        "inputs": {},
+        "outputs": {},
+        "position": [
+          670.5360462716283,
+          -1737.5862831892537
+        ],
+        "name": "omnitool.recipe_metadata"
+      },
+      "499": {
+        "id": 499,
+        "data": {
+          "background": "A burning medieval castle on a hill in rural landscape, smoke billowing to the sky",
+          "boolean": false,
+          "button": "",
+          "details": "side profile",
+          "enabled": true,
+          "foreground": "An aging elven wizard in flowing robes wielding a magical quarterstaff, cowled robes",
+          "prompt": "Valisa DeKelwithe, a commoner of the northern tundra village, selling her wares. Blank white background.",
+          "source": "### {{ RECIPE recipe.meta.name }} 💁👌🎍😍\n*{{ RECIPE recipe.meta.description }}*\n{{ INPUT inputs.subject \"Subject\" }}  \n💡 The main subject of the emoji.\n{{ INPUT inputs.details \"Details\" }} \n💡Additional details such as clothing, camera angle, etc.\n{{ INPUT inputs.switch \"Background Removal\" }}\n💡 Removing background usually yields more authentic results  \n{{ RUN_BUTTON \"🧑🏽‍🎨 Emojify 🧑🏽‍🎨\" }}",
+          "subject": "A Tesla car fire",
+          "switch": false,
+          "x-omni-dynamicInputs": {
+            "details": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "details",
+              "title": "Details",
+              "type": "string"
+            },
+            "subject": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "subject",
+              "title": "Subject",
+              "type": "string"
+            },
+            "switch": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "boolean",
+              "name": "switch",
+              "socketOpts": {},
+              "title": "switch",
+              "type": "boolean"
+            }
+          },
+          "x-omni-dynamicOutputs": {
+            "details": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "details",
+              "title": "Details",
+              "type": "string"
+            },
+            "subject": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "subject",
+              "title": "Subject",
+              "type": "string"
+            },
+            "switch": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "boolean",
+              "name": "switch",
+              "socketOpts": {},
+              "title": "switch",
+              "type": "boolean"
+            }
+          }
+        },
+        "inputs": {
+          "details": {
+            "connections": []
+          },
+          "subject": {
+            "connections": []
+          },
+          "switch": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "details": {
+            "connections": [
+              {
+                "node": 531,
+                "input": "details",
+                "data": {}
+              }
+            ]
+          },
+          "subject": {
+            "connections": [
+              {
+                "node": 531,
+                "input": "subject",
+                "data": {}
+              }
+            ]
+          },
+          "switch": {
+            "connections": [
+              {
+                "node": 524,
+                "input": "switch",
+                "data": {}
+              }
+            ]
+          },
+          "any": {
+            "connections": []
+          }
+        },
+        "position": [
+          -101.45794301536992,
+          -1335.3422092615624
+        ],
+        "name": "omnitool.custom_ui_1"
+      },
+      "500": {
+        "id": 500,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "enabled": true,
+          "images": "",
+          "object": null,
+          "text": "",
+          "textType": "text/markdown"
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 524,
+                "output": "off",
+                "data": {}
+              },
+              {
+                "node": 760,
+                "output": "output",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          }
+        },
+        "outputs": {},
+        "position": [
+          2574.286705949443,
+          -1337.9072507348994
+        ],
+        "name": "omnitool.chat_output"
+      },
+      "524": {
+        "id": 524,
+        "data": {
+          "enabled": true,
+          "files": "",
+          "switch": false
+        },
+        "inputs": {
+          "files": {
+            "connections": [
+              {
+                "node": 769,
+                "output": "output",
+                "data": {}
+              }
+            ]
+          },
+          "switch": {
+            "connections": [
+              {
+                "node": 499,
+                "output": "switch",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "on": {
+            "connections": [
+              {
+                "node": 760,
+                "input": "image",
+                "data": {}
+              }
+            ]
+          },
+          "off": {
+            "connections": [
+              {
+                "node": 500,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          },
+          "switch": {
+            "connections": []
+          }
+        },
+        "position": [
+          1375.2052077077303,
+          -1454.9872607731654
+        ],
+        "name": "omnitool.file_switch"
+      },
+      "531": {
+        "id": 531,
+        "data": {
+          "background": "",
+          "button": "",
+          "details": "closeup shot",
+          "enabled": true,
+          "foreground": "",
+          "images": "",
+          "replace": null,
+          "source": "a TOK emoji of a ({input:Subject}), {input:Details}",
+          "subject": "Tiger",
+          "x-omni-dynamicInputs": {
+            "details": {
+              "customSocket": "text",
+              "name": "details",
+              "title": "Details",
+              "type": "string"
+            },
+            "subject": {
+              "customSocket": "text",
+              "name": "subject",
+              "title": "Subject",
+              "type": "string"
+            }
+          }
+        },
+        "inputs": {
+          "details": {
+            "connections": [
+              {
+                "node": 499,
+                "output": "details",
+                "data": {}
+              }
+            ]
+          },
+          "subject": {
+            "connections": [
+              {
+                "node": 499,
+                "output": "subject",
+                "data": {}
+              }
+            ]
+          },
+          "source": {
+            "connections": []
+          },
+          "replace": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 769,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          667.2290119554034,
+          -611.9907666941374
+        ],
+        "name": "omnitool.multi_text_replace"
+      },
+      "742": {
+        "id": 742,
+        "data": {
+          "enabled": true,
+          "number": 0,
+          "number_format": "timestamp",
+          "x-omni-comment": "Replicate uses blank to randomize the seed. Since omnitool currently does not support blank numbers, we instead feed a random number here."
+        },
+        "inputs": {
+          "number": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "number": {
+            "connections": []
+          }
+        },
+        "position": [
+          631.0942211090795,
+          -1058.6084776335233
+        ],
+        "name": "omnitool.number_input"
+      },
+      "760": {
+        "id": 760,
+        "data": {
+          "enabled": true,
+          "image": "https://replicate.delivery/pbxt/Ho28olmw8dnOffOz7yjuPK6UGsOPqFUfpCnq1ur8zaAKxiPH/animal-1.jpeg"
+        },
+        "inputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 524,
+                "output": "on",
+                "data": {}
+              }
+            ]
+          },
+          "enabled": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 500,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          1969.4646405855367,
+          -1544.7181302477275
+        ],
+        "name": "omni-extension-replicate:run.cjwbw/rembg"
+      },
+      "769": {
+        "id": 769,
+        "data": {
+          "apply_watermark": true,
+          "enabled": true,
+          "guidance_scale": 7.5,
+          "height": 1024,
+          "high_noise_frac": 0.8,
+          "image": "",
+          "lora_scale": 0.6,
+          "mask": "",
+          "negative_prompt": "low quality, low resolution, lowres, deformed, ugly, nsfw",
+          "num_inference_steps": 50,
+          "num_outputs": 1,
+          "prompt": "A TOK emoji of a man",
+          "prompt_strength": 0.8,
+          "refine": "no_refiner",
+          "refine_steps": 0,
+          "replicate_weights": "",
+          "scheduler": "K_EULER",
+          "seed": 0,
+          "width": 1024
+        },
+        "inputs": {
+          "mask": {
+            "connections": []
+          },
+          "enabled": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          },
+          "image": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 531,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "refine": {
+            "connections": []
+          },
+          "scheduler": {
+            "connections": []
+          },
+          "lora_scale": {
+            "connections": []
+          },
+          "num_outputs": {
+            "connections": []
+          },
+          "refine_steps": {
+            "connections": []
+          },
+          "guidance_scale": {
+            "connections": []
+          },
+          "apply_watermark": {
+            "connections": []
+          },
+          "high_noise_frac": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": []
+          },
+          "prompt_strength": {
+            "connections": []
+          },
+          "replicate_weights": {
+            "connections": []
+          },
+          "num_inference_steps": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 524,
+                "input": "files",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          1242.8555758498312,
+          -1023.0092171826727
+        ],
+        "name": "omni-extension-replicate:run.fofr/sdxl-emoji"
+      }
+    }
+  },
+  "api": {
+    "fields": {}
+  },
+  "ui": {},
+  "_flags": [
+    "owner"
+  ]
+}
