@@ -6,7 +6,7 @@
     "description": "Generate High Definition Apple Style Emojis for any subject, with optional background removal.",
     "help": "",
     "created": 1694707332548,
-    "updated": 1694717816649,
+    "updated": 1695017628605,
     "tags": []
   },
   "rete": {
@@ -21,7 +21,8 @@
           "description": "Generate High Definition Apple Style Emojis for any subject, with optional background removal.",
           "enabled": true,
           "help": "",
-          "title": "Emoji Generator"
+          "title": "Emoji Generator",
+          "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
@@ -103,7 +104,8 @@
               "title": "switch",
               "type": "boolean"
             }
-          }
+          },
+          "xOmniEnabled": true
         },
         "inputs": {
           "details": {
@@ -163,7 +165,8 @@
           "images": "",
           "object": null,
           "text": "",
-          "textType": "text/markdown"
+          "textType": "text/markdown",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -205,7 +208,8 @@
         "data": {
           "enabled": true,
           "files": "",
-          "switch": false
+          "switch": false,
+          "xOmniEnabled": true
         },
         "inputs": {
           "files": {
@@ -247,7 +251,13 @@
             ]
           },
           "switch": {
-            "connections": []
+            "connections": [
+              {
+                "node": 760,
+                "input": "enabled",
+                "data": {}
+              }
+            ]
           }
         },
         "position": [
@@ -281,7 +291,8 @@
               "title": "Subject",
               "type": "string"
             }
-          }
+          },
+          "xOmniEnabled": true
         },
         "inputs": {
           "details": {
@@ -335,7 +346,8 @@
           "enabled": true,
           "number": 0,
           "number_format": "timestamp",
-          "x-omni-comment": "Replicate uses blank to randomize the seed. Since omnitool currently does not support blank numbers, we instead feed a random number here."
+          "x-omni-comment": "Replicate uses blank to randomize the seed. Since omnitool currently does not support blank numbers, we instead feed a random number here.",
+          "xOmniEnabled": true
         },
         "inputs": {
           "number": {
@@ -344,7 +356,13 @@
         },
         "outputs": {
           "number": {
-            "connections": []
+            "connections": [
+              {
+                "node": 769,
+                "input": "seed",
+                "data": {}
+              }
+            ]
           }
         },
         "position": [
@@ -357,7 +375,8 @@
         "id": 760,
         "data": {
           "enabled": true,
-          "image": "https://replicate.delivery/pbxt/Ho28olmw8dnOffOz7yjuPK6UGsOPqFUfpCnq1ur8zaAKxiPH/animal-1.jpeg"
+          "image": "https://replicate.delivery/pbxt/Ho28olmw8dnOffOz7yjuPK6UGsOPqFUfpCnq1ur8zaAKxiPH/animal-1.jpeg",
+          "xOmniEnabled": true
         },
         "inputs": {
           "image": {
@@ -370,7 +389,13 @@
             ]
           },
           "enabled": {
-            "connections": []
+            "connections": [
+              {
+                "node": 524,
+                "output": "switch",
+                "data": {}
+              }
+            ]
           }
         },
         "outputs": {
@@ -411,7 +436,8 @@
           "replicate_weights": "",
           "scheduler": "K_EULER",
           "seed": 0,
-          "width": 1024
+          "width": 1024,
+          "xOmniEnabled": true
         },
         "inputs": {
           "mask": {
@@ -421,7 +447,13 @@
             "connections": []
           },
           "seed": {
-            "connections": []
+            "connections": [
+              {
+                "node": 742,
+                "output": "number",
+                "data": {}
+              }
+            ]
           },
           "image": {
             "connections": []
