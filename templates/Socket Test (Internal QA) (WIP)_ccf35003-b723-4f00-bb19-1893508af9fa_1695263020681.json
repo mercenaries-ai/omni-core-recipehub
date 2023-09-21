@@ -6,7 +6,7 @@
     "description": "A Omnitool smoke test recipe",
     "help": "# Prerequisites\n\nBefore proceeding, ensure you have the following in place:\n\n1. **Automatic1111 host**\n   - Alternatively, you can replace the *Text To Image* block with a static image or another image generation block.\n\n2. **Google TTS Oauth**\n   - To leverage the *Google Text-to-Speech* service, ensure you've passed *google-tts* OAuth in the *Settings* page. Alternatively, you can replace this with a static audio file or another audio generation block.\n\n3. **OpenAI Key**\n   - Ensure you have a valid API key for integrating with OpenAI services.",
     "created": 1694458802674,
-    "updated": 1694745509589,
+    "updated": 1695263017303,
     "pictureUrl": "omni.png",
     "tags": [
       "quality assurance"
@@ -24,7 +24,8 @@
           "description": "A Omnitool smoke test recipe",
           "enabled": true,
           "help": "# Prerequisites\n\nBefore proceeding, ensure you have the following in place:\n\n1. **Automatic1111 host**\n   - Alternatively, you can replace the *Text To Image* block with a static image or another image generation block.\n\n2. **Google TTS Oauth**\n   - To leverage the *Google Text-to-Speech* service, ensure you've passed *google-tts* OAuth in the *Settings* page. Alternatively, you can replace this with a static audio file or another audio generation block.\n\n3. **OpenAI Key**\n   - Ensure you have a valid API key for integrating with OpenAI services.",
-          "title": "Socket Test (Internal QA) (WIP)"
+          "title": "Socket Test (Internal QA) (WIP)",
+          "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
@@ -44,7 +45,8 @@
           "object": null,
           "text": "",
           "textType": "text/plain",
-          "x-omni-title": "Chat Output (text/plain)"
+          "x-omni-title": "Chat Output (text/plain)",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -173,7 +175,8 @@
             "text array 3rd item",
             "text array 4th item"
           ],
-          "valueSelector": ""
+          "valueSelector": "",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -430,6 +433,11 @@
                 "node": 574,
                 "input": "images",
                 "data": {}
+              },
+              {
+                "node": 2344,
+                "input": "image",
+                "data": {}
               }
             ]
           },
@@ -550,7 +558,8 @@
           "languageCode": "en-GB",
           "ssmlGender": "SSML_VOICE_GENDER_UNSPECIFIED",
           "text": "this is audio socket test. You have to do google-tts's OAuth in setting page first with your mercenaries account.",
-          "voice_name": ""
+          "voice_name": "",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -601,7 +610,8 @@
           "object": null,
           "text": "",
           "textType": "text/markdown",
-          "x-omni-title": "Chat Output (Array)"
+          "x-omni-title": "Chat Output (Array)",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -619,16 +629,6 @@
               {
                 "node": 621,
                 "output": "text",
-                "data": {}
-              },
-              {
-                "node": 623,
-                "output": "validationReport",
-                "data": {}
-              },
-              {
-                "node": 676,
-                "output": "validationReport",
                 "data": {}
               }
             ]
@@ -687,7 +687,8 @@
           "object": null,
           "text": "",
           "textType": "text/markdown",
-          "x-omni-title": "Chat Output (markdown)"
+          "x-omni-title": "Chat Output (markdown)",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -777,7 +778,8 @@
           "object": null,
           "text": "",
           "textType": "text/markdown-code",
-          "x-omni-title": "Chat Output (markdown code)"
+          "x-omni-title": "Chat Output (markdown code)",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -815,7 +817,8 @@
           "enabled": true,
           "object": null,
           "transform": "$[2]",
-          "x-omni-title": "JSONata Transformation for TextArray"
+          "x-omni-title": "JSONata Transformation for TextArray",
+          "xOmniEnabled": false
         },
         "inputs": {
           "transform": {
@@ -866,7 +869,8 @@
         "id": 580,
         "data": {
           "enabled": true,
-          "text": "### this is markdown test"
+          "text": "### this is markdown test",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -894,7 +898,8 @@
         "id": 582,
         "data": {
           "enabled": true,
-          "text": "this is plain text test"
+          "text": "this is plain text test",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -922,7 +927,8 @@
         "id": 583,
         "data": {
           "enabled": true,
-          "text": "```javascript\n// This is markdown code test, this should display as code block\nfunction testFunction(a, b) {\n    return a + b;\n}\n\n// Example usage:\nlet result = testFunction(5, 3);\nconsole.log(result);  // Outputs: 8\n```"
+          "text": "```javascript\n// This is markdown code test, this should display as code block\nfunction testFunction(a, b) {\n    return a + b;\n}\n\n// Example usage:\nlet result = testFunction(5, 3);\nconsole.log(result);  // Outputs: 8\n```",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -951,7 +957,8 @@
         "data": {
           "enabled": true,
           "object": null,
-          "transform": "$[2].objectArray"
+          "transform": "$[2].objectArray",
+          "xOmniEnabled": false
         },
         "inputs": {
           "transform": {
@@ -1000,7 +1007,8 @@
           "fileName": "this_is_md_test_doc",
           "storageType": "Permanent",
           "text": "### this is document test\nthis is a file created by test document writer and save as a markdown file\n\n# H1\n## H2\n### H3\n\n**bold text**\n\n*italicized text*\n\n> blockquote\n\n1. First item\n2. Second item\n3. Third item\n\n- First item\n- Second item\n- Third item\n\n`code`\n\n---\n\n[link](https://omnitool.ai/)\n\n![alt text](https://omnitool.ai/favicon.jpg)\n\n| Syntax | Description |\n| ----------- | ----------- |\n| Header | Title |\n| Paragraph | Text |\n\n```\n{\n  \"firstName\": \"John\",\n  \"lastName\": \"Smith\",\n  \"age\": 25\n}\n```\n\nHere's a sentence with a footnote. [^1]\n\nThat is so funny! :joy:\n\nI need to highlight these ==very important words==.\n\n[^1]: This is the footnote.",
-          "textType": "text/markdown"
+          "textType": "text/markdown",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -1027,8 +1035,8 @@
           }
         },
         "position": [
-          1151.844071353645,
-          -1252.6938271977033
+          1149.3309475065473,
+          -1246.5973518575959
         ],
         "name": "omnitool.write_document"
       },
@@ -1042,7 +1050,8 @@
           "object": null,
           "text": "",
           "textType": "text/markdown",
-          "x-omni-title": "Chat Output (B64)"
+          "x-omni-title": "Chat Output (B64)",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -1072,13 +1081,7 @@
             "connections": []
           },
           "documents": {
-            "connections": [
-              {
-                "node": 2322,
-                "output": "document",
-                "data": {}
-              }
-            ]
+            "connections": []
           },
           "object": {
             "connections": []
@@ -1095,7 +1098,8 @@
         "id": 620,
         "data": {
           "enabled": true,
-          "text": "This is B64 image test. You should be seeing b64 image automatically converted and output as image"
+          "text": "This is B64 image test. You should be seeing b64 image automatically converted and output as image",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -1123,7 +1127,8 @@
         "id": 621,
         "data": {
           "enabled": true,
-          "text": "This is array output test. You should be seeing text and object transformed by jsonata."
+          "text": "This is array output test. You should be seeing text and object transformed by jsonata.",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -1158,7 +1163,8 @@
           "enabled": true,
           "number": 0,
           "object": null,
-          "string": ""
+          "string": "",
+          "xOmniEnabled": false
         },
         "inputs": {
           "string": {
@@ -1188,18 +1194,7 @@
         },
         "outputs": {
           "validationReport": {
-            "connections": [
-              {
-                "node": 573,
-                "input": "text",
-                "data": {}
-              },
-              {
-                "node": 2322,
-                "input": "text",
-                "data": {}
-              }
-            ]
+            "connections": []
           }
         },
         "position": [
@@ -1221,7 +1216,8 @@
           "enabled": true,
           "number": 0,
           "object": null,
-          "string": ""
+          "string": "",
+          "xOmniEnabled": false
         },
         "inputs": {
           "string": {
@@ -1251,18 +1247,7 @@
         },
         "outputs": {
           "validationReport": {
-            "connections": [
-              {
-                "node": 573,
-                "input": "text",
-                "data": {}
-              },
-              {
-                "node": 2322,
-                "input": "text",
-                "data": {}
-              }
-            ]
+            "connections": []
           }
         },
         "position": [
@@ -1288,6 +1273,7 @@
           "steps": 30,
           "tiling": false,
           "width": 512,
+          "xOmniEnabled": true,
           "x_settings": ""
         },
         "inputs": {
@@ -1356,51 +1342,6 @@
           -2565.45068502461
         ],
         "name": "automatic1111.simpleStableDiffusion"
-      },
-      "2322": {
-        "id": 2322,
-        "data": {
-          "enabled": true,
-          "fileName": "validation_report",
-          "storageType": "Temporary",
-          "text": "",
-          "textType": "text/markdown"
-        },
-        "inputs": {
-          "text": {
-            "connections": [
-              {
-                "node": 623,
-                "output": "validationReport",
-                "data": {}
-              },
-              {
-                "node": 676,
-                "output": "validationReport",
-                "data": {}
-              }
-            ]
-          },
-          "fileName": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "document": {
-            "connections": [
-              {
-                "node": 587,
-                "input": "documents",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "position": [
-          3286.937538187971,
-          -139.6555734325434
-        ],
-        "name": "omnitool.write_document"
       },
       "2343": {
         "id": 2343,
@@ -1634,7 +1575,8 @@
               "title": "text",
               "type": "string"
             }
-          }
+          },
+          "xOmniEnabled": true
         },
         "inputs": {
           "Assert": {
@@ -1759,6 +1701,195 @@
           -1638.9556833448974
         ],
         "name": "omnitool.custom_ui_1"
+      },
+      "2344": {
+        "id": 2344,
+        "data": {
+          "image": "",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 567,
+                "output": "image",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "image": {
+            "connections": []
+          },
+          "width": {
+            "connections": [
+              {
+                "node": 2346,
+                "input": "number",
+                "data": {}
+              }
+            ]
+          },
+          "height": {
+            "connections": [
+              {
+                "node": 2347,
+                "input": "number",
+                "data": {}
+              }
+            ]
+          },
+          "size": {
+            "connections": []
+          },
+          "mimeType": {
+            "connections": [
+              {
+                "node": 2346,
+                "input": "string",
+                "data": {}
+              }
+            ]
+          },
+          "ext": {
+            "connections": [
+              {
+                "node": 2347,
+                "input": "string",
+                "data": {}
+              }
+            ]
+          },
+          "fid": {
+            "connections": []
+          },
+          "url": {
+            "connections": []
+          }
+        },
+        "position": [
+          2425.275804615105,
+          -3270.244191544897
+        ],
+        "name": "omnitool.image_info"
+      },
+      "2346": {
+        "id": 2346,
+        "data": {
+          "array": null,
+          "assert": {
+            "number": 512,
+            "string": "image/jpeg"
+          },
+          "boolean": false,
+          "enabled": true,
+          "number": 0,
+          "object": null,
+          "string": "",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "string": {
+            "connections": [
+              {
+                "node": 2344,
+                "output": "mimeType",
+                "data": {}
+              }
+            ]
+          },
+          "boolean": {
+            "connections": []
+          },
+          "number": {
+            "connections": [
+              {
+                "node": 2344,
+                "output": "width",
+                "data": {}
+              }
+            ]
+          },
+          "array": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          },
+          "assert": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "validationReport": {
+            "connections": []
+          }
+        },
+        "position": [
+          3172.9477170400523,
+          -3457.7729829129366
+        ],
+        "name": "omnitool.validator"
+      },
+      "2347": {
+        "id": 2347,
+        "data": {
+          "array": null,
+          "assert": {
+            "ext": "jpg",
+            "number": 512
+          },
+          "boolean": false,
+          "enabled": true,
+          "number": 0,
+          "object": null,
+          "string": "",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "string": {
+            "connections": [
+              {
+                "node": 2344,
+                "output": "ext",
+                "data": {}
+              }
+            ]
+          },
+          "boolean": {
+            "connections": []
+          },
+          "number": {
+            "connections": [
+              {
+                "node": 2344,
+                "output": "height",
+                "data": {}
+              }
+            ]
+          },
+          "array": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          },
+          "assert": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "validationReport": {
+            "connections": []
+          }
+        },
+        "position": [
+          3170.2746373699215,
+          -2945.168033130396
+        ],
+        "name": "omnitool.validator"
       }
     }
   },
