@@ -1,12 +1,12 @@
 {
-  "id": "1a6bd89c-794b-4f5e-bea1-c086f6330e93",
+  "id": "e8ff0815-d2d2-4300-89fe-1a3e741d73ef",
   "meta": {
     "name": "Describe Image",
     "author": "omnitool.ai team",
     "description": "Generate textual descriptions usable with a image generation systems for images.",
     "help": "",
     "created": 1694515149216,
-    "updated": 1694516008600,
+    "updated": 1695618241770,
     "pictureUrl": "eye.png",
     "tags": [
       "art & design"
@@ -15,45 +15,6 @@
   "rete": {
     "id": "mercs@0.1.1",
     "nodes": {
-      "14": {
-        "id": 14,
-        "data": {
-          "enabled": true,
-          "image": "",
-          "model": "clip",
-          "x-omni-title": "Generate Image Description"
-        },
-        "inputs": {
-          "image": {
-            "connections": [
-              {
-                "node": 378,
-                "output": "images",
-                "data": {}
-              }
-            ]
-          },
-          "model": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "caption": {
-            "connections": [
-              {
-                "node": 379,
-                "input": "text",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "position": [
-          481.3522814917413,
-          -48.35642073597878
-        ],
-        "name": "automatic1111.interrogate"
-      },
       "111": {
         "id": 111,
         "data": {
@@ -63,7 +24,8 @@
           "description": "Generate textual descriptions usable with a image generation systems for images.",
           "enabled": true,
           "help": "",
-          "title": "Describe Image"
+          "title": "Describe Image",
+          "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
@@ -81,7 +43,8 @@
           "enabled": true,
           "images": "",
           "text": "",
-          "x-omni-title": "Upload an Image in the Chat"
+          "x-omni-title": "Upload an Image in the Chat",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -104,7 +67,7 @@
           "images": {
             "connections": [
               {
-                "node": 14,
+                "node": 1737,
                 "input": "image",
                 "data": {}
               }
@@ -133,14 +96,15 @@
           "json": "",
           "object": null,
           "text": "",
-          "textType": "text/markdown"
+          "textType": "text/markdown",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
             "connections": [
               {
-                "node": 14,
-                "output": "caption",
+                "node": 1737,
+                "output": "output",
                 "data": {}
               }
             ]
@@ -164,6 +128,53 @@
           192.71260589565884
         ],
         "name": "omnitool.chat_output"
+      },
+      "1737": {
+        "id": 1737,
+        "data": {
+          "enabled": true,
+          "image": "https://replicate.delivery/mgxm/4dc7763a-f234-4a7c-a85f-cb9e05e37cf8/COCO_val2014_000000579664.jpg",
+          "model": "coco",
+          "use_beam_search": false,
+          "x-omni-title": "Generate Caption via Replicate",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 378,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          },
+          "enabled": {
+            "connections": []
+          },
+          "model": {
+            "connections": []
+          },
+          "use_beam_search": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 379,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          472.67812808060273,
+          -13.163798601557275
+        ],
+        "name": "omni-extension-replicate:run.rmokady/clip_prefix_caption"
       }
     }
   },
@@ -171,5 +182,7 @@
     "fields": {}
   },
   "ui": {},
-  "_flags": []
+  "_flags": [
+    "owner"
+  ]
 }

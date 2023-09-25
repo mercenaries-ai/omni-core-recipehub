@@ -1,12 +1,12 @@
 {
-  "id": "9297e7f0-5ccc-46ce-b10a-2cac47e156db",
+  "id": "6e0f680b-f8d8-4ccc-9406-4634e6cd7b27",
   "meta": {
     "name": "Dr. Ulla - 100 Thousand Whys",
     "author": "omnitool.ai team",
     "description": "Inspired by the popular children's science book series, \"100 Thousand Whys\", Dr. Ulla tackles a diverse range of 'Why' questions, fostering children's curiosity for knowledge in a simple and engaging manner accompanied by vivid illustrations.",
     "help": "",
     "created": 1694621573851,
-    "updated": 1694624049493,
+    "updated": 1695618688684,
     "pictureUrl": "ulla.png",
     "tags": [
       "education"
@@ -35,7 +35,8 @@
           "temperature": 0.5,
           "top_p": 1,
           "user": "",
-          "x-omni-title": "Generate the Answer via ChatGPT"
+          "x-omni-title": "Generate the Answer via ChatGPT",
+          "xOmniEnabled": true
         },
         "inputs": {
           "model": {
@@ -99,7 +100,8 @@
           "temperature": 0.3,
           "top_p": 1,
           "user": "",
-          "x-omni-title": "Generate Illustration Description via ChatGPT"
+          "x-omni-title": "Generate Illustration Description via ChatGPT",
+          "xOmniEnabled": true
         },
         "inputs": {
           "model": {
@@ -142,7 +144,8 @@
         "id": 108,
         "data": {
           "enabled": true,
-          "text": ""
+          "text": "",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -188,7 +191,8 @@
           "enabled": true,
           "object": "",
           "transform": "$.\"1\"",
-          "x-omni-title": "Fetch 1st Illustration Description"
+          "x-omni-title": "Fetch 1st Illustration Description",
+          "xOmniEnabled": true
         },
         "inputs": {
           "transform": {
@@ -230,7 +234,8 @@
           "enabled": true,
           "object": "",
           "transform": "$.\"2\"",
-          "x-omni-title": "Fetch 2nd Illustration Description"
+          "x-omni-title": "Fetch 2nd Illustration Description",
+          "xOmniEnabled": true
         },
         "inputs": {
           "transform": {
@@ -272,7 +277,8 @@
           "enabled": true,
           "object": "",
           "transform": "$.\"3\"",
-          "x-omni-title": "Fetch 3rd Illustration Description"
+          "x-omni-title": "Fetch 3rd Illustration Description",
+          "xOmniEnabled": true
         },
         "inputs": {
           "transform": {
@@ -313,7 +319,8 @@
         "data": {
           "enabled": true,
           "text": "You are a helpful assistant interpreting user inputs for a generative image program. You output pure valid and syntactically correct JSON without any other embellishments or comments, following the exact structure: {\"positive\": \"the prompt\", \"negative\": \"the negative prompt\"}\nThe prompt field will contain anything the user wants to include in their image, the negative field will have any element the user does not want included in their image. You will compress tokens in the fields by separating the terms within the fields with commas. Try to combine the \nYou will always append the following list to the negative prompt: \"lowres, bad quality, deformed, mutated, blurry, out of frame, watermark\" If the image includes a person, also add \"ugly, zombie, bad anatomy\" to the negative prompt. Other things to include in the negative prompt are \"lowres, poorly drawn, text\"\nYou will always prepend the following list to the positive prompt in the front: \"(((in the style of Arthur Rackham))), 4k, 8k, high quality\"\nIf there is only one word, (or even no input at all), be creative and add elements to make a fun interesting prompt yourself.\n\nexamples: \nUser input: a dog on a field under a blue sky Your output: {\"positive\": \"(((in the style of book illustration))), A beautiful painting of a dog on a field, landscape, blue sky, 4k, 8k, high quality, magnificent, medium shot, details, nature, god rays\", \"negative\": \"low quality artifacts, lowres, bad quality, deformed, mutated, out of frame, watermark\"}\n\nUser input: anime house \nYour output: {\"positive\": \"(((in the style of book illustration))), A detailed digital illustration of a house, 4k, 8k, high quality, stunning beautiful, sharp focus, strong lines\", \"negative\": \"lowres, bad quality, deformed, mutated, out of frame, watermark\"}\n\nUser input: kitten in a teacup \nYour output: {\"positive\": \"(((in the style of book illustration))), A photograph of a super cute teacup kitten, showing his head, smiling happily, the kitten is fluffy, intricate detail, cinematic, 8 k, cel shaded, unreal engine, featured on artstation, pixiv, insane detail\", \"negative\": \"lowres, bad quality, deformed, mutated, out of frame, watermark\"}",
-          "x-omni-title": "Prompt for Illustration"
+          "x-omni-title": "Prompt for Illustration",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -355,7 +362,8 @@
           "enabled": true,
           "images": "",
           "text": "Why does moon has different shapes?",
-          "x-omni-title": "AskYour Why Question in Chat"
+          "x-omni-title": "AskYour Why Question in Chat",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -408,7 +416,8 @@
           "object": null,
           "text": "",
           "textType": "text/markdown",
-          "x-omni-title": "Chat Output"
+          "x-omni-title": "Chat Output",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -423,18 +432,18 @@
           "images": {
             "connections": [
               {
-                "node": 495,
-                "output": "images",
+                "node": 1015,
+                "output": "output",
                 "data": {}
               },
               {
-                "node": 496,
-                "output": "images",
+                "node": 1016,
+                "output": "output",
                 "data": {}
               },
               {
-                "node": 497,
-                "output": "images",
+                "node": 1017,
+                "output": "output",
                 "data": {}
               }
             ]
@@ -465,7 +474,8 @@
           "description": "Inspired by the popular children's science book series, \"100 Thousand Whys\", Dr. Ulla tackles a diverse range of 'Why' questions, fostering children's curiosity for knowledge in a simple and engaging manner accompanied by vivid illustrations.",
           "enabled": true,
           "help": "",
-          "title": "Dr. Ulla - 100 Thousand Whys"
+          "title": "Dr. Ulla - 100 Thousand Whys",
+          "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
@@ -481,7 +491,8 @@
           "enabled": true,
           "instruction": "You are a helpful assistant interpreting user inputs for a generative image program. You output pure valid and syntactically correct JSON without any other embellishments or comments, following the exact structure: { \"checkpoint\" : \"model checkpoint\", \"positive\": \"the prompt\", \"negative\": \"the negative prompt\", \"width\": 640, \"height\": 640 }\nThe prompt field will contain anything the user wants to include in their image, the negative field will have any element the user does not want included in their image. You will compress tokens in the fields by separating the terms within the fields with commas. By default the checkpoint field has the value \"deliberate_v2\". If the user specifies a style on the following list, you will change the checkpoint accordingly: - for photos use \"analog-diffusion-1.0\" - for cosplay, people or realistic images use \"protogenX53Photorealism_10\" - for anime or cartoons use \"protogenV22Anime_22\" - for landscapes use \"deliberate_v11\" - for coloring pages, use \"coloringPage_v10\" and add \"coloring page of a\" to the prompt.\nIf the user mentions they would like a landscape picture, change the width to 768. If the user mentions they would like a portrait picture, change the height to 768. If the user specifies the dimensions, choose the closest value from 512, 640, 768, 896, 1024. (Never include width or height information in the prompt or negative prompt fields.)\nYou will always append the following list to the negative prompt: \"lowres, bad quality, deformed, mutated, blurry, out of frame, watermark\" If the image includes a person, also add \"ugly, zombie, bad anatomy\" to the negative prompt. Other things to include in the negative prompt are \"lowres, poorly drawn, text\"\nYou will always append the following list to the positive prompt: \"4k, 8k, high quality\"\nIf there is only one word, (or even no input at all), be creative and add elements to make a fun interesting prompt yourself.\nexamples: User input: a dog on a field under a blue sky Your output: {checkpoint: \"deliberate_v2\", \"positive\": \"A beautiful painting of a dog on a field, landscape, blue sky, 4k, 8k, high quality, magnificent, medium shot, details, nature, god rays\", \"negative\": \"low quality artifacts, lowres, bad quality, deformed, mutated, out of frame, watermark\", \"width\": 768, \"height\": 640}\nUser input: anime house Your output: {checkpoint: \"protogenV22Anime_22\", \"positive\": \"A detailed digital illustration of a house, 4k, 8k, high quality, stunning beautiful, sharp focus, strong lines\", \"negative\": \"lowres, bad quality, deformed, mutated, out of frame, watermark\", \"width\": 640, \"height\": 640}\nUser input: kitten in a teacup Your output: {checkpoint: \"analog-diffusion-1.0\", \"positive\": \"A photograph of a super cute teacup kitten, showing his head, smiling happily, the kitten is fluffy, intricate detail, cinematic, 8 k, cel shaded, unreal engine, featured on artstation, pixiv, insane detail\", \"negative\": \"lowres, bad quality, deformed, mutated, out of frame, watermark\", \"width\": 640, \"height\": 640}",
           "prompt": "Butterfly in a field",
-          "x-omni-title": "Generate 1st Stable Diffusion Prompt"
+          "x-omni-title": "Generate 1st Stable Diffusion Prompt",
+          "xOmniEnabled": true
         },
         "inputs": {
           "prompt": {
@@ -507,7 +518,7 @@
           "positive": {
             "connections": [
               {
-                "node": 495,
+                "node": 1015,
                 "input": "prompt",
                 "data": {}
               }
@@ -522,7 +533,7 @@
           "negative": {
             "connections": [
               {
-                "node": 495,
+                "node": 1015,
                 "input": "negative_prompt",
                 "data": {}
               }
@@ -547,7 +558,8 @@
           "enabled": true,
           "instruction": "You are a helpful assistant interpreting user inputs for a generative image program. You output pure valid and syntactically correct JSON without any other embellishments or comments, following the exact structure: { \"checkpoint\" : \"model checkpoint\", \"positive\": \"the prompt\", \"negative\": \"the negative prompt\", \"width\": 640, \"height\": 640 }\nThe prompt field will contain anything the user wants to include in their image, the negative field will have any element the user does not want included in their image. You will compress tokens in the fields by separating the terms within the fields with commas. By default the checkpoint field has the value \"deliberate_v2\". If the user specifies a style on the following list, you will change the checkpoint accordingly: - for photos use \"analog-diffusion-1.0\" - for cosplay, people or realistic images use \"protogenX53Photorealism_10\" - for anime or cartoons use \"protogenV22Anime_22\" - for landscapes use \"deliberate_v11\" - for coloring pages, use \"coloringPage_v10\" and add \"coloring page of a\" to the prompt.\nIf the user mentions they would like a landscape picture, change the width to 768. If the user mentions they would like a portrait picture, change the height to 768. If the user specifies the dimensions, choose the closest value from 512, 640, 768, 896, 1024. (Never include width or height information in the prompt or negative prompt fields.)\nYou will always append the following list to the negative prompt: \"lowres, bad quality, deformed, mutated, blurry, out of frame, watermark\" If the image includes a person, also add \"ugly, zombie, bad anatomy\" to the negative prompt. Other things to include in the negative prompt are \"lowres, poorly drawn, text\"\nYou will always append the following list to the positive prompt: \"4k, 8k, high quality\"\nIf there is only one word, (or even no input at all), be creative and add elements to make a fun interesting prompt yourself.\nexamples: User input: a dog on a field under a blue sky Your output: {checkpoint: \"deliberate_v2\", \"positive\": \"A beautiful painting of a dog on a field, landscape, blue sky, 4k, 8k, high quality, magnificent, medium shot, details, nature, god rays\", \"negative\": \"low quality artifacts, lowres, bad quality, deformed, mutated, out of frame, watermark\", \"width\": 768, \"height\": 640}\nUser input: anime house Your output: {checkpoint: \"protogenV22Anime_22\", \"positive\": \"A detailed digital illustration of a house, 4k, 8k, high quality, stunning beautiful, sharp focus, strong lines\", \"negative\": \"lowres, bad quality, deformed, mutated, out of frame, watermark\", \"width\": 640, \"height\": 640}\nUser input: kitten in a teacup Your output: {checkpoint: \"analog-diffusion-1.0\", \"positive\": \"A photograph of a super cute teacup kitten, showing his head, smiling happily, the kitten is fluffy, intricate detail, cinematic, 8 k, cel shaded, unreal engine, featured on artstation, pixiv, insane detail\", \"negative\": \"lowres, bad quality, deformed, mutated, out of frame, watermark\", \"width\": 640, \"height\": 640}",
           "prompt": "Butterfly in a field",
-          "x-omni-title": "Generate 2nd Stable Diffusion Prompt"
+          "x-omni-title": "Generate 2nd Stable Diffusion Prompt",
+          "xOmniEnabled": true
         },
         "inputs": {
           "prompt": {
@@ -573,7 +585,7 @@
           "positive": {
             "connections": [
               {
-                "node": 496,
+                "node": 1016,
                 "input": "prompt",
                 "data": {}
               }
@@ -588,7 +600,7 @@
           "negative": {
             "connections": [
               {
-                "node": 496,
+                "node": 1016,
                 "input": "negative_prompt",
                 "data": {}
               }
@@ -613,7 +625,8 @@
           "enabled": true,
           "instruction": "You are a helpful assistant interpreting user inputs for a generative image program. You output pure valid and syntactically correct JSON without any other embellishments or comments, following the exact structure: { \"checkpoint\" : \"model checkpoint\", \"positive\": \"the prompt\", \"negative\": \"the negative prompt\", \"width\": 640, \"height\": 640 }\nThe prompt field will contain anything the user wants to include in their image, the negative field will have any element the user does not want included in their image. You will compress tokens in the fields by separating the terms within the fields with commas. By default the checkpoint field has the value \"deliberate_v2\". If the user specifies a style on the following list, you will change the checkpoint accordingly: - for photos use \"analog-diffusion-1.0\" - for cosplay, people or realistic images use \"protogenX53Photorealism_10\" - for anime or cartoons use \"protogenV22Anime_22\" - for landscapes use \"deliberate_v11\" - for coloring pages, use \"coloringPage_v10\" and add \"coloring page of a\" to the prompt.\nIf the user mentions they would like a landscape picture, change the width to 768. If the user mentions they would like a portrait picture, change the height to 768. If the user specifies the dimensions, choose the closest value from 512, 640, 768, 896, 1024. (Never include width or height information in the prompt or negative prompt fields.)\nYou will always append the following list to the negative prompt: \"lowres, bad quality, deformed, mutated, blurry, out of frame, watermark\" If the image includes a person, also add \"ugly, zombie, bad anatomy\" to the negative prompt. Other things to include in the negative prompt are \"lowres, poorly drawn, text\"\nYou will always append the following list to the positive prompt: \"4k, 8k, high quality\"\nIf there is only one word, (or even no input at all), be creative and add elements to make a fun interesting prompt yourself.\nexamples: User input: a dog on a field under a blue sky Your output: {checkpoint: \"deliberate_v2\", \"positive\": \"A beautiful painting of a dog on a field, landscape, blue sky, 4k, 8k, high quality, magnificent, medium shot, details, nature, god rays\", \"negative\": \"low quality artifacts, lowres, bad quality, deformed, mutated, out of frame, watermark\", \"width\": 768, \"height\": 640}\nUser input: anime house Your output: {checkpoint: \"protogenV22Anime_22\", \"positive\": \"A detailed digital illustration of a house, 4k, 8k, high quality, stunning beautiful, sharp focus, strong lines\", \"negative\": \"lowres, bad quality, deformed, mutated, out of frame, watermark\", \"width\": 640, \"height\": 640}\nUser input: kitten in a teacup Your output: {checkpoint: \"analog-diffusion-1.0\", \"positive\": \"A photograph of a super cute teacup kitten, showing his head, smiling happily, the kitten is fluffy, intricate detail, cinematic, 8 k, cel shaded, unreal engine, featured on artstation, pixiv, insane detail\", \"negative\": \"lowres, bad quality, deformed, mutated, out of frame, watermark\", \"width\": 640, \"height\": 640}",
           "prompt": "Butterfly in a field",
-          "x-omni-title": "Generate 3rd Stable Diffusion Prompt"
+          "x-omni-title": "Generate 3rd Stable Diffusion Prompt",
+          "xOmniEnabled": true
         },
         "inputs": {
           "prompt": {
@@ -639,7 +652,7 @@
           "positive": {
             "connections": [
               {
-                "node": 497,
+                "node": 1017,
                 "input": "prompt",
                 "data": {}
               }
@@ -654,7 +667,7 @@
           "negative": {
             "connections": [
               {
-                "node": 497,
+                "node": 1017,
                 "input": "negative_prompt",
                 "data": {}
               }
@@ -672,303 +685,6 @@
           -845.0990781176064
         ],
         "name": "openai.SDpromptParser"
-      },
-      "495": {
-        "id": 495,
-        "data": {
-          "cfg_scale": 7,
-          "checkpoint": "childrensStories_v1CustomA",
-          "enabled": true,
-          "filter_nsfw": true,
-          "height": 512,
-          "negative_prompt": "",
-          "preview": "",
-          "prompt": "",
-          "restore_faces": false,
-          "sampler_name": "DPM++ 2M",
-          "seed": -1,
-          "steps": 30,
-          "tiling": false,
-          "width": 512,
-          "x-omni-title": "Generate 1st Illustration via Stable Diffusion",
-          "x_settings": ""
-        },
-        "inputs": {
-          "prompt": {
-            "connections": [
-              {
-                "node": 491,
-                "output": "positive",
-                "data": {}
-              }
-            ]
-          },
-          "seed": {
-            "connections": []
-          },
-          "sampler_name": {
-            "connections": []
-          },
-          "steps": {
-            "connections": []
-          },
-          "cfg_scale": {
-            "connections": []
-          },
-          "width": {
-            "connections": []
-          },
-          "height": {
-            "connections": []
-          },
-          "restore_faces": {
-            "connections": []
-          },
-          "tiling": {
-            "connections": []
-          },
-          "negative_prompt": {
-            "connections": [
-              {
-                "node": 491,
-                "output": "negative",
-                "data": {}
-              }
-            ]
-          },
-          "checkpoint": {
-            "connections": []
-          },
-          "filter_nsfw": {
-            "connections": []
-          },
-          "x_settings": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "images": {
-            "connections": [
-              {
-                "node": 132,
-                "input": "images",
-                "data": {}
-              }
-            ]
-          },
-          "parameters": {
-            "connections": []
-          },
-          "info": {
-            "connections": []
-          },
-          "seed": {
-            "connections": []
-          }
-        },
-        "position": [
-          2460.997680558336,
-          -2321.5806244555606
-        ],
-        "name": "automatic1111.simpleStableDiffusion"
-      },
-      "496": {
-        "id": 496,
-        "data": {
-          "cfg_scale": 7,
-          "checkpoint": "childrensStories_v1CustomA",
-          "enabled": true,
-          "filter_nsfw": true,
-          "height": 512,
-          "negative_prompt": "",
-          "preview": "",
-          "prompt": "",
-          "restore_faces": false,
-          "sampler_name": "DPM++ 2M",
-          "seed": -1,
-          "steps": 30,
-          "tiling": false,
-          "width": 512,
-          "x-omni-title": "Generate 2nd Illustration via Stable Diffusion",
-          "x_settings": ""
-        },
-        "inputs": {
-          "prompt": {
-            "connections": [
-              {
-                "node": 493,
-                "output": "positive",
-                "data": {}
-              }
-            ]
-          },
-          "seed": {
-            "connections": []
-          },
-          "sampler_name": {
-            "connections": []
-          },
-          "steps": {
-            "connections": []
-          },
-          "cfg_scale": {
-            "connections": []
-          },
-          "width": {
-            "connections": []
-          },
-          "height": {
-            "connections": []
-          },
-          "restore_faces": {
-            "connections": []
-          },
-          "tiling": {
-            "connections": []
-          },
-          "negative_prompt": {
-            "connections": [
-              {
-                "node": 493,
-                "output": "negative",
-                "data": {}
-              }
-            ]
-          },
-          "checkpoint": {
-            "connections": []
-          },
-          "filter_nsfw": {
-            "connections": []
-          },
-          "x_settings": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "images": {
-            "connections": [
-              {
-                "node": 132,
-                "input": "images",
-                "data": {}
-              }
-            ]
-          },
-          "parameters": {
-            "connections": []
-          },
-          "info": {
-            "connections": []
-          },
-          "seed": {
-            "connections": []
-          }
-        },
-        "position": [
-          2479.2618509869094,
-          -1580.5996386798927
-        ],
-        "name": "automatic1111.simpleStableDiffusion"
-      },
-      "497": {
-        "id": 497,
-        "data": {
-          "cfg_scale": 7,
-          "checkpoint": "childrensStories_v1CustomA",
-          "enabled": true,
-          "filter_nsfw": true,
-          "height": 512,
-          "negative_prompt": "",
-          "preview": "",
-          "prompt": "",
-          "restore_faces": false,
-          "sampler_name": "DPM++ 2M",
-          "seed": -1,
-          "steps": 30,
-          "tiling": false,
-          "width": 512,
-          "x-omni-title": "Generate 3rd Illustration via Stable Diffusion",
-          "x_settings": ""
-        },
-        "inputs": {
-          "prompt": {
-            "connections": [
-              {
-                "node": 494,
-                "output": "positive",
-                "data": {}
-              }
-            ]
-          },
-          "seed": {
-            "connections": []
-          },
-          "sampler_name": {
-            "connections": []
-          },
-          "steps": {
-            "connections": []
-          },
-          "cfg_scale": {
-            "connections": []
-          },
-          "width": {
-            "connections": []
-          },
-          "height": {
-            "connections": []
-          },
-          "restore_faces": {
-            "connections": []
-          },
-          "tiling": {
-            "connections": []
-          },
-          "negative_prompt": {
-            "connections": [
-              {
-                "node": 494,
-                "output": "negative",
-                "data": {}
-              }
-            ]
-          },
-          "checkpoint": {
-            "connections": []
-          },
-          "filter_nsfw": {
-            "connections": []
-          },
-          "x_settings": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "images": {
-            "connections": [
-              {
-                "node": 132,
-                "input": "images",
-                "data": {}
-              }
-            ]
-          },
-          "parameters": {
-            "connections": []
-          },
-          "info": {
-            "connections": []
-          },
-          "seed": {
-            "connections": []
-          }
-        },
-        "position": [
-          2488.8713746501735,
-          -770.8516552916203
-        ],
-        "name": "automatic1111.simpleStableDiffusion"
       },
       "1013": {
         "id": 1013,
@@ -999,7 +715,8 @@
               "title": " Question",
               "type": "string"
             }
-          }
+          },
+          "xOmniEnabled": true
         },
         "inputs": {
           "_question": {
@@ -1048,7 +765,8 @@
               "title": " Question",
               "type": "string"
             }
-          }
+          },
+          "xOmniEnabled": true
         },
         "inputs": {
           "_question": {
@@ -1086,6 +804,345 @@
           -806.5154228030395
         ],
         "name": "omnitool.multi_text_replace"
+      },
+      "1015": {
+        "id": 1015,
+        "data": {
+          "apply_watermark": true,
+          "enabled": true,
+          "guidance_scale": 7.5,
+          "height": 512,
+          "high_noise_frac": 0.8,
+          "image": "",
+          "lora_scale": 0.6,
+          "mask": "",
+          "negative_prompt": "",
+          "num_inference_steps": 50,
+          "num_outputs": 1,
+          "prompt": "An astronaut riding a rainbow unicorn, cinematic, dramatic",
+          "prompt_strength": 0.8,
+          "refine": "expert_ensemble_refiner",
+          "refine_steps": 0,
+          "replicate_weights": "",
+          "scheduler": "DPMSolverMultistep",
+          "seed": -1,
+          "width": 512,
+          "x-omni-title": "Generate 1st Illustration",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "mask": {
+            "connections": []
+          },
+          "enabled": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          },
+          "image": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 491,
+                "output": "positive",
+                "data": {}
+              }
+            ]
+          },
+          "refine": {
+            "connections": []
+          },
+          "scheduler": {
+            "connections": []
+          },
+          "lora_scale": {
+            "connections": []
+          },
+          "num_outputs": {
+            "connections": []
+          },
+          "refine_steps": {
+            "connections": []
+          },
+          "guidance_scale": {
+            "connections": []
+          },
+          "apply_watermark": {
+            "connections": []
+          },
+          "high_noise_frac": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": [
+              {
+                "node": 491,
+                "output": "negative",
+                "data": {}
+              }
+            ]
+          },
+          "prompt_strength": {
+            "connections": []
+          },
+          "replicate_weights": {
+            "connections": []
+          },
+          "num_inference_steps": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 132,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          2415.936610546974,
+          -2346.254130062041
+        ],
+        "name": "omni-extension-replicate:run.stability-ai/sdxl"
+      },
+      "1016": {
+        "id": 1016,
+        "data": {
+          "apply_watermark": true,
+          "enabled": true,
+          "guidance_scale": 7.5,
+          "height": 512,
+          "high_noise_frac": 0.8,
+          "image": "",
+          "lora_scale": 0.6,
+          "mask": "",
+          "negative_prompt": "",
+          "num_inference_steps": 50,
+          "num_outputs": 1,
+          "prompt": "An astronaut riding a rainbow unicorn, cinematic, dramatic",
+          "prompt_strength": 0.8,
+          "refine": "expert_ensemble_refiner",
+          "refine_steps": 0,
+          "replicate_weights": "",
+          "scheduler": "DPMSolverMultistep",
+          "seed": -1,
+          "width": 512,
+          "x-omni-title": "Generate 2nd Illustration",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "mask": {
+            "connections": []
+          },
+          "enabled": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          },
+          "image": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 493,
+                "output": "positive",
+                "data": {}
+              }
+            ]
+          },
+          "refine": {
+            "connections": []
+          },
+          "scheduler": {
+            "connections": []
+          },
+          "lora_scale": {
+            "connections": []
+          },
+          "num_outputs": {
+            "connections": []
+          },
+          "refine_steps": {
+            "connections": []
+          },
+          "guidance_scale": {
+            "connections": []
+          },
+          "apply_watermark": {
+            "connections": []
+          },
+          "high_noise_frac": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": [
+              {
+                "node": 493,
+                "output": "negative",
+                "data": {}
+              }
+            ]
+          },
+          "prompt_strength": {
+            "connections": []
+          },
+          "replicate_weights": {
+            "connections": []
+          },
+          "num_inference_steps": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 132,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          2408.5670253427693,
+          -1336.9098441900428
+        ],
+        "name": "omni-extension-replicate:run.stability-ai/sdxl"
+      },
+      "1017": {
+        "id": 1017,
+        "data": {
+          "apply_watermark": true,
+          "enabled": true,
+          "guidance_scale": 7.5,
+          "height": 512,
+          "high_noise_frac": 0.8,
+          "image": "",
+          "lora_scale": 0.6,
+          "mask": "",
+          "negative_prompt": "",
+          "num_inference_steps": 50,
+          "num_outputs": 1,
+          "prompt": "An astronaut riding a rainbow unicorn, cinematic, dramatic",
+          "prompt_strength": 0.8,
+          "refine": "expert_ensemble_refiner",
+          "refine_steps": 0,
+          "replicate_weights": "",
+          "scheduler": "DPMSolverMultistep",
+          "seed": -1,
+          "width": 512,
+          "x-omni-title": "Generate 3rd Illustration",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "mask": {
+            "connections": []
+          },
+          "enabled": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          },
+          "image": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 494,
+                "output": "positive",
+                "data": {}
+              }
+            ]
+          },
+          "refine": {
+            "connections": []
+          },
+          "scheduler": {
+            "connections": []
+          },
+          "lora_scale": {
+            "connections": []
+          },
+          "num_outputs": {
+            "connections": []
+          },
+          "refine_steps": {
+            "connections": []
+          },
+          "guidance_scale": {
+            "connections": []
+          },
+          "apply_watermark": {
+            "connections": []
+          },
+          "high_noise_frac": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": [
+              {
+                "node": 494,
+                "output": "negative",
+                "data": {}
+              }
+            ]
+          },
+          "prompt_strength": {
+            "connections": []
+          },
+          "replicate_weights": {
+            "connections": []
+          },
+          "num_inference_steps": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 132,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          2396.8020212042684,
+          -301.9730759544731
+        ],
+        "name": "omni-extension-replicate:run.stability-ai/sdxl"
       }
     }
   },

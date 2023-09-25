@@ -1,61 +1,29 @@
 {
-  "id": "0f063341-b67e-4eb5-8586-67bdd316cb63",
-  "version": "draft",
+  "id": "bd335cbb-9a94-4c9c-b253-d88c112b8aa5",
   "meta": {
-    "created": 1691661366559,
-    "description": "Show her a picture and she will recommend you a novel to read.",
     "name": "Monica the Librarian",
+    "author": "Anonymous",
+    "description": "Show her a picture and she will recommend you a novel to read.",
+    "help": "",
+    "created": 1695619571906,
+    "updated": 1695619635389,
     "pictureUrl": "monica.png",
-    "tags": ["lifestyle", "books & reference"],
-    "updated": 1691692004806
+    "tags": [
+      "lifestyle",
+      "books & reference"
+    ]
   },
   "rete": {
     "id": "mercs@0.1.1",
     "nodes": {
-      "64": {
-        "id": 64,
-        "data": {
-          "image": "",
-          "model": "clip"
-        },
-        "inputs": {
-          "image": {
-            "connections": [
-              {
-                "node": 145,
-                "output": "images",
-                "data": {}
-              }
-            ]
-          },
-          "model": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "caption": {
-            "connections": [
-              {
-                "node": 65,
-                "input": "prompt",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "position": [
-          -472.7826747963564,
-          247.669531620239
-        ],
-        "name": "automatic1111.interrogate"
-      },
       "65": {
         "id": 65,
         "data": {
           "instruction": "You are a literary connoisseur named \"Monica the Librarian\".\n\nYou are vivacious, sarcastic and superfluously eloquent. But above all, you are helpful! You will always recommend a good book, even if you personally dislike aspects of your recommendation.\n\nYou will receive a programmatically created description of an image.\n(There will be additional words and numbers in brackets, just ignore those.)\nYou will use the content of that description to recommend a novel, book or short story that fits the overall theme of the image.\n\nAlways start your answer with an introduction like: \"Cordial greetings from Monica, your digital bookworm companion\" or \"You are now graced by the communicative presence of Monica\" or \"Salutations from Monica, your humble Librarian, about to guide you like a lighthouse through the fogs of fiction.\", \"I, Monica, a veritable bastion of bookish knowledge and wisdom...\"\n\nHowever, keep your responses brief and succinct.\n\nIf you are absolutely certain the book is definitely available on Project Gutenberg, provide a direct link like so:\n* [Flatland: A Romance of Many Dimensions](https://www.gutenberg.org/ebooks/97)\nIf you are in any doubt if the book is on Project Gutenberg, instead, invent an amusing hard to locate place in your library where the book may be found instead.\n\nMonica, Stay in character.",
           "model": "gpt-3.5-turbo",
           "prompt": "",
-          "temperature": 1
+          "temperature": 1,
+          "xOmniEnabled": true
         },
         "inputs": {
           "model": {
@@ -70,8 +38,8 @@
           "prompt": {
             "connections": [
               {
-                "node": 64,
-                "output": "caption",
+                "node": 1064,
+                "output": "output",
                 "data": {}
               }
             ]
@@ -100,7 +68,8 @@
           "audio": "",
           "documents": "",
           "images": "",
-          "text": ""
+          "text": "",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -123,7 +92,7 @@
           "images": {
             "connections": [
               {
-                "node": 64,
+                "node": 1064,
                 "input": "image",
                 "data": {}
               }
@@ -133,9 +102,6 @@
             "connections": []
           },
           "documents": {
-            "connections": []
-          },
-          "json": {
             "connections": []
           }
         },
@@ -152,7 +118,10 @@
           "documents": "",
           "images": "",
           "json": "",
-          "text": ""
+          "object": null,
+          "text": "",
+          "textType": "text/markdown",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -173,7 +142,7 @@
           "documents": {
             "connections": []
           },
-          "json": {
+          "object": {
             "connections": []
           }
         },
@@ -183,12 +152,60 @@
           74.84460768510385
         ],
         "name": "omnitool.chat_output"
+      },
+      "1064": {
+        "id": 1064,
+        "data": {
+          "enabled": true,
+          "image": "https://replicate.delivery/mgxm/4dc7763a-f234-4a7c-a85f-cb9e05e37cf8/COCO_val2014_000000579664.jpg",
+          "model": "coco",
+          "use_beam_search": false,
+          "x-omni-title": "Describe Image",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 145,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          },
+          "enabled": {
+            "connections": []
+          },
+          "model": {
+            "connections": []
+          },
+          "use_beam_search": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 65,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -513.604999619555,
+          64.38992750715707
+        ],
+        "name": "omni-extension-replicate:run.rmokady/clip_prefix_caption"
       }
     }
   },
   "api": {
     "fields": {}
   },
+  "ui": {},
   "_flags": [
     "owner"
   ]

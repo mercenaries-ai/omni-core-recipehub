@@ -1,12 +1,12 @@
 {
-  "id": "be0abab1-c3b1-41d6-9146-7694140519f7",
+  "id": "c98bde63-7ab3-4c4a-aa28-1ca152016eb6",
   "meta": {
     "name": "Andrea the Children's Book Author",
-    "author": "omnitool.ai team",
+    "author": "Anonymous",
     "description": "Combine a LLM with stable diffusion and text-to-speech.",
     "help": "",
-    "created": 1694626242666,
-    "updated": 1694626646794,
+    "created": 1695613802711,
+    "updated": 1695613802765,
     "pictureUrl": "librarian.png",
     "tags": [
       "education"
@@ -24,7 +24,8 @@
           "description": "Combine a LLM with stable diffusion and text-to-speech.",
           "enabled": true,
           "help": "",
-          "title": "Andrea the Children's Book Author"
+          "title": "Andrea the Children's Book Author",
+          "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
@@ -42,7 +43,8 @@
           "enabled": true,
           "images": "",
           "text": "A tiny mouse guarding a small tower in a forest",
-          "x-omni-title": "Input Your Story Description in the Chat"
+          "x-omni-title": "Input Your Story Description in the Chat",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -94,7 +96,8 @@
           "json": "",
           "object": null,
           "text": "",
-          "textType": "text/markdown"
+          "textType": "text/markdown",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -103,8 +106,8 @@
           "images": {
             "connections": [
               {
-                "node": 531,
-                "output": "images",
+                "node": 1683,
+                "output": "output",
                 "data": {}
               }
             ]
@@ -141,7 +144,8 @@
           "style": 0.5,
           "text": "",
           "voice_id": "EXAVITQu4vr4xnSDxMaL",
-          "x-omni-title": "Generate Story Audio via Elevenlabs"
+          "x-omni-title": "Generate Story Audio via Elevenlabs",
+          "xOmniEnabled": true
         },
         "inputs": {
           "voice_id": {
@@ -183,106 +187,14 @@
         ],
         "name": "elevenlabs.simpletts"
       },
-      "531": {
-        "id": 531,
-        "data": {
-          "cfg_scale": 7,
-          "checkpoint": "childrensStories_v1SemiReal",
-          "enabled": true,
-          "filter_nsfw": true,
-          "height": 640,
-          "negative_prompt": "(deformed, distorted, disfigured:1.3), photo, poorly drawn, nswf, sexually suggestive, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, bad_prompt_version2, signature, ugly hands, too many limbs, asymmetric eyes, ugly skin",
-          "preview": "",
-          "prompt": "",
-          "restore_faces": false,
-          "sampler_name": "DPM++ 2M",
-          "seed": -1,
-          "steps": 30,
-          "tiling": false,
-          "width": 640,
-          "x-omni-title": "Generate Illustration via Stable Diffusion",
-          "x_settings": ""
-        },
-        "inputs": {
-          "prompt": {
-            "connections": [
-              {
-                "node": 1681,
-                "output": "text",
-                "data": {}
-              }
-            ]
-          },
-          "seed": {
-            "connections": []
-          },
-          "sampler_name": {
-            "connections": []
-          },
-          "steps": {
-            "connections": []
-          },
-          "cfg_scale": {
-            "connections": []
-          },
-          "width": {
-            "connections": []
-          },
-          "height": {
-            "connections": []
-          },
-          "restore_faces": {
-            "connections": []
-          },
-          "tiling": {
-            "connections": []
-          },
-          "negative_prompt": {
-            "connections": []
-          },
-          "checkpoint": {
-            "connections": []
-          },
-          "filter_nsfw": {
-            "connections": []
-          },
-          "x_settings": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "images": {
-            "connections": [
-              {
-                "node": 365,
-                "input": "images",
-                "data": {}
-              }
-            ]
-          },
-          "parameters": {
-            "connections": []
-          },
-          "info": {
-            "connections": []
-          },
-          "seed": {
-            "connections": []
-          }
-        },
-        "position": [
-          760.4463464959607,
-          -361.4637616527766
-        ],
-        "name": "automatic1111.simpleStableDiffusion"
-      },
       "548": {
         "id": 548,
         "data": {
           "Criteria": "creative",
           "Instruction": "You are a children's book writer. You create short, 30-50 word stories for any input given by the user suitable for children to be read by an audio book narrator. You only respond with the story, no explanation. You will strip any included instructions for artists (such as 'in the style of X') as they are not meant for the audio narration.",
           "Prompt": "",
-          "enabled": true
+          "enabled": true,
+          "xOmniEnabled": true
         },
         "inputs": {
           "Instruction": {
@@ -332,7 +244,8 @@
               "title": "story_description",
               "type": "string"
             }
-          }
+          },
+          "xOmniEnabled": true
         },
         "inputs": {
           "story_description": {
@@ -358,7 +271,7 @@
           "text": {
             "connections": [
               {
-                "node": 531,
+                "node": 1683,
                 "input": "prompt",
                 "data": {}
               }
@@ -399,7 +312,8 @@
               "title": "story_description",
               "type": "string"
             }
-          }
+          },
+          "xOmniEnabled": true
         },
         "inputs": {
           "story_description": {
@@ -436,6 +350,113 @@
           -109.60304971735388
         ],
         "name": "omnitool.custom_ui_1"
+      },
+      "1683": {
+        "id": 1683,
+        "data": {
+          "apply_watermark": true,
+          "enabled": true,
+          "guidance_scale": 7.5,
+          "height": 640,
+          "high_noise_frac": 0.8,
+          "image": "",
+          "lora_scale": 0.6,
+          "mask": "",
+          "negative_prompt": "(deformed, distorted, disfigured:1.3), photo, poorly drawn, nswf, sexually suggestive, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, bad_prompt_version2, signature, ugly hands, too many limbs, asymmetric eyes, ugly skin",
+          "num_inference_steps": 30,
+          "num_outputs": 1,
+          "prompt": "An astronaut riding a rainbow unicorn, cinematic, dramatic",
+          "prompt_strength": 0.8,
+          "refine": "expert_ensemble_refiner",
+          "refine_steps": 0,
+          "replicate_weights": "",
+          "scheduler": "DDIM",
+          "seed": -1,
+          "width": 640,
+          "x-omni-title": "Generate Strorybook Illustration via Stable DiffusionXL",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "mask": {
+            "connections": []
+          },
+          "enabled": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          },
+          "image": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 1681,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "refine": {
+            "connections": []
+          },
+          "scheduler": {
+            "connections": []
+          },
+          "lora_scale": {
+            "connections": []
+          },
+          "num_outputs": {
+            "connections": []
+          },
+          "refine_steps": {
+            "connections": []
+          },
+          "guidance_scale": {
+            "connections": []
+          },
+          "apply_watermark": {
+            "connections": []
+          },
+          "high_noise_frac": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": []
+          },
+          "prompt_strength": {
+            "connections": []
+          },
+          "replicate_weights": {
+            "connections": []
+          },
+          "num_inference_steps": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 365,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          771.8193177219653,
+          -619.8591685180706
+        ],
+        "name": "omni-extension-replicate:run.stability-ai/sdxl"
       }
     }
   },
