@@ -2,7 +2,7 @@
   "name": "omni-extension-template",
   "packageManager": "yarn@3.3.1",
   "scripts": {
-    "build": "esbuild --bundle ./src/main.ts --outdir=../../public/  --format=esm --analyze --color=true --target=es2020  --platform=browser"
+    "build": "esbuild --bundle ./src/extension.ts --outdir=../../public/  --format=esm --analyze --color=true --target=es2020  --platform=browser"
   },
   "devDependencies": {
     "esbuild": "^0.18.4",
