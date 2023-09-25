@@ -1,12 +1,12 @@
 {
-  "id": "cfe31c51-2891-48b7-ba06-4781c13670e2",
+  "id": "89b747f6-330a-4bcd-aa7d-8f04be84c8b7",
   "meta": {
     "name": "Photographer",
     "author": "omnitool.ai team",
     "description": "Take photos with AI! Craft stunning virtual photographs with just a few descriptive words.",
     "help": "",
     "created": 1694630083554,
-    "updated": 1694630426557,
+    "updated": 1695635602434,
     "pictureUrl": "photographer.png",
     "tags": [
       "photography"
@@ -15,94 +15,6 @@
   "rete": {
     "id": "mercs@0.1.1",
     "nodes": {
-      "28": {
-        "id": 28,
-        "data": {
-          "cfg_scale": 5.5,
-          "checkpoint": "analog-diffusion-1.0",
-          "enabled": true,
-          "filter_nsfw": true,
-          "height": 640,
-          "negative_prompt": "(worst quality:0.8), cartoon, halftone print, (cinematic:1.2), verybadimagenegative_v1.3, easynegative, (surreal:0.8), (modernism:0.8), (art deco:0.8), (art nouveau:0.8)",
-          "preview": "",
-          "prompt": "",
-          "restore_faces": true,
-          "sampler_name": "DPM++ 2M Karras",
-          "seed": -1,
-          "steps": 30,
-          "width": 832,
-          "x_settings": ""
-        },
-        "inputs": {
-          "prompt": {
-            "connections": [
-              {
-                "node": 2212,
-                "output": "text",
-                "data": {}
-              }
-            ]
-          },
-          "seed": {
-            "connections": []
-          },
-          "sampler_name": {
-            "connections": []
-          },
-          "steps": {
-            "connections": []
-          },
-          "cfg_scale": {
-            "connections": []
-          },
-          "width": {
-            "connections": []
-          },
-          "height": {
-            "connections": []
-          },
-          "restore_faces": {
-            "connections": []
-          },
-          "negative_prompt": {
-            "connections": []
-          },
-          "checkpoint": {
-            "connections": []
-          },
-          "filter_nsfw": {
-            "connections": []
-          },
-          "x_settings": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "images": {
-            "connections": [
-              {
-                "node": 65,
-                "input": "images",
-                "data": {}
-              }
-            ]
-          },
-          "parameters": {
-            "connections": []
-          },
-          "info": {
-            "connections": []
-          },
-          "seed": {
-            "connections": []
-          }
-        },
-        "position": [
-          -376.50276505107263,
-          -714.3845480161384
-        ],
-        "name": "automatic1111.simplePhotography"
-      },
       "64": {
         "id": 64,
         "data": {
@@ -110,7 +22,8 @@
           "documents": "",
           "enabled": true,
           "images": "",
-          "text": "Lake Tahoe"
+          "text": "An off-center portrait of an old bohemian barista preparing coffee in a boutique vintage cafe.",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -147,8 +60,8 @@
           }
         },
         "position": [
-          -1733.656069964911,
-          -363.1706588933283
+          -1825.544084192841,
+          -379.42175925086383
         ],
         "name": "omnitool.chat_input"
       },
@@ -162,7 +75,8 @@
           "json": "",
           "object": null,
           "text": "",
-          "textType": "text/markdown"
+          "textType": "text/markdown",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -171,8 +85,8 @@
           "images": {
             "connections": [
               {
-                "node": 28,
-                "output": "images",
+                "node": 2232,
+                "output": "output",
                 "data": {}
               }
             ]
@@ -222,7 +136,8 @@
               "title": "PROMPT",
               "type": "string"
             }
-          }
+          },
+          "xOmniEnabled": true
         },
         "inputs": {
           "prompt": {
@@ -250,8 +165,8 @@
           }
         },
         "position": [
-          -1290.7042599929407,
-          -431.455621222379
+          -1359.1452623465175,
+          -432.86690817690027
         ],
         "name": "omnitool.custom_ui_1"
       },
@@ -263,7 +178,7 @@
           "images": "",
           "prompt": "",
           "replace": null,
-          "source": "a perfect photo of {input:PROMPT}",
+          "source": "Photograph of  {input:PROMPT}, (good composition), (in frame), 8k, 4k, detailed, attractive, beautiful, impressive, photorealistic, realistic, cinematic composition, volumetric lighting, high-resolution, vivid, detailed, stunning, professional, lifelike, crisp, flawless, DSLR, 4k, 8k, 16k, 1024, 2048, 4096, detailed, sharp, best quality, high quality, highres, absurdres",
           "x-omni-dynamicInputs": {
             "prompt": {
               "customSocket": "text",
@@ -271,7 +186,8 @@
               "title": "PROMPT",
               "type": "string"
             }
-          }
+          },
+          "xOmniEnabled": true
         },
         "inputs": {
           "prompt": {
@@ -297,7 +213,7 @@
           "text": {
             "connections": [
               {
-                "node": 28,
+                "node": 2232,
                 "input": "prompt",
                 "data": {}
               }
@@ -305,8 +221,8 @@
           }
         },
         "position": [
-          -823.43284520977,
-          -296.89561561800235
+          -857.2966592024867,
+          -508.79116232979226
         ],
         "name": "omnitool.multi_text_replace"
       },
@@ -319,7 +235,8 @@
           "description": "Take photos with AI! Craft stunning virtual photographs with just a few descriptive words.",
           "enabled": true,
           "help": "",
-          "title": "Photographer"
+          "title": "Photographer",
+          "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
@@ -328,6 +245,147 @@
           -787.7319215468292
         ],
         "name": "omnitool.recipe_metadata"
+      },
+      "2232": {
+        "id": 2232,
+        "data": {
+          "apply_watermark": true,
+          "enabled": true,
+          "guidance_scale": 5,
+          "height": 896,
+          "high_noise_frac": 0.8,
+          "image": "",
+          "lora_scale": 0.6,
+          "mask": "",
+          "negative_prompt": "(bad composition), (out of frame), (nsfw), (nude), (sexual), off center, drawing, anime, art, cartoon, painting, drawing, anime, art, cartoon, painting, drawing, anime, art, cartoon, painting, Low quality, worst quality, bad anatomy, bad gun anatomy, 144p, blurry, censored, artifacts, jpeg artifact, oversaturation, watermark, signature, EasyNegative, , verybadimagenegative, bad hand, duplicates, distortion",
+          "num_inference_steps": 32,
+          "num_outputs": 1,
+          "prompt": "An astronaut riding a rainbow unicorn, cinematic, dramatic",
+          "prompt_strength": 0.8,
+          "refine": "expert_ensemble_refiner",
+          "refine_steps": 0,
+          "replicate_weights": "",
+          "scheduler": "DPMSolverMultistep",
+          "seed": 0,
+          "width": 1152,
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "mask": {
+            "connections": []
+          },
+          "enabled": {
+            "connections": []
+          },
+          "seed": {
+            "connections": [
+              {
+                "node": 2233,
+                "output": "number",
+                "data": {}
+              }
+            ]
+          },
+          "image": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 2212,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "refine": {
+            "connections": []
+          },
+          "scheduler": {
+            "connections": []
+          },
+          "lora_scale": {
+            "connections": []
+          },
+          "num_outputs": {
+            "connections": []
+          },
+          "refine_steps": {
+            "connections": []
+          },
+          "guidance_scale": {
+            "connections": []
+          },
+          "apply_watermark": {
+            "connections": []
+          },
+          "high_noise_frac": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": []
+          },
+          "prompt_strength": {
+            "connections": []
+          },
+          "replicate_weights": {
+            "connections": []
+          },
+          "num_inference_steps": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 65,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -360.7884754139411,
+          -822.274911866494
+        ],
+        "name": "omni-extension-replicate:run.stability-ai/sdxl"
+      },
+      "2233": {
+        "id": 2233,
+        "data": {
+          "number": 0,
+          "number_format": "timestamp",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "number": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "number": {
+            "connections": [
+              {
+                "node": 2232,
+                "input": "seed",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -919.5443390260137,
+          -827.1842835060413
+        ],
+        "name": "omnitool.number_input"
       }
     }
   },
