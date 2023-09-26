@@ -3,13 +3,19 @@
  * All rights reserved.
  */
 
-import { run } from '../scripts/server/importRecipes.js';
-const extensionHooks = {
-    'server_loaded': async function(ctx, omniPackage, installationId, orgId, customBaseUrl, duration) {
-      console.log('Server loaded:', omniPackage);
-      console.log('Reconciling published recipes...')
-      await run();  // Trigger the script to run when a package is installed
-    }
-  };
+import { run } from '../scripts/server/import.js';
 
-export default {hooks: extensionHooks}
+async function init(ctx) {
+  console.log('Importing demo recipes...');
+  await run();
+}
+// TODO: Need to figure out how to get right event to trigger this
+const extensionHooks = {
+    // 'extensions_loaded': async function(ctx, omniPackage, installationId, orgId, customBaseUrl, duration) {
+    //   console.log('Extension loaded:', omniPackage);
+    //   console.log('Reconciling published recipes...')
+    //   await run();  // Trigger the script to run when a package is installed
+    // }
+};
+
+export default {hooks: extensionHooks, init}

@@ -102,7 +102,7 @@ async function reconcilePublishedRecipes(publishedRecipes) {
 }
 
 const script = {
-    name: 'importRecipes',
+    name: 'import',
     exec: async function (ctx, payload) {
         console.log('Starting recipe import...');
         await run();
