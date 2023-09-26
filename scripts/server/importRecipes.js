@@ -110,5 +110,4 @@ const script = {
         return { status: 'success', message: 'Recipe import completed.' };
     }
 };
-run()
 export { run, script };
