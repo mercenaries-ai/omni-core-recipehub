@@ -1,12 +1,12 @@
 {
-  "id": "9e6c2534-f154-4f49-856b-f0ca199fadaa",
+  "id": "9c4f9e88-395b-4f23-8762-73dfc0f8e58b",
   "meta": {
     "name": "Chef François Food Photography",
     "author": "omnitool.ai team",
     "description": "Food photography with flourishing presentation and delivery.",
     "help": "",
-    "created": 1695613994168,
-    "updated": 1695617534775,
+    "created": 1695785507874,
+    "updated": 1695787189967,
     "pictureUrl": "chef.png",
     "tags": [
       "photography"
@@ -70,13 +70,19 @@
           "documents": "",
           "enabled": true,
           "images": "",
-          "text": "Macarons and espresso.",
-          "x-omni-title": "Input the Dish Name in the Chat",
+          "text": "Macarons and espresso",
+          "x-omni-title": "Take Culinary Idea from the Chat",
           "xOmniEnabled": true
         },
         "inputs": {
           "text": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2495,
+                "output": "text",
+                "data": {}
+              }
+            ]
           },
           "images": {
             "connections": []
@@ -97,7 +103,7 @@
                 "data": {}
               },
               {
-                "node": 1458,
+                "node": 1459,
                 "input": "prompt",
                 "data": {}
               }
@@ -111,11 +117,14 @@
           },
           "documents": {
             "connections": []
+          },
+          "json": {
+            "connections": []
           }
         },
         "position": [
-          -593.2347194086921,
-          121.3284375433287
+          -697.5682796084022,
+          -16.526908110498965
         ],
         "name": "omnitool.chat_input"
       },
@@ -125,11 +134,13 @@
           "audio": "",
           "documents": "",
           "enabled": true,
+          "files": "",
           "images": "",
           "json": "",
           "object": null,
           "text": "",
           "textType": "text/markdown",
+          "videos": "",
           "xOmniEnabled": true
         },
         "inputs": {
@@ -157,6 +168,12 @@
           "documents": {
             "connections": []
           },
+          "videos": {
+            "connections": []
+          },
+          "files": {
+            "connections": []
+          },
           "object": {
             "connections": []
           }
@@ -177,78 +194,17 @@
           "description": "Food photography with flourishing presentation and delivery.",
           "enabled": true,
           "help": "",
+          "license": "",
           "title": "Chef François Food Photography",
           "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
         "position": [
-          -996.554086707223,
-          -264.90402307832477
+          -1895.686764578664,
+          -217.80609932794874
         ],
         "name": "omnitool.recipe_metadata"
-      },
-      "1458": {
-        "id": 1458,
-        "data": {
-          "button": "",
-          "enabled": true,
-          "prompt": "",
-          "source": "![Custom UI](/chef.png)  \n*{{ RECIPE recipe.meta.description }}*\n{{ INPUT inputs.prompt }}  \n💡Hint: \nEnter your culinary idea! e.g. Macarons and espresso.\n\n{{ RUN_BUTTON \"Make it so!\" }}",
-          "x-omni-dynamicInputs": {
-            "prompt": {
-              "control": {
-                "type": "AlpineLabelControl"
-              },
-              "customSocket": "text",
-              "name": "prompt",
-              "title": "PROMPT",
-              "type": "string"
-            }
-          },
-          "x-omni-dynamicOutputs": {
-            "prompt": {
-              "control": {
-                "type": "AlpineLabelControl"
-              },
-              "customSocket": "text",
-              "name": "prompt",
-              "title": "PROMPT",
-              "type": "string"
-            }
-          },
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "prompt": {
-            "connections": [
-              {
-                "node": 27,
-                "output": "text",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "outputs": {
-          "prompt": {
-            "connections": [
-              {
-                "node": 1459,
-                "input": "prompt",
-                "data": {}
-              }
-            ]
-          },
-          "any": {
-            "connections": []
-          }
-        },
-        "position": [
-          -590.7743805394443,
-          556.0077142887063
-        ],
-        "name": "omnitool.custom_ui_1"
       },
       "1459": {
         "id": 1459,
@@ -267,14 +223,15 @@
               "type": "string"
             }
           },
+          "x-omni-title": "Write the Stable Diffusion Prompt",
           "xOmniEnabled": true
         },
         "inputs": {
           "prompt": {
             "connections": [
               {
-                "node": 1458,
-                "output": "prompt",
+                "node": 27,
+                "output": "text",
                 "data": {}
               }
             ]
@@ -301,8 +258,8 @@
           }
         },
         "position": [
-          -99.16572487394959,
-          -102.92968540312438
+          -187.74193859933905,
+          393.9027186695488
         ],
         "name": "omnitool.multi_text_replace"
       },
@@ -411,6 +368,173 @@
           104.6968660799771
         ],
         "name": "omni-extension-replicate:run.stability-ai/sdxl"
+      },
+      "2495": {
+        "id": 2495,
+        "data": {
+          "button": "",
+          "editMode": false,
+          "enableUI": true,
+          "source": {
+            "components": [
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "Chef François Food Photography",
+                "input": false,
+                "key": "x-title",
+                "label": "Recipe Title",
+                "refreshOnChange": false,
+                "tableView": false,
+                "tag": "h3",
+                "type": "htmlelement"
+              },
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "Food photography with flourishing presentation and delivery.",
+                "input": false,
+                "key": "x-desc",
+                "label": "Recipe Description",
+                "refreshOnChange": false,
+                "tableView": false,
+                "type": "htmlelement"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "applyMaskOn": "change",
+                        "autoExpand": false,
+                        "description": "A simple input string",
+                        "input": true,
+                        "key": "text",
+                        "label": "Enter your culinary idea! e.g. Macarons and espresso.",
+                        "tableView": true,
+                        "type": "textarea"
+                      }
+                    ],
+                    "key": "x-inputs",
+                    "label": "Inputs"
+                  },
+                  {
+                    "components": [
+                      {
+                        "attrs": [
+                          {
+                            "attr": "id",
+                            "value": "outputContent"
+                          }
+                        ],
+                        "content": "Results will show up here!",
+                        "input": false,
+                        "key": "x-outputContent",
+                        "label": "Results Pane",
+                        "refreshOnChange": false,
+                        "tableView": false,
+                        "tag": "div",
+                        "type": "htmlelement"
+                      }
+                    ],
+                    "key": "x-results",
+                    "label": "Results"
+                  }
+                ],
+                "input": false,
+                "key": "tabs",
+                "label": "Tabs",
+                "tableView": false,
+                "type": "tabs"
+              },
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "&nbsp;",
+                "input": false,
+                "key": "html",
+                "label": "HTML",
+                "refreshOnChange": false,
+                "tableView": false,
+                "tag": "div",
+                "type": "htmlelement"
+              },
+              {
+                "disableOnInvalid": true,
+                "input": true,
+                "key": "submit",
+                "label": "Run Recipe",
+                "showValidations": false,
+                "tableView": true,
+                "type": "button"
+              }
+            ]
+          },
+          "text": "",
+          "x-omni-dynamicInputs": {
+            "text": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "description": "A simple input string",
+              "name": "text",
+              "socketOpts": {},
+              "title": "Text",
+              "type": "string"
+            }
+          },
+          "x-omni-dynamicOutputs": {
+            "text": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "description": "A simple input string",
+              "name": "text",
+              "socketOpts": {},
+              "title": "Text",
+              "type": "string"
+            }
+          },
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 27,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          },
+          "any": {
+            "connections": []
+          }
+        },
+        "position": [
+          -1237.3231213546396,
+          -24.118267093563645
+        ],
+        "name": "omni-extension-formio:formio.auto_ui"
       }
     }
   },

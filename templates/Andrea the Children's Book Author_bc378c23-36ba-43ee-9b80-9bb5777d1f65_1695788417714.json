@@ -1,12 +1,12 @@
 {
-  "id": "c98bde63-7ab3-4c4a-aa28-1ca152016eb6",
+  "id": "bc378c23-36ba-43ee-9b80-9bb5777d1f65",
   "meta": {
     "name": "Andrea the Children's Book Author",
-    "author": "Anonymous",
+    "author": "omnitool.ai team",
     "description": "Combine a LLM with stable diffusion and text-to-speech.",
     "help": "",
-    "created": 1695613802711,
-    "updated": 1695613802765,
+    "created": 1695787670775,
+    "updated": 1695787902128,
     "pictureUrl": "librarian.png",
     "tags": [
       "education"
@@ -24,14 +24,15 @@
           "description": "Combine a LLM with stable diffusion and text-to-speech.",
           "enabled": true,
           "help": "",
+          "license": "",
           "title": "Andrea the Children's Book Author",
           "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
         "position": [
-          -664.838383293512,
-          -508.1139156160781
+          -974.931903750233,
+          -701.9131980959254
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -48,7 +49,13 @@
         },
         "inputs": {
           "text": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2281,
+                "output": "text",
+                "data": {}
+              }
+            ]
           },
           "images": {
             "connections": []
@@ -64,8 +71,13 @@
           "text": {
             "connections": [
               {
-                "node": 1682,
+                "node": 1681,
                 "input": "story_description",
+                "data": {}
+              },
+              {
+                "node": 548,
+                "input": "Prompt",
                 "data": {}
               }
             ]
@@ -78,11 +90,14 @@
           },
           "documents": {
             "connections": []
+          },
+          "json": {
+            "connections": []
           }
         },
         "position": [
-          -667.6141583984604,
-          -95.21574370049728
+          -391.34374399403515,
+          -162.07869061537139
         ],
         "name": "omnitool.chat_input"
       },
@@ -92,11 +107,13 @@
           "audio": "",
           "documents": "",
           "enabled": true,
+          "files": "",
           "images": "",
           "json": "",
           "object": null,
           "text": "",
           "textType": "text/markdown",
+          "videos": "",
           "xOmniEnabled": true
         },
         "inputs": {
@@ -122,6 +139,12 @@
             ]
           },
           "documents": {
+            "connections": []
+          },
+          "videos": {
+            "connections": []
+          },
+          "files": {
             "connections": []
           },
           "object": {
@@ -183,7 +206,7 @@
         },
         "position": [
           778.6314172259215,
-          502.20868965827196
+          501.36132820565234
         ],
         "name": "elevenlabs.simpletts"
       },
@@ -203,8 +226,8 @@
           "Prompt": {
             "connections": [
               {
-                "node": 1682,
-                "output": "story_description",
+                "node": 364,
+                "output": "text",
                 "data": {}
               }
             ]
@@ -251,8 +274,8 @@
           "story_description": {
             "connections": [
               {
-                "node": 1682,
-                "output": "story_description",
+                "node": 364,
+                "output": "text",
                 "data": {}
               }
             ]
@@ -279,77 +302,10 @@
           }
         },
         "position": [
-          256.08037696793076,
-          -326.32862355779366
+          178.26886697953535,
+          -290.3038695103029
         ],
         "name": "omnitool.multi_text_replace"
-      },
-      "1682": {
-        "id": 1682,
-        "data": {
-          "button": "",
-          "enabled": true,
-          "source": "![Custom UI](/librarian.png)  \n*{{ RECIPE recipe.meta.description }}*\n\nSimply input your idea, and receive a captivating 30-50 word story and audio narration crafted specifically for young listeners!\n{{ INPUT inputs.story_description }} \ne.g. A tiny mouse guarding a small tower in a forest\n\n{{ RUN_BUTTON \"Make it so!\" }}",
-          "story_description": "",
-          "x-omni-dynamicInputs": {
-            "story_description": {
-              "control": {
-                "type": "AlpineLabelControl"
-              },
-              "customSocket": "text",
-              "name": "story_description",
-              "title": "story_description",
-              "type": "string"
-            }
-          },
-          "x-omni-dynamicOutputs": {
-            "story_description": {
-              "control": {
-                "type": "AlpineLabelControl"
-              },
-              "customSocket": "text",
-              "name": "story_description",
-              "title": "story_description",
-              "type": "string"
-            }
-          },
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "story_description": {
-            "connections": [
-              {
-                "node": 364,
-                "output": "text",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "outputs": {
-          "story_description": {
-            "connections": [
-              {
-                "node": 1681,
-                "input": "story_description",
-                "data": {}
-              },
-              {
-                "node": 548,
-                "input": "Prompt",
-                "data": {}
-              }
-            ]
-          },
-          "any": {
-            "connections": []
-          }
-        },
-        "position": [
-          -232.15402393608093,
-          -109.60304971735388
-        ],
-        "name": "omnitool.custom_ui_1"
       },
       "1683": {
         "id": 1683,
@@ -384,7 +340,13 @@
             "connections": []
           },
           "seed": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2352,
+                "output": "number",
+                "data": {}
+              }
+            ]
           },
           "image": {
             "connections": []
@@ -457,6 +419,203 @@
           -619.8591685180706
         ],
         "name": "omni-extension-replicate:run.stability-ai/sdxl"
+      },
+      "2281": {
+        "id": 2281,
+        "data": {
+          "button": "",
+          "editMode": false,
+          "enableUI": true,
+          "source": {
+            "components": [
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "Andrea the Children's Book Author",
+                "input": false,
+                "key": "x-title",
+                "label": "Recipe Title",
+                "refreshOnChange": false,
+                "tableView": false,
+                "tag": "h3",
+                "type": "htmlelement"
+              },
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "Input your story idea, and get a delightful 30-50 word tale with an audio narration tailored especially for young ears!",
+                "input": false,
+                "key": "x-desc",
+                "label": "Recipe Description",
+                "refreshOnChange": false,
+                "tableView": false,
+                "type": "htmlelement"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "applyMaskOn": "change",
+                        "autoExpand": false,
+                        "defaultValue": "A tiny mouse guarding a small tower in a forest",
+                        "description": "A simple input string",
+                        "input": true,
+                        "key": "text",
+                        "label": "Story Description",
+                        "tableView": true,
+                        "type": "textarea"
+                      }
+                    ],
+                    "key": "x-inputs",
+                    "label": "Inputs"
+                  },
+                  {
+                    "components": [
+                      {
+                        "attrs": [
+                          {
+                            "attr": "id",
+                            "value": "outputContent"
+                          }
+                        ],
+                        "content": "Results will show up here!",
+                        "input": false,
+                        "key": "x-outputContent",
+                        "label": "Results Pane",
+                        "refreshOnChange": false,
+                        "tableView": false,
+                        "tag": "div",
+                        "type": "htmlelement"
+                      }
+                    ],
+                    "key": "x-results",
+                    "label": "Results"
+                  }
+                ],
+                "input": false,
+                "key": "tabs",
+                "label": "Tabs",
+                "tableView": false,
+                "type": "tabs"
+              },
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "&nbsp;",
+                "input": false,
+                "key": "html",
+                "label": "HTML",
+                "refreshOnChange": false,
+                "tableView": false,
+                "tag": "div",
+                "type": "htmlelement"
+              },
+              {
+                "disableOnInvalid": true,
+                "input": true,
+                "key": "submit",
+                "label": "Run Recipe",
+                "showValidations": false,
+                "tableView": true,
+                "type": "button"
+              }
+            ]
+          },
+          "text": "",
+          "x-omni-dynamicInputs": {
+            "text": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "description": "A simple input string",
+              "name": "text",
+              "socketOpts": {},
+              "title": "Text",
+              "type": "string"
+            }
+          },
+          "x-omni-dynamicOutputs": {
+            "text": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "description": "A simple input string",
+              "name": "text",
+              "socketOpts": {},
+              "title": "Text",
+              "type": "string"
+            }
+          },
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 364,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          },
+          "any": {
+            "connections": []
+          }
+        },
+        "position": [
+          -963.7748341562258,
+          -121.67227851486459
+        ],
+        "name": "omni-extension-formio:formio.auto_ui"
+      },
+      "2352": {
+        "id": 2352,
+        "data": {
+          "number": 0,
+          "number_format": "timestamp",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "number": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "number": {
+            "connections": [
+              {
+                "node": 1683,
+                "input": "seed",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          278.7210825249483,
+          -719.5865089456354
+        ],
+        "name": "omnitool.number_input"
       }
     }
   },
