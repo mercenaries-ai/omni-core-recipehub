@@ -4,9 +4,9 @@
     "name": "Andrea the Children's Book Author",
     "author": "omnitool.ai team",
     "description": "Combine a LLM with stable diffusion and text-to-speech.",
-    "help": "# Andrea the Children's Book Author 📖✨\n\nWelcome to this recipe! Unleash the power of storytelling by transforming your ideas into enchanting storybook texts accompanied by narrative audios.\n\n## Prerequisites:\n\n### API Keys:\n- OpenAPI\n- ElevenLabs\n- Replicate\n\n### Extensions:\n- Replicate\n\n### Models:\n- Replicate: stability-ai/sdxl\n\n## How to Use:\n\n1. **Find** the custom UI window box.\n2. **Input** your *Story Description*. Think about the setting, characters, plot, and any specific events you want to be included.\n3. Hit **Run Recipe**.\n4. Find your crafted story in the **Chat** box.",
-    "created": 1695807250336,
-    "updated": 1695871545020,
+    "help": "# Andrea the Children's Book Author 📖✨\n\nUnleash the power of storytelling by transforming simple ideas into enchanting storybook visuals and texts, accompanied by spoken narrative.\n\n## Prerequisites:\n\n### API Keys:\n- OpenAPI\n- ElevenLabs\n- Replicate\n\n### Extensions:\n- Replicate\n\n### Models:\n- Replicate: stability-ai/sdxl\n\n## How to Use:\n\n1. **Find** the custom UI window box.\n2. **Input** your *Story Description*. Describe a single scene from your story.\n3. Hit **Run Recipe**.\n4. Find your crafted story in the **Chat** box.",
+    "created": 1695873044953,
+    "updated": 1695874246943,
     "pictureUrl": "librarian.png",
     "tags": [
       "education"
@@ -23,16 +23,16 @@
           "credits": "",
           "description": "Combine a LLM with stable diffusion and text-to-speech.",
           "enabled": true,
-          "help": "# Andrea the Children's Book Author 📖✨\n\nWelcome to this recipe! Unleash the power of storytelling by transforming your ideas into enchanting storybook texts accompanied by narrative audios.\n\n## Prerequisites:\n\n### API Keys:\n- OpenAPI\n- ElevenLabs\n- Replicate\n\n### Extensions:\n- Replicate\n\n### Models:\n- Replicate: stability-ai/sdxl\n\n## How to Use:\n\n1. **Find** the custom UI window box.\n2. **Input** your *Story Description*. Think about the setting, characters, plot, and any specific events you want to be included.\n3. Hit **Run Recipe**.\n4. Find your crafted story in the **Chat** box.",
-          "license": "",
+          "help": "# Andrea the Children's Book Author 📖✨\n\nUnleash the power of storytelling by transforming simple ideas into enchanting storybook visuals and texts, accompanied by spoken narrative.\n\n## Prerequisites:\n\n### API Keys:\n- OpenAPI\n- ElevenLabs\n- Replicate\n\n### Extensions:\n- Replicate\n\n### Models:\n- Replicate: stability-ai/sdxl\n\n## How to Use:\n\n1. **Find** the custom UI window box.\n2. **Input** your *Story Description*. Describe a single scene from your story.\n3. Hit **Run Recipe**.\n4. Find your crafted story in the **Chat** box.",
+          "license": "CC0",
           "title": "Andrea the Children's Book Author",
           "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
         "position": [
-          -1108.492755016782,
-          -1028.5962222848418
+          -839.7816427353436,
+          -0.7015593688590007
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -64,8 +64,8 @@
           "images": {
             "connections": [
               {
-                "node": 1683,
-                "output": "output",
+                "node": 2353,
+                "output": "Result",
                 "data": {}
               }
             ]
@@ -94,8 +94,8 @@
         },
         "outputs": {},
         "position": [
-          1270.997006381028,
-          -43.91964318017119
+          1766.1147624643907,
+          451.76603971057267
         ],
         "name": "omnitool.chat_output"
       },
@@ -107,7 +107,7 @@
           "output_format": "mp3_44100",
           "style": 0.5,
           "text": "",
-          "voice_id": "EXAVITQu4vr4xnSDxMaL",
+          "voice_id": "pMsXgVXv3BLzUgSXRplE",
           "x-omni-title": "Generate Story Audio via Elevenlabs",
           "xOmniEnabled": true
         },
@@ -146,8 +146,8 @@
           }
         },
         "position": [
-          778.6314172259215,
-          501.36132820565234
+          913.0501579633623,
+          502.39625640569824
         ],
         "name": "elevenlabs.simpletts"
       },
@@ -155,7 +155,7 @@
         "id": 548,
         "data": {
           "Criteria": "creative",
-          "Instruction": "You are a children's book writer. You create short, 30-50 word stories for any input given by the user suitable for children to be read by an audio book narrator. You only respond with the story, no explanation. You will strip any included instructions for artists (such as 'in the style of X') as they are not meant for the audio narration.",
+          "Instruction": "You are a children's book writer. Given a description of a single page of a storybook, rewrite and expand the prompt into a short, 30-50 word passage suitable for children to be read by an audio book narrator. You only respond with the text, no explanation. You will strip any included instructions for artists (such as 'in the style of X') as they are not meant for the audio narration.",
           "Prompt": "",
           "enabled": true,
           "xOmniEnabled": true
@@ -168,7 +168,7 @@
             "connections": [
               {
                 "node": 2281,
-                "output": "story_description",
+                "output": "scene_description",
                 "data": {}
               }
             ]
@@ -191,8 +191,8 @@
           }
         },
         "position": [
-          162.0308352965805,
-          328.0125171447065
+          266.72892424858105,
+          376.4747670011616
         ],
         "name": "omnitool.large_language_model"
       },
@@ -204,24 +204,25 @@
           "images": "",
           "prompt": "",
           "replace": null,
-          "source": "A lovely children's story book illustration of \"{input:story_description}\" in the style of an animated movie, colorful, inviting, cute, high quality, masterpiece, vivid",
+          "scene_description": "",
+          "source": "A gorgeous children's story book illustration of \"{input:Scene Description}\" in the style of an animated movie, colorful, inviting, cute, high quality, masterpiece, vivid",
           "story_description": "",
           "x-omni-dynamicInputs": {
-            "story_description": {
+            "scene_description": {
               "customSocket": "text",
-              "name": "story_description",
-              "title": "story_description",
+              "name": "scene_description",
+              "title": "Scene Description",
               "type": "string"
             }
           },
           "xOmniEnabled": true
         },
         "inputs": {
-          "story_description": {
+          "scene_description": {
             "connections": [
               {
                 "node": 2281,
-                "output": "story_description",
+                "output": "scene_description",
                 "data": {}
               }
             ]
@@ -248,8 +249,8 @@
           }
         },
         "position": [
-          178.26886697953535,
-          -290.3038695103029
+          188.20251457302012,
+          -316.3097711578228
         ],
         "name": "omnitool.multi_text_replace"
       },
@@ -286,7 +287,13 @@
             "connections": []
           },
           "seed": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2296,
+                "output": "number",
+                "data": {}
+              }
+            ]
           },
           "image": {
             "connections": []
@@ -347,16 +354,16 @@
           "output": {
             "connections": [
               {
-                "node": 365,
-                "input": "images",
+                "node": 2353,
+                "input": "Source",
                 "data": {}
               }
             ]
           }
         },
         "position": [
-          771.8193177219653,
-          -619.8591685180706
+          736.6973575287403,
+          -630.397200235799
         ],
         "name": "omni-extension-replicate:run.stability-ai/sdxl"
       },
@@ -366,6 +373,7 @@
           "button": "",
           "editMode": false,
           "enableUI": true,
+          "scene_description": "Pebbles the cat waits patiently beside Lisa's birthday cake.",
           "source": {
             "components": [
               {
@@ -404,13 +412,9 @@
                   {
                     "components": [
                       {
-                        "applyMaskOn": "change",
-                        "autoExpand": false,
-                        "defaultValue": "A tiny mouse guarding a small tower in a forest",
                         "input": true,
-                        "key": "story_description",
-                        "label": "Story Description",
-                        "tableView": true,
+                        "key": "scene_description",
+                        "label": "Scene Description",
                         "type": "textarea"
                       }
                     ],
@@ -473,42 +477,41 @@
               }
             ]
           },
-          "story_description": "A tiny mouse guarding a small tower in a forest",
           "x-omni-dynamicInputs": {
-            "story_description": {
+            "scene_description": {
               "control": {
                 "type": "AlpineLabelControl"
               },
               "customSocket": "text",
-              "name": "story_description",
-              "title": "story_description",
+              "name": "scene_description",
+              "title": "Scene Description",
               "type": "string"
             }
           },
           "x-omni-dynamicOutputs": {
-            "story_description": {
+            "scene_description": {
               "control": {
                 "type": "AlpineLabelControl"
               },
               "customSocket": "text",
-              "name": "story_description",
-              "title": "story_description",
+              "name": "scene_description",
+              "title": "Scene Description",
               "type": "string"
             }
           },
           "xOmniEnabled": true
         },
         "inputs": {
-          "story_description": {
+          "scene_description": {
             "connections": []
           }
         },
         "outputs": {
-          "story_description": {
+          "scene_description": {
             "connections": [
               {
                 "node": 1681,
-                "input": "story_description",
+                "input": "scene_description",
                 "data": {}
               },
               {
@@ -523,10 +526,83 @@
           }
         },
         "position": [
-          -475.1877016276535,
-          -421.25229829225157
+          -369.7795496644011,
+          -20.40432243374228
         ],
         "name": "omni-extension-formio:formio.auto_ui"
+      },
+      "2296": {
+        "id": 2296,
+        "data": {
+          "number": 0,
+          "number_format": "timestamp",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "number": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "number": {
+            "connections": [
+              {
+                "node": 1683,
+                "input": "seed",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          185.32430886531114,
+          -645.3104288557239
+        ],
+        "name": "omnitool.number_input"
+      },
+      "2353": {
+        "id": 2353,
+        "data": {
+          "Source": "",
+          "Target": "4k",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "Source": {
+            "connections": [
+              {
+                "node": 1683,
+                "output": "output",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "Result": {
+            "connections": [
+              {
+                "node": 365,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          },
+          "Mask": {
+            "connections": []
+          },
+          "Width": {
+            "connections": []
+          },
+          "Height": {
+            "connections": []
+          }
+        },
+        "position": [
+          1260.2890466088302,
+          83.37903241034945
+        ],
+        "name": "omnitool.prepare_image"
       }
     }
   },
