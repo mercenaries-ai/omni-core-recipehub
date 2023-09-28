@@ -1,12 +1,12 @@
 {
-  "id": "6e0f680b-f8d8-4ccc-9406-4634e6cd7b27",
+  "id": "88bb916e-d5c1-4e1a-a3b1-a4c353ef3d96",
   "meta": {
     "name": "Dr. Ulla - 100 Thousand Whys",
     "author": "omnitool.ai team",
-    "description": "Inspired by the popular children's science book series, \"100 Thousand Whys\", Dr. Ulla tackles a diverse range of 'Why' questions, fostering children's curiosity for knowledge in a simple and engaging manner accompanied by vivid illustrations.",
+    "description": "Inspired by the popular Chinese children's science book series, \"100 Thousand Whys\", Dr. Ulla uses a combination of LLM and Stable Diffusion to craft engaging answers and illustrations for the 'Why' questions, nurturing a child's thirst for knowledge.",
     "help": "",
     "created": 1694621573851,
-    "updated": 1695618688684,
+    "updated": 1695895022390,
     "pictureUrl": "ulla.png",
     "tags": [
       "education"
@@ -51,8 +51,8 @@
           "prompt": {
             "connections": [
               {
-                "node": 1014,
-                "output": "text",
+                "node": 1150,
+                "output": "undefined",
                 "data": {}
               }
             ]
@@ -135,8 +135,8 @@
           }
         },
         "position": [
-          85.12296137660796,
-          -1763.3900009480637
+          -0.6407171252924826,
+          -1805.1398109044928
         ],
         "name": "openai.simpleChatGPT"
       },
@@ -223,7 +223,7 @@
           }
         },
         "position": [
-          895.3130749121917,
+          896.0442980829934,
           -1536.8355006855393
         ],
         "name": "omnitool.jsonata"
@@ -354,68 +354,19 @@
         ],
         "name": "omnitool.input_text"
       },
-      "131": {
-        "id": 131,
-        "data": {
-          "audio": "",
-          "documents": "",
-          "enabled": true,
-          "images": "",
-          "text": "Why does moon has different shapes?",
-          "x-omni-title": "AskYour Why Question in Chat",
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "text": {
-            "connections": []
-          },
-          "images": {
-            "connections": []
-          },
-          "audio": {
-            "connections": []
-          },
-          "documents": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "text": {
-            "connections": [
-              {
-                "node": 1013,
-                "input": "_question",
-                "data": {}
-              }
-            ]
-          },
-          "images": {
-            "connections": []
-          },
-          "audio": {
-            "connections": []
-          },
-          "documents": {
-            "connections": []
-          }
-        },
-        "position": [
-          -1899.031066575751,
-          -948.7863076459196
-        ],
-        "name": "omnitool.chat_input"
-      },
       "132": {
         "id": 132,
         "data": {
           "audio": "",
           "documents": "",
           "enabled": true,
+          "files": "",
           "images": "",
           "json": "",
           "object": null,
           "text": "",
           "textType": "text/markdown",
+          "videos": "",
           "x-omni-title": "Chat Output",
           "xOmniEnabled": true
         },
@@ -454,6 +405,12 @@
           "documents": {
             "connections": []
           },
+          "videos": {
+            "connections": []
+          },
+          "files": {
+            "connections": []
+          },
           "object": {
             "connections": []
           }
@@ -471,17 +428,18 @@
           "author": "omnitool.ai team",
           "button": "",
           "credits": "",
-          "description": "Inspired by the popular children's science book series, \"100 Thousand Whys\", Dr. Ulla tackles a diverse range of 'Why' questions, fostering children's curiosity for knowledge in a simple and engaging manner accompanied by vivid illustrations.",
+          "description": "Inspired by the popular Chinese children's science book series, \"100 Thousand Whys\", Dr. Ulla uses a combination of LLM and Stable Diffusion to craft engaging answers and illustrations for the 'Why' questions, nurturing a child's thirst for knowledge.",
           "enabled": true,
           "help": "",
+          "license": "",
           "title": "Dr. Ulla - 100 Thousand Whys",
           "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
         "position": [
-          -1891.0432199199995,
-          -2026.9742558740595
+          -1155.672530293402,
+          -1921.096138047079
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -685,125 +643,6 @@
           -845.0990781176064
         ],
         "name": "openai.SDpromptParser"
-      },
-      "1013": {
-        "id": 1013,
-        "data": {
-          "_question": "Why does moon has different shapes?",
-          "button": "",
-          "enabled": true,
-          "source": "![Custom UI](/ulla.png)  \n*{{ RECIPE recipe.meta.description }}*\n{{ INPUT inputs._question }}\n💡Hint: Ask a 'Why' question. For example:\n\n- Why Do Mosquito Bites Itch? \n- Why Do Dogs And Cats Have Whiskers? \n- Why Are Moths Attracted To Light? \n- Why is the sky blue?\n\n{{ RUN_BUTTON \"Make it so!\" }}",
-          "undefined": "",
-          "x-omni-dynamicInputs": {
-            "_question": {
-              "control": {
-                "type": "AlpineLabelControl"
-              },
-              "customSocket": "text",
-              "name": "_question",
-              "title": " Question",
-              "type": "string"
-            }
-          },
-          "x-omni-dynamicOutputs": {
-            "_question": {
-              "control": {
-                "type": "AlpineLabelControl"
-              },
-              "customSocket": "text",
-              "name": "_question",
-              "title": " Question",
-              "type": "string"
-            }
-          },
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "_question": {
-            "connections": [
-              {
-                "node": 131,
-                "output": "text",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "outputs": {
-          "_question": {
-            "connections": [
-              {
-                "node": 1014,
-                "input": "_question",
-                "data": {}
-              }
-            ]
-          },
-          "any": {
-            "connections": []
-          }
-        },
-        "position": [
-          -1418.749738521026,
-          -1037.1205764728952
-        ],
-        "name": "omnitool.custom_ui_1"
-      },
-      "1014": {
-        "id": 1014,
-        "data": {
-          "_question": "",
-          "button": "",
-          "enabled": true,
-          "images": "",
-          "replace": null,
-          "source": "{input: Question}",
-          "x-omni-dynamicInputs": {
-            "_question": {
-              "customSocket": "text",
-              "name": "_question",
-              "title": " Question",
-              "type": "string"
-            }
-          },
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "_question": {
-            "connections": [
-              {
-                "node": 1013,
-                "output": "_question",
-                "data": {}
-              }
-            ]
-          },
-          "source": {
-            "connections": []
-          },
-          "replace": {
-            "connections": []
-          },
-          "images": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "text": {
-            "connections": [
-              {
-                "node": 95,
-                "input": "prompt",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "position": [
-          -961.3151940974464,
-          -806.5154228030395
-        ],
-        "name": "omnitool.multi_text_replace"
       },
       "1015": {
         "id": 1015,
@@ -1143,6 +982,222 @@
           -301.9730759544731
         ],
         "name": "omni-extension-replicate:run.stability-ai/sdxl"
+      },
+      "1150": {
+        "id": 1150,
+        "data": {
+          "button": "",
+          "editMode": false,
+          "enableUI": true,
+          "source": {
+            "components": [
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "Dr. Ulla - 100 Thousand Whys",
+                "input": false,
+                "key": "x-title",
+                "label": "Recipe Title",
+                "refreshOnChange": false,
+                "tableView": false,
+                "tag": "h3",
+                "type": "htmlelement"
+              },
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "Inspired by the popular Chinese children's science book series, \"100 Thousand Whys\", Dr. Ulla uses a combination of LLM and Stable Diffusion to craft engaging answers and illustrations for the 'Why' questions, nurturing a child's thirst for knowledge.",
+                "input": false,
+                "key": "x-desc",
+                "label": "Recipe Description",
+                "refreshOnChange": false,
+                "tableView": false,
+                "type": "htmlelement"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "applyMaskOn": "change",
+                        "autoExpand": false,
+                        "defaultValue": "Why is the ocean blue?",
+                        "input": true,
+                        "key": "textArea",
+                        "label": "Asking Dr. Ulla your 'Why' question: ",
+                        "tableView": true,
+                        "type": "textarea"
+                      }
+                    ],
+                    "key": "x-inputs",
+                    "label": "Inputs"
+                  },
+                  {
+                    "components": [
+                      {
+                        "attrs": [
+                          {
+                            "attr": "id",
+                            "value": "outputContent"
+                          }
+                        ],
+                        "content": "Results will show up here!",
+                        "input": false,
+                        "key": "x-outputContent",
+                        "label": "Results Pane",
+                        "refreshOnChange": false,
+                        "tableView": false,
+                        "tag": "div",
+                        "type": "htmlelement"
+                      }
+                    ],
+                    "key": "x-results",
+                    "label": "Results"
+                  }
+                ],
+                "input": false,
+                "key": "tabs",
+                "label": "Tabs",
+                "tableView": false,
+                "type": "tabs"
+              },
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "&nbsp;",
+                "input": false,
+                "key": "html",
+                "label": "HTML",
+                "refreshOnChange": false,
+                "tableView": false,
+                "tag": "div",
+                "type": "htmlelement"
+              },
+              {
+                "disableOnInvalid": true,
+                "input": true,
+                "key": "submit",
+                "label": "Run Recipe",
+                "showValidations": false,
+                "tableView": true,
+                "type": "button"
+              }
+            ]
+          },
+          "undefined": "Why is the ocean blue?",
+          "x-omni-dynamicInputs": {
+            "undefined": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "name": "undefined",
+              "title": "undefined",
+              "type": "string"
+            }
+          },
+          "x-omni-dynamicOutputs": {
+            "undefined": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "type": "string"
+            }
+          },
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "undefined": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "undefined": {
+            "connections": [
+              {
+                "node": 95,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          },
+          "any": {
+            "connections": []
+          }
+        },
+        "position": [
+          -1083.4900004807023,
+          -1115.8793229300497
+        ],
+        "name": "omni-extension-formio:formio.auto_ui"
+      },
+      "1287": {
+        "id": 1287,
+        "data": {
+          "function": null,
+          "instruction": "You are a helpful bot.  You can help people by answering their questions.",
+          "model": "gpt-3.5-turbo",
+          "prompt": "",
+          "temperature": 1,
+          "top_p": 1,
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "model": {
+            "connections": []
+          },
+          "temperature": {
+            "connections": []
+          },
+          "top_p": {
+            "connections": []
+          },
+          "function": {
+            "connections": []
+          },
+          "instruction": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "answer_text": {
+            "connections": []
+          },
+          "function_call": {
+            "connections": []
+          },
+          "function_arguments_string": {
+            "connections": []
+          },
+          "function_arguments": {
+            "connections": []
+          },
+          "function_name": {
+            "connections": []
+          },
+          "raw_output": {
+            "connections": []
+          }
+        },
+        "position": [
+          130.68591071292963,
+          -822.5096395145301
+        ],
+        "name": "openai.advancedChatGPT"
       }
     }
   },

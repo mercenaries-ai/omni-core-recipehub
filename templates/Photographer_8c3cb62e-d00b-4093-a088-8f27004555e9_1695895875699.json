@@ -1,12 +1,12 @@
 {
-  "id": "89b747f6-330a-4bcd-aa7d-8f04be84c8b7",
+  "id": "8c3cb62e-d00b-4093-a088-8f27004555e9",
   "meta": {
     "name": "Photographer",
     "author": "omnitool.ai team",
     "description": "Take photos with AI! Craft stunning virtual photographs with just a few descriptive words.",
     "help": "",
-    "created": 1694630083554,
-    "updated": 1695635602434,
+    "created": 1695895156391,
+    "updated": 1695895855960,
     "pictureUrl": "photographer.png",
     "tags": [
       "photography"
@@ -15,67 +15,19 @@
   "rete": {
     "id": "mercs@0.1.1",
     "nodes": {
-      "64": {
-        "id": 64,
-        "data": {
-          "audio": "",
-          "documents": "",
-          "enabled": true,
-          "images": "",
-          "text": "An off-center portrait of an old bohemian barista preparing coffee in a boutique vintage cafe.",
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "text": {
-            "connections": []
-          },
-          "images": {
-            "connections": []
-          },
-          "audio": {
-            "connections": []
-          },
-          "documents": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "text": {
-            "connections": [
-              {
-                "node": 2211,
-                "input": "prompt",
-                "data": {}
-              }
-            ]
-          },
-          "images": {
-            "connections": []
-          },
-          "audio": {
-            "connections": []
-          },
-          "documents": {
-            "connections": []
-          }
-        },
-        "position": [
-          -1825.544084192841,
-          -379.42175925086383
-        ],
-        "name": "omnitool.chat_input"
-      },
       "65": {
         "id": 65,
         "data": {
           "audio": "",
           "documents": "",
           "enabled": true,
+          "files": "",
           "images": "",
           "json": "",
           "object": null,
           "text": "",
           "textType": "text/markdown",
+          "videos": "",
           "xOmniEnabled": true
         },
         "inputs": {
@@ -97,6 +49,12 @@
           "documents": {
             "connections": []
           },
+          "videos": {
+            "connections": []
+          },
+          "files": {
+            "connections": []
+          },
           "object": {
             "connections": []
           }
@@ -107,68 +65,6 @@
           -472.5435934243344
         ],
         "name": "omnitool.chat_output"
-      },
-      "2211": {
-        "id": 2211,
-        "data": {
-          "button": "",
-          "enabled": true,
-          "prompt": "",
-          "source": "![Custom UI](/photographer.png)  \n*{{ RECIPE recipe.meta.description }}*\n{{ INPUT inputs.prompt }}\n{{ RUN_BUTTON \"Make it so!\" }}",
-          "x-omni-dynamicInputs": {
-            "prompt": {
-              "control": {
-                "type": "AlpineLabelControl"
-              },
-              "customSocket": "text",
-              "name": "prompt",
-              "title": "PROMPT",
-              "type": "string"
-            }
-          },
-          "x-omni-dynamicOutputs": {
-            "prompt": {
-              "control": {
-                "type": "AlpineLabelControl"
-              },
-              "customSocket": "text",
-              "name": "prompt",
-              "title": "PROMPT",
-              "type": "string"
-            }
-          },
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "prompt": {
-            "connections": [
-              {
-                "node": 64,
-                "output": "text",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "outputs": {
-          "prompt": {
-            "connections": [
-              {
-                "node": 2212,
-                "input": "prompt",
-                "data": {}
-              }
-            ]
-          },
-          "any": {
-            "connections": []
-          }
-        },
-        "position": [
-          -1359.1452623465175,
-          -432.86690817690027
-        ],
-        "name": "omnitool.custom_ui_1"
       },
       "2212": {
         "id": 2212,
@@ -193,7 +89,7 @@
           "prompt": {
             "connections": [
               {
-                "node": 2211,
+                "node": 2234,
                 "output": "prompt",
                 "data": {}
               }
@@ -235,14 +131,15 @@
           "description": "Take photos with AI! Craft stunning virtual photographs with just a few descriptive words.",
           "enabled": true,
           "help": "",
+          "license": "CC-BY-SA",
           "title": "Photographer",
           "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
         "position": [
-          -1636.4360630300848,
-          -787.7319215468292
+          -1990.9035965429891,
+          -940.8982740366497
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -386,6 +283,169 @@
           -827.1842835060413
         ],
         "name": "omnitool.number_input"
+      },
+      "2234": {
+        "id": 2234,
+        "data": {
+          "button": "",
+          "editMode": false,
+          "enableUI": true,
+          "prompt": "An off-center portrait of an old bohemian barista preparing coffee in a boutique vintage cafe.",
+          "source": {
+            "components": [
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "Photographer",
+                "input": false,
+                "key": "x-title",
+                "label": "Recipe Title",
+                "refreshOnChange": false,
+                "tableView": false,
+                "tag": "h3",
+                "type": "htmlelement"
+              },
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "Take photos with AI! Craft stunning virtual photographs with just a few descriptive words.",
+                "input": false,
+                "key": "x-desc",
+                "label": "Recipe Description",
+                "refreshOnChange": false,
+                "tableView": false,
+                "type": "htmlelement"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "applyMaskOn": "change",
+                        "autoExpand": false,
+                        "defaultValue": "An off-center portrait of an old bohemian barista preparing coffee in a boutique vintage cafe.",
+                        "input": true,
+                        "key": "prompt",
+                        "label": "Describe the Photo:",
+                        "tableView": true,
+                        "type": "textarea"
+                      }
+                    ],
+                    "key": "x-inputs",
+                    "label": "Inputs"
+                  },
+                  {
+                    "components": [
+                      {
+                        "attrs": [
+                          {
+                            "attr": "id",
+                            "value": "outputContent"
+                          }
+                        ],
+                        "content": "Results will show up here!",
+                        "input": false,
+                        "key": "x-outputContent",
+                        "label": "Results Pane",
+                        "refreshOnChange": false,
+                        "tableView": false,
+                        "tag": "div",
+                        "type": "htmlelement"
+                      }
+                    ],
+                    "key": "x-results",
+                    "label": "Results"
+                  }
+                ],
+                "input": false,
+                "key": "tabs",
+                "label": "Tabs",
+                "tableView": false,
+                "type": "tabs"
+              },
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "&nbsp;",
+                "input": false,
+                "key": "html",
+                "label": "HTML",
+                "refreshOnChange": false,
+                "tableView": false,
+                "tag": "div",
+                "type": "htmlelement"
+              },
+              {
+                "disableOnInvalid": true,
+                "input": true,
+                "key": "submit",
+                "label": "Run Recipe",
+                "showValidations": false,
+                "tableView": true,
+                "type": "button"
+              }
+            ]
+          },
+          "x-omni-dynamicInputs": {
+            "prompt": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "PROMPT",
+              "type": "string"
+            }
+          },
+          "x-omni-dynamicOutputs": {
+            "prompt": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "PROMPT",
+              "type": "string"
+            }
+          },
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "prompt": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "prompt": {
+            "connections": [
+              {
+                "node": 2212,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          },
+          "any": {
+            "connections": []
+          }
+        },
+        "position": [
+          -1452.3717223419917,
+          -499.75254547415665
+        ],
+        "name": "omni-extension-formio:formio.auto_ui"
       }
     }
   },
