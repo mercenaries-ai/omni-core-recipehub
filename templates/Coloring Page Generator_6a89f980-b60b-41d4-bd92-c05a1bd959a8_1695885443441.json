@@ -5,8 +5,8 @@
     "author": "omnitool.ai team",
     "description": "Creates simple coloring pages based on user input accompanied by rhymes, suitable for children of any age.",
     "help": "## Coloring Page Generator 🎨✒️\n\nWelcome to the Coloring Page Generator! This recipe utilizes the power of AI to generate coloring pages accompanied by rhymes based on the your description. Follow the instructions below to create your own custom coloring page activity.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models**:\n- Replicate: paappraiser/retro-coloring-book\n\n### How to Use:\n\n1. Navigate to the custom UI window.\n2. Enter a detailed description of the desired coloring page.\n3. Hit **Run Recipe**\n4. Start enjoying your personalized coloring page generated in the **Chat** box!",
-    "created": 1695874282990,
-    "updated": 1695885436037,
+    "created": 1695886570340,
+    "updated": 1695894274360,
     "pictureUrl": "coloring.png",
     "tags": [
       "education",
@@ -44,8 +44,8 @@
           "images": {
             "connections": [
               {
-                "node": 1761,
-                "output": "output",
+                "node": 1781,
+                "output": "Result",
                 "data": {}
               }
             ]
@@ -68,8 +68,8 @@
         },
         "outputs": {},
         "position": [
-          1184.047574447866,
-          596.264948013308
+          1750.2574592644498,
+          443.7268590010048
         ],
         "name": "omnitool.chat_output"
       },
@@ -82,15 +82,15 @@
           "description": "Creates simple coloring pages based on user input accompanied by rhymes, suitable for children of any age.",
           "enabled": true,
           "help": "## Coloring Page Generator 🎨✒️\n\nWelcome to the Coloring Page Generator! This recipe utilizes the power of AI to generate coloring pages accompanied by rhymes based on the your description. Follow the instructions below to create your own custom coloring page activity.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models**:\n- Replicate: paappraiser/retro-coloring-book\n\n### How to Use:\n\n1. Navigate to the custom UI window.\n2. Enter a detailed description of the desired coloring page.\n3. Hit **Run Recipe**\n4. Start enjoying your personalized coloring page generated in the **Chat** box!",
-          "license": "",
+          "license": "CC0",
           "title": "Coloring Page Generator",
           "xOmniEnabled": true
         },
         "inputs": {},
         "outputs": {},
         "position": [
-          -881.9557977649959,
-          -250.6853063300776
+          -882.5036946527376,
+          -0.607433260457308
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -98,7 +98,7 @@
         "id": 725,
         "data": {
           "Criteria": "creative",
-          "Instruction": "You are a children's book writer. You create short, 30-50 word stories for any input given by the user suitable for children to be read by an audio book narrator. You only respond with the story, no explanation. You will strip make it rhyme any included instructions for artists (such as 'in the style of X') as they are not meant for the audio narration.\n\nPrefix the rhyme with a one sentence introduction and postfix it with a one sentence call to action suitable for a 6 year old, encouraging them to fill the page with color and bringing it to life.",
+          "Instruction": "You write text to accompany pages in a coloring book. You create short, 30-50 word rhyming poems for any input given by the user suitable for children.\n\n(Ignore any included art-direction instructions for artists, such as 'in the style of X' as they are not part of the content.)\n\nPrefix your rhyme with a one sentence introduction and postfix it with a one sentence call to action suitable for a 6 year old, encouraging them to fill the page with color and bringing the illustration to life.\n\nExample prompt: Dinosaur Part\nExample Response: ```\nLet's journey to a time long ago, where dinosaurs dance to and fro.\n\n  T-Rex wore a hat, Stego brought a pie,\n  Dinos danced around, under the ancient sky.\n  Triceratops spun, Pterodactyl flew,\n  At the dino party, oh what a zoo!\n\nNow grab your crayons, let's make this scene bright, fill the page with colors, make it a delightful sight!\n```",
           "Prompt": "",
           "enabled": true,
           "xOmniEnabled": true
@@ -129,32 +129,33 @@
           }
         },
         "position": [
-          676.8506551364742,
-          -50.58238995771494
+          628.284838643971,
+          -336.98583468883
         ],
         "name": "omnitool.large_language_model"
       },
       "1406": {
         "id": 1406,
         "data": {
+          "_prompt": "",
           "button": "",
           "enabled": true,
           "images": "",
           "prompt": "",
           "replace": null,
-          "source": "a picture of TOK {input:PROMPT}. Coloring book vintage minimal lines easy to color.",
+          "source": "A TOK line art drawing of {input: Prompt}. Coloring book vintage minimal lines easy to color.",
           "x-omni-dynamicInputs": {
-            "prompt": {
+            "_prompt": {
               "customSocket": "text",
-              "name": "prompt",
-              "title": "PROMPT",
+              "name": "_prompt",
+              "title": " Prompt",
               "type": "string"
             }
           },
           "xOmniEnabled": true
         },
         "inputs": {
-          "prompt": {
+          "_prompt": {
             "connections": [
               {
                 "node": 1762,
@@ -185,8 +186,8 @@
           }
         },
         "position": [
-          140.72670643663085,
-          153.90909505898296
+          121.44353132787577,
+          250.1016936982074
         ],
         "name": "omnitool.multi_text_replace"
       },
@@ -221,7 +222,13 @@
             "connections": []
           },
           "seed": {
-            "connections": []
+            "connections": [
+              {
+                "node": 1810,
+                "output": "number",
+                "data": {}
+              }
+            ]
           },
           "image": {
             "connections": []
@@ -279,16 +286,16 @@
           "output": {
             "connections": [
               {
-                "node": 330,
-                "input": "images",
+                "node": 1781,
+                "input": "Source",
                 "data": {}
               }
             ]
           }
         },
         "position": [
-          651.9669070689525,
-          408.7467712991287
+          653.3533556432237,
+          410.00556343365264
         ],
         "name": "omni-extension-replicate:run.paappraiser/retro-coloring-book"
       },
@@ -439,13 +446,13 @@
           "prompt": {
             "connections": [
               {
-                "node": 1406,
-                "input": "prompt",
+                "node": 725,
+                "input": "Prompt",
                 "data": {}
               },
               {
-                "node": 725,
-                "input": "Prompt",
+                "node": 1406,
+                "input": "_prompt",
                 "data": {}
               }
             ]
@@ -455,10 +462,83 @@
           }
         },
         "position": [
-          -412.1418799934791,
-          -212.7653295347738
+          -412.50355548565415,
+          51.86898732724345
         ],
         "name": "omni-extension-formio:formio.auto_ui"
+      },
+      "1781": {
+        "id": 1781,
+        "data": {
+          "Source": "",
+          "Target": "us_letter",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "Source": {
+            "connections": [
+              {
+                "node": 1761,
+                "output": "output",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "Result": {
+            "connections": [
+              {
+                "node": 330,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          },
+          "Mask": {
+            "connections": []
+          },
+          "Width": {
+            "connections": []
+          },
+          "Height": {
+            "connections": []
+          }
+        },
+        "position": [
+          1200.482192453712,
+          762.5480699761483
+        ],
+        "name": "omnitool.prepare_image"
+      },
+      "1810": {
+        "id": 1810,
+        "data": {
+          "number": 0,
+          "number_format": "timestamp",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "number": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "number": {
+            "connections": [
+              {
+                "node": 1761,
+                "input": "seed",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          110.13921714266803,
+          854.8906859582366
+        ],
+        "name": "omnitool.number_input"
       }
     }
   },
