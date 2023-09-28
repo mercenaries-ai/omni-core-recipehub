@@ -1,0 +1,472 @@
+{
+  "id": "6a89f980-b60b-41d4-bd92-c05a1bd959a8",
+  "meta": {
+    "name": "Coloring Page Generator",
+    "author": "omnitool.ai team",
+    "description": "Creates simple coloring pages based on user input accompanied by rhymes, suitable for children of any age.",
+    "help": "## Coloring Page Generator 🎨✒️\n\nWelcome to the Coloring Page Generator! This recipe utilizes the power of AI to generate coloring pages accompanied by rhymes based on the your description. Follow the instructions below to create your own custom coloring page activity.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models**:\n- Replicate: paappraiser/retro-coloring-book\n\n### How to Use:\n\n1. Navigate to the custom UI window.\n2. Enter a detailed description of the desired coloring page.\n3. Hit **Run Recipe**\n4. Start enjoying your personalized coloring page generated in the **Chat** box!",
+    "created": 1695874282990,
+    "updated": 1695885436037,
+    "pictureUrl": "coloring.png",
+    "tags": [
+      "education",
+      "entertainment"
+    ]
+  },
+  "rete": {
+    "id": "mercs@0.1.1",
+    "nodes": {
+      "330": {
+        "id": 330,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "enabled": true,
+          "files": "",
+          "images": "",
+          "json": "",
+          "object": null,
+          "text": "",
+          "textType": "text/markdown",
+          "videos": "",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 725,
+                "output": "Reply",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 1761,
+                "output": "output",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "videos": {
+            "connections": []
+          },
+          "files": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          }
+        },
+        "outputs": {},
+        "position": [
+          1184.047574447866,
+          596.264948013308
+        ],
+        "name": "omnitool.chat_output"
+      },
+      "711": {
+        "id": 711,
+        "data": {
+          "author": "omnitool.ai team",
+          "button": "",
+          "credits": "",
+          "description": "Creates simple coloring pages based on user input accompanied by rhymes, suitable for children of any age.",
+          "enabled": true,
+          "help": "## Coloring Page Generator 🎨✒️\n\nWelcome to the Coloring Page Generator! This recipe utilizes the power of AI to generate coloring pages accompanied by rhymes based on the your description. Follow the instructions below to create your own custom coloring page activity.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models**:\n- Replicate: paappraiser/retro-coloring-book\n\n### How to Use:\n\n1. Navigate to the custom UI window.\n2. Enter a detailed description of the desired coloring page.\n3. Hit **Run Recipe**\n4. Start enjoying your personalized coloring page generated in the **Chat** box!",
+          "license": "",
+          "title": "Coloring Page Generator",
+          "xOmniEnabled": true
+        },
+        "inputs": {},
+        "outputs": {},
+        "position": [
+          -881.9557977649959,
+          -250.6853063300776
+        ],
+        "name": "omnitool.recipe_metadata"
+      },
+      "725": {
+        "id": 725,
+        "data": {
+          "Criteria": "creative",
+          "Instruction": "You are a children's book writer. You create short, 30-50 word stories for any input given by the user suitable for children to be read by an audio book narrator. You only respond with the story, no explanation. You will strip make it rhyme any included instructions for artists (such as 'in the style of X') as they are not meant for the audio narration.\n\nPrefix the rhyme with a one sentence introduction and postfix it with a one sentence call to action suitable for a 6 year old, encouraging them to fill the page with color and bringing it to life.",
+          "Prompt": "",
+          "enabled": true,
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "Instruction": {
+            "connections": []
+          },
+          "Prompt": {
+            "connections": [
+              {
+                "node": 1762,
+                "output": "prompt",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "Reply": {
+            "connections": [
+              {
+                "node": 330,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          676.8506551364742,
+          -50.58238995771494
+        ],
+        "name": "omnitool.large_language_model"
+      },
+      "1406": {
+        "id": 1406,
+        "data": {
+          "button": "",
+          "enabled": true,
+          "images": "",
+          "prompt": "",
+          "replace": null,
+          "source": "a picture of TOK {input:PROMPT}. Coloring book vintage minimal lines easy to color.",
+          "x-omni-dynamicInputs": {
+            "prompt": {
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "PROMPT",
+              "type": "string"
+            }
+          },
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "prompt": {
+            "connections": [
+              {
+                "node": 1762,
+                "output": "prompt",
+                "data": {}
+              }
+            ]
+          },
+          "source": {
+            "connections": []
+          },
+          "replace": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 1761,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          140.72670643663085,
+          153.90909505898296
+        ],
+        "name": "omnitool.multi_text_replace"
+      },
+      "1761": {
+        "id": 1761,
+        "data": {
+          "apply_watermark": true,
+          "enabled": true,
+          "guidance_scale": 7.5,
+          "height": 1024,
+          "high_noise_frac": 0.8,
+          "image": "",
+          "lora_scale": 0.6,
+          "mask": "",
+          "negative_prompt": "complex, realistic, color, gradient, ugly, realistic, photograph, rendered, shaded, colored, nsfw, adult, violence, sexual, naked, color, gray, grey, faded, frame, text, signature, watermark, out of frame, cut off, colored, highly intricate",
+          "num_inference_steps": 50,
+          "num_outputs": 1,
+          "prompt": "a picture of TOK a very large and simple evil wizard with no nose . Coloring book vintage minimal lines easy to color",
+          "prompt_strength": 0.8,
+          "refine": "no_refiner",
+          "refine_steps": 0,
+          "scheduler": "K_EULER",
+          "seed": -1,
+          "width": 1024,
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "mask": {
+            "connections": []
+          },
+          "enabled": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          },
+          "image": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 1406,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "refine": {
+            "connections": []
+          },
+          "scheduler": {
+            "connections": []
+          },
+          "lora_scale": {
+            "connections": []
+          },
+          "num_outputs": {
+            "connections": []
+          },
+          "refine_steps": {
+            "connections": []
+          },
+          "guidance_scale": {
+            "connections": []
+          },
+          "apply_watermark": {
+            "connections": []
+          },
+          "high_noise_frac": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": []
+          },
+          "prompt_strength": {
+            "connections": []
+          },
+          "num_inference_steps": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 330,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          651.9669070689525,
+          408.7467712991287
+        ],
+        "name": "omni-extension-replicate:run.paappraiser/retro-coloring-book"
+      },
+      "1762": {
+        "id": 1762,
+        "data": {
+          "button": "",
+          "editMode": false,
+          "enableUI": true,
+          "prompt": "",
+          "source": {
+            "components": [
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "Coloring Page Generator",
+                "input": false,
+                "key": "x-title",
+                "label": "Recipe Title",
+                "refreshOnChange": false,
+                "tableView": false,
+                "tag": "h3",
+                "type": "htmlelement"
+              },
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "Creates simple coloring pages based on user input accompanied by rhymes, suitable for children of any age.",
+                "input": false,
+                "key": "x-desc",
+                "label": "Recipe Description",
+                "refreshOnChange": false,
+                "tableView": false,
+                "type": "htmlelement"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "applyMaskOn": "change",
+                        "autoExpand": false,
+                        "defaultValue": "A teddy bear picnic",
+                        "input": true,
+                        "key": "prompt",
+                        "label": "Description",
+                        "tableView": true,
+                        "type": "textarea"
+                      }
+                    ],
+                    "key": "x-inputs",
+                    "label": "Inputs"
+                  },
+                  {
+                    "components": [
+                      {
+                        "attrs": [
+                          {
+                            "attr": "id",
+                            "value": "outputContent"
+                          }
+                        ],
+                        "content": "Results will show up here!",
+                        "input": false,
+                        "key": "x-outputContent",
+                        "label": "Results Pane",
+                        "refreshOnChange": false,
+                        "tableView": false,
+                        "tag": "div",
+                        "type": "htmlelement"
+                      }
+                    ],
+                    "key": "x-results",
+                    "label": "Results"
+                  }
+                ],
+                "input": false,
+                "key": "tabs",
+                "label": "Tabs",
+                "tableView": false,
+                "type": "tabs"
+              },
+              {
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "&nbsp;",
+                "input": false,
+                "key": "html",
+                "label": "HTML",
+                "refreshOnChange": false,
+                "tableView": false,
+                "tag": "div",
+                "type": "htmlelement"
+              },
+              {
+                "disableOnInvalid": true,
+                "input": true,
+                "key": "submit",
+                "label": "Run Recipe",
+                "showValidations": false,
+                "tableView": true,
+                "type": "button"
+              }
+            ]
+          },
+          "x-omni-dynamicInputs": {
+            "prompt": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "PROMPT",
+              "type": "string"
+            }
+          },
+          "x-omni-dynamicOutputs": {
+            "prompt": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "customSocket": "text",
+              "name": "prompt",
+              "title": "PROMPT",
+              "type": "string"
+            }
+          },
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "prompt": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "prompt": {
+            "connections": [
+              {
+                "node": 1406,
+                "input": "prompt",
+                "data": {}
+              },
+              {
+                "node": 725,
+                "input": "Prompt",
+                "data": {}
+              }
+            ]
+          },
+          "any": {
+            "connections": []
+          }
+        },
+        "position": [
+          -412.1418799934791,
+          -212.7653295347738
+        ],
+        "name": "omni-extension-formio:formio.auto_ui"
+      }
+    }
+  },
+  "api": {
+    "fields": {}
+  },
+  "ui": {},
+  "_flags": [
+    "owner"
+  ]
+}
