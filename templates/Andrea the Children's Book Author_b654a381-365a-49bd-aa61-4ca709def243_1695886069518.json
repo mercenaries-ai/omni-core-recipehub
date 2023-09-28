@@ -1,12 +1,12 @@
 {
-  "id": "aa5a70a8-4a0a-4b5d-a84d-767158a7895b",
+  "id": "b654a381-365a-49bd-aa61-4ca709def243",
   "meta": {
     "name": "Andrea the Children's Book Author",
     "author": "omnitool.ai team",
     "description": "Combine a LLM with stable diffusion and text-to-speech.",
-    "help": "# Andrea the Children's Book Author 📖✨\n\nUnleash the power of storytelling by transforming simple ideas into enchanting storybook visuals and texts, accompanied by spoken narrative.\n\n## Prerequisites:\n\n### API Keys:\n- OpenAPI\n- ElevenLabs\n- Replicate\n\n### Extensions:\n- Replicate\n\n### Models:\n- Replicate: stability-ai/sdxl\n\n## How to Use:\n\n1. **Find** the custom UI window box.\n2. **Input** your *Story Description*. Describe a single scene from your story.\n3. Hit **Run Recipe**.\n4. Find your crafted story in the **Chat** box.",
-    "created": 1695873044953,
-    "updated": 1695874246943,
+    "help": "# Andrea the Children's Book Author 📖✨\n\nUnleash the power of storytelling by transforming simple ideas into enchanting storybook visuals and texts, accompanied by spoken narrative.\n\n## Prerequisites:\n\n### API Keys:\n- OpenAPI\n- ElevenLabs\n- Replicate\n\n### Extensions:\n- Replicate\n\n### Models:\n- Replicate: stability-ai/sdxl\n\n## How to Use:\n\n1. **Find** the custom UI window box.\n2. **Input** your *Scene Description*. Describe a single scene from your story.\n3. Hit **Run Recipe**.\n4. Find your crafted story in the **Chat** box.",
+    "created": 1695885643366,
+    "updated": 1695886058577,
     "pictureUrl": "librarian.png",
     "tags": [
       "education"
@@ -23,7 +23,7 @@
           "credits": "",
           "description": "Combine a LLM with stable diffusion and text-to-speech.",
           "enabled": true,
-          "help": "# Andrea the Children's Book Author 📖✨\n\nUnleash the power of storytelling by transforming simple ideas into enchanting storybook visuals and texts, accompanied by spoken narrative.\n\n## Prerequisites:\n\n### API Keys:\n- OpenAPI\n- ElevenLabs\n- Replicate\n\n### Extensions:\n- Replicate\n\n### Models:\n- Replicate: stability-ai/sdxl\n\n## How to Use:\n\n1. **Find** the custom UI window box.\n2. **Input** your *Story Description*. Describe a single scene from your story.\n3. Hit **Run Recipe**.\n4. Find your crafted story in the **Chat** box.",
+          "help": "# Andrea the Children's Book Author 📖✨\n\nUnleash the power of storytelling by transforming simple ideas into enchanting storybook visuals and texts, accompanied by spoken narrative.\n\n## Prerequisites:\n\n### API Keys:\n- OpenAPI\n- ElevenLabs\n- Replicate\n\n### Extensions:\n- Replicate\n\n### Models:\n- Replicate: stability-ai/sdxl\n\n## How to Use:\n\n1. **Find** the custom UI window box.\n2. **Input** your *Scene Description*. Describe a single scene from your story.\n3. Hit **Run Recipe**.\n4. Find your crafted story in the **Chat** box.",
           "license": "CC0",
           "title": "Andrea the Children's Book Author",
           "xOmniEnabled": true
@@ -412,9 +412,13 @@
                   {
                     "components": [
                       {
+                        "applyMaskOn": "change",
+                        "autoExpand": false,
+                        "defaultValue": "Pebbles the cat waits patiently beside Lisa's birthday cake.",
                         "input": true,
                         "key": "scene_description",
                         "label": "Scene Description",
+                        "tableView": true,
                         "type": "textarea"
                       }
                     ],
