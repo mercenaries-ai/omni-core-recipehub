@@ -5,8 +5,8 @@
     "author": "omnitool.ai team",
     "description": "Food photography with flourishing presentation and delivery.",
     "help": "",
-    "created": 1695785507874,
-    "updated": 1695787189967,
+    "created": 1695909595756,
+    "updated": 1695910095767,
     "pictureUrl": "chef.png",
     "tags": [
       "photography"
@@ -15,54 +15,6 @@
   "rete": {
     "id": "mercs@0.1.1",
     "nodes": {
-      "26": {
-        "id": 26,
-        "data": {
-          "enabled": true,
-          "instruction": "You are a helpful copywriter, you write small flourish text for a restaurant menu based on the user's input text.\n\nFor example, if the input text is \"peking duck\", you may write a one sentence summary about the origin and tradition of peking duck, followed by a one sentence summary about the dish in the restaurant. \n\nYou write flourishing, text fit for a high class five star gourmet restaurant",
-          "model": "gpt-3.5-turbo",
-          "prompt": "",
-          "temperature": 1,
-          "x-omni-title": "Generate flourish text for the dish via ChatGPT",
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "model": {
-            "connections": []
-          },
-          "temperature": {
-            "connections": []
-          },
-          "instruction": {
-            "connections": []
-          },
-          "prompt": {
-            "connections": [
-              {
-                "node": 27,
-                "output": "text",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "outputs": {
-          "text": {
-            "connections": [
-              {
-                "node": 28,
-                "input": "text",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "position": [
-          887.3064792640636,
-          -35.23526002684699
-        ],
-        "name": "openai.simpleChatGPT"
-      },
       "27": {
         "id": 27,
         "data": {
@@ -98,13 +50,13 @@
           "text": {
             "connections": [
               {
-                "node": 26,
+                "node": 1459,
                 "input": "prompt",
                 "data": {}
               },
               {
-                "node": 1459,
-                "input": "prompt",
+                "node": 2503,
+                "input": "Prompt",
                 "data": {}
               }
             ]
@@ -123,8 +75,8 @@
           }
         },
         "position": [
-          -697.5682796084022,
-          -16.526908110498965
+          -665.2533592794523,
+          123.00243308279042
         ],
         "name": "omnitool.chat_input"
       },
@@ -147,8 +99,8 @@
           "text": {
             "connections": [
               {
-                "node": 26,
-                "output": "text",
+                "node": 2503,
+                "output": "Reply",
                 "data": {}
               }
             ]
@@ -180,8 +132,8 @@
         },
         "outputs": {},
         "position": [
-          1385.4893268093047,
-          410.4893271856622
+          1408.2622712811674,
+          561.7858902993416
         ],
         "name": "omnitool.chat_output"
       },
@@ -201,8 +153,8 @@
         "inputs": {},
         "outputs": {},
         "position": [
-          -1895.686764578664,
-          -217.80609932794874
+          -590.9626234077705,
+          -529.8091233501711
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -214,12 +166,12 @@
           "images": "",
           "prompt": "",
           "replace": null,
-          "source": "{input:PROMPT}, unreal engine 5 render, food art, food photography, realistic render, dramatic lighting, cinematic lighting, rule of thirds, depth of field, cinematic bloom, vfx, art by fodm4st3r <lyco:fodm4st3r:0.6> <lora:add_detail:0.9> <lora:LowRA:0.5>",
+          "source": "{input:Prompt}, unreal engine 5 render, food art, food photography, realistic render, dramatic lighting, cinematic lighting, rule of thirds, depth of field, cinematic bloom. Canon, macro photography, leica lens. 35mm. Hasselblad",
           "x-omni-dynamicInputs": {
             "prompt": {
               "customSocket": "text",
               "name": "prompt",
-              "title": "PROMPT",
+              "title": "Prompt",
               "type": "string"
             }
           },
@@ -258,8 +210,8 @@
           }
         },
         "position": [
-          -187.74193859933905,
-          393.9027186695488
+          -135.27959728364505,
+          284.5132797235544
         ],
         "name": "omnitool.multi_text_replace"
       },
@@ -269,12 +221,12 @@
           "apply_watermark": true,
           "enabled": true,
           "guidance_scale": 7.75,
-          "height": 640,
+          "height": 1024,
           "high_noise_frac": 0.8,
           "image": "",
           "lora_scale": 0.6,
           "mask": "",
-          "negative_prompt": "burger, (smoke), mist, AuroraNegative, plastic, grainy,",
+          "negative_prompt": "smoke, mist, plastic, grainy",
           "num_inference_steps": 28,
           "num_outputs": 1,
           "prompt": "An astronaut riding a rainbow unicorn, cinematic, dramatic",
@@ -284,7 +236,7 @@
           "replicate_weights": "",
           "scheduler": "DPMSolverMultistep",
           "seed": -1,
-          "width": 896,
+          "width": 1024,
           "xOmniEnabled": true
         },
         "inputs": {
@@ -295,7 +247,13 @@
             "connections": []
           },
           "seed": {
-            "connections": []
+            "connections": [
+              {
+                "node": 2504,
+                "output": "number",
+                "data": {}
+              }
+            ]
           },
           "image": {
             "connections": []
@@ -364,8 +322,8 @@
           }
         },
         "position": [
-          366.77258016449036,
-          104.6968660799771
+          409.6816307385719,
+          68.0810627783601
         ],
         "name": "omni-extension-replicate:run.stability-ai/sdxl"
       },
@@ -531,10 +489,78 @@
           }
         },
         "position": [
-          -1237.3231213546396,
-          -24.118267093563645
+          -1205.1756806754322,
+          83.68687954122241
         ],
         "name": "omni-extension-formio:formio.auto_ui"
+      },
+      "2503": {
+        "id": 2503,
+        "data": {
+          "Criteria": "creative",
+          "Instruction": "You are an eloquent copywriter, you write concise flourish text for a restaurant menu based on the user's input text.\n\nFor example, if the input text is \"peking duck\", you may write a one sentence summary about the origin and tradition of peking duck, followed by a one sentence summary about the dish in the restaurant. \n\nYou write flourishing, exquisite text, perfect for a high class five star gourmet restaurant.",
+          "Prompt": "",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "Instruction": {
+            "connections": []
+          },
+          "Prompt": {
+            "connections": [
+              {
+                "node": 27,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "Reply": {
+            "connections": [
+              {
+                "node": 28,
+                "input": "text",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          879.6777513766461,
+          185.9649979235611
+        ],
+        "name": "omnitool.large_language_model"
+      },
+      "2504": {
+        "id": 2504,
+        "data": {
+          "number": 0,
+          "number_format": "timestamp",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "number": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "number": {
+            "connections": [
+              {
+                "node": 1722,
+                "input": "seed",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -120.96480362181693,
+          -44.48410856333164
+        ],
+        "name": "omnitool.number_input"
       }
     }
   },
