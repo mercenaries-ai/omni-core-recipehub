@@ -5,30 +5,16 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { spawn } from 'child_process';
 import { v4 } from 'uuid';
-import os from 'os';
 import { fileURLToPath } from 'url';
 
 const MONO_COLLECTION_ID = "legacyMonoCollection";
-const platform = os.platform();
-
-async function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const project_abs_root = path.resolve(__dirname, '../../../../../../');
-const pocketDB_root_dir = '.local.bin';
-
-const pocketbaseInstallPath = path.join(
-    project_abs_root,
-    pocketDB_root_dir,
-    'pocketbase'
-);
 
 async function run() {
+    return;
     const templateDir = path.join(__dirname, '../../templates');
     const files = fs.readdirSync(templateDir);  
 
@@ -58,20 +44,7 @@ async function run() {
     await reconcilePublishedRecipes(jsonArray);
 }
 
-function getExecutable() {
-    switch (`${platform}`) {
-        case "win32": return "pocketbase.exe";
-        case "darwin": return "pocketbase";
-        case "linux": return "pocketbase";
-    }
-    throw new Error("Unhandled executable type for " + platform);
-}
-
 async function reconcilePublishedRecipes(publishedRecipes) {
-    let dbprocess = spawn(path.join(
-        pocketbaseInstallPath,
-        getExecutable()), ['serve']);
-    await sleep(1000);
     const Pocketbase = (await import('pocketbase')).default;
     let pb = new Pocketbase('http://127.0.0.1:8090');
     pb.autoCancellation(false);
@@ -98,7 +71,6 @@ async function reconcilePublishedRecipes(publishedRecipes) {
     });                
     await Promise.all(createCmd);
     console.info(`Updated ${createCmd.length} demo recipes.`);
-    dbprocess.kill();
 }
 
 const script = {
