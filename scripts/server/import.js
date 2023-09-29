@@ -13,6 +13,14 @@ const MONO_COLLECTION_ID = "legacyMonoCollection";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+
+function addMetaTag(doc, tag) {
+    if (doc.meta.tags.indexOf(tag) === -1) {
+        doc.meta.tags.push(tag)
+    }
+}
+
+
 async function run() {
 
     const templateDir = path.join(__dirname, '../../templates');
@@ -22,20 +30,32 @@ async function run() {
         path.extname(file).toLowerCase() === '.json'
     );    
 
+    const demoRecipes = [
+        ['Bugbear', 'c0deba5e-417d-49df-96d3-8aeb8fc15402'],
+        ['Celestia', 'c0deba5e-786a-4d4b-88d9-1694ebc85527'],
+        ['Chef', 'c0deba5e-7634-49ac-a2b7-878f8476057b'],
+    ]
+
     let jsonArray = [];
     for(let file of jsonFiles) {
         let content = fs.readFileSync(path.join(templateDir, file));
         let doc = JSON.parse(content);
-        doc['owner'] = '-----public-----';
-        
-        if(doc.id === '949b18eb-417d-49df-96d3-8aeb8fc15402' && doc['meta']['tags'].indexOf('system') === -1) {
-            doc['meta']['tags'].push('system');
+        doc.owner = '-----public-----';
+
+        for(let i=0; i<demoRecipes.length; ++i) {
+            const fileNamePrefix = demoRecipes[i][0]
+            const overrideId = demoRecipes[i][1]
+            if(file.startsWith(fileNamePrefix)) {
+                doc.id = overrideId
+                addMetaTag(doc, 'system')
+            }
         }
-        if (doc['meta']['tags'].indexOf('template') === -1) {
-            doc['meta']['tags'].push('template');
-        }
+
+        addMetaTag(doc, 'template');
+
+        doc.meta.org = 'omnitool_core_recipes'
+
         doc['publishedTo'] = [];
-        doc['version'] = 'draft';
         doc['_id'] = `wf:${doc.id}`;
         jsonArray.push(doc);
     }
