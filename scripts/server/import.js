@@ -34,7 +34,6 @@ async function run() {
         if (doc['meta']['tags'].indexOf('template') === -1) {
             doc['meta']['tags'].push('template');
         }
-        doc['meta']['updated'] = Date.now();
         doc['publishedTo'] = [];
         doc['version'] = 'draft';
         doc['_id'] = `wf:${doc.id}`;
