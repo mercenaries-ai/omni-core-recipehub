@@ -1,15 +1,15 @@
 {
-  "id": "9c4f9e88-395b-4f23-8762-73dfc0f8e58b",
+  "id": "7618b857-e2c8-4cac-814d-143ade714951",
   "meta": {
     "name": "Chef François Food Photography",
     "author": "omnitool.ai team",
     "description": "Food photography with flourishing presentation and delivery.",
-    "help": "",
-    "created": 1695909595756,
-    "updated": 1695910095767,
+    "help": "## Chef François Food Photography 📸🍲\n\nWelcome to this recipe! Describe your culinary idea and get a captivating description and image in return.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the custom UI window.\n- Describe the food\n- Hit **Run Recipe** button!\n- Enjoy the generated description and image in the **Chat** box.",
+    "created": 1696222081907,
+    "updated": 1696222240319,
     "pictureUrl": "chef.png",
     "tags": [
-      "photography", 
+      "photography",
       "lifestyle"
     ]
   },
@@ -146,7 +146,7 @@
           "credits": "",
           "description": "Food photography with flourishing presentation and delivery.",
           "enabled": true,
-          "help": "",
+          "help": "## Chef François Food Photography 📸🍲\n\nWelcome to this recipe! Describe your culinary idea and get a captivating description and image in return.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the custom UI window.\n- Describe the food\n- Hit **Run Recipe** button!\n- Enjoy the generated description and image in the **Chat** box.",
           "license": "",
           "title": "Chef François Food Photography",
           "xOmniEnabled": true
@@ -154,8 +154,8 @@
         "inputs": {},
         "outputs": {},
         "position": [
-          -590.9626234077705,
-          -529.8091233501711
+          -851.092445853631,
+          -567.2482211250341
         ],
         "name": "omnitool.recipe_metadata"
       },
