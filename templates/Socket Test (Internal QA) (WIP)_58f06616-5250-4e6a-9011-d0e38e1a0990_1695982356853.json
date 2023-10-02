@@ -1,7 +1,7 @@
 {
   "id": "58f06616-5250-4e6a-9011-d0e38e1a0990",
   "meta": {
-    "name": "Socket Test (Internal QA) (WIP)",
+    "name": "Socket Test (Internal QA)",
     "author": "Omnitool.ai team",
     "description": "A Omnitool smoke test recipe",
     "help": "## Socket Test (Internal QA) 🔌🧪\n\nWelcome to this recipe! This is a socket test recipe that allows you to test and validate your connection with the ElevenLabs and OpenAI services.\n\n### Prerequisites:\n\n**API Keys**:\n\n- ElevenLabs\n- OpenAI\n\n**Extensions**:\n\n- Replicate\n\n**Models:**",
