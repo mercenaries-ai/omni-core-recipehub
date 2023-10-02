@@ -1,12 +1,12 @@
 {
-  "id": "88bb916e-d5c1-4e1a-a3b1-a4c353ef3d96",
+  "id": "8e7ad3e8-f6b1-4a35-b7c5-0f8238c81a26",
   "meta": {
     "name": "Dr. Ulla - 100 Thousand Whys",
     "author": "omnitool.ai team",
     "description": "Inspired by the popular Chinese children's science book series, \"100 Thousand Whys\", Dr. Ulla uses a combination of LLM and Stable Diffusion to craft engaging answers and illustrations for the 'Why' questions, nurturing a child's thirst for knowledge.",
-    "help": "",
-    "created": 1694621573851,
-    "updated": 1695895022390,
+    "help": "## Dr. Ulla - 100 Thousand Whys 🧪🔬\n\nWelcome to this recipe! Inspired by the popular Chinese children's science book series, \"100 Thousand Whys\", Dr. Ulla uses a combination of LLM and Stable Diffusion to craft engaging answers and illustrations for the 'Why' questions, nurturing a child's thirst for knowledge.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n- Replicate\n\n**Models:**\n- replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Type in your 'Why' question.\n- Hit Run Recipe button!\n- View the generated answer and illustration in the **Chat** box.\n- Enjoy the journey of discovery with Dr. Ulla!",
+    "created": 1696221894477,
+    "updated": 1696221894478,
     "pictureUrl": "ulla.png",
     "tags": [
       "education",
@@ -431,7 +431,7 @@
           "credits": "",
           "description": "Inspired by the popular Chinese children's science book series, \"100 Thousand Whys\", Dr. Ulla uses a combination of LLM and Stable Diffusion to craft engaging answers and illustrations for the 'Why' questions, nurturing a child's thirst for knowledge.",
           "enabled": true,
-          "help": "",
+          "help": "## Dr. Ulla - 100 Thousand Whys 🧪🔬\n\nWelcome to this recipe! Inspired by the popular Chinese children's science book series, \"100 Thousand Whys\", Dr. Ulla uses a combination of LLM and Stable Diffusion to craft engaging answers and illustrations for the 'Why' questions, nurturing a child's thirst for knowledge.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n- Replicate\n\n**Models:**\n- replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Type in your 'Why' question.\n- Hit Run Recipe button!\n- View the generated answer and illustration in the **Chat** box.\n- Enjoy the journey of discovery with Dr. Ulla!",
           "license": "",
           "title": "Dr. Ulla - 100 Thousand Whys",
           "xOmniEnabled": true
