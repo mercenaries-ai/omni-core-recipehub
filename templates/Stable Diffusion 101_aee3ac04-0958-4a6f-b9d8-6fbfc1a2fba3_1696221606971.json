@@ -1,12 +1,12 @@
 {
-  "id": "97398ad0-f1fa-4012-881b-454adf6d04d5",
+  "id": "aee3ac04-0958-4a6f-b9d8-6fbfc1a2fba3",
   "meta": {
     "name": "Stable Diffusion 101",
     "author": "omnitool.ai team",
     "description": "A simple Image Generation Demo using Stable Diffusion and Upscaling",
     "help": "## Stable Diffusion 101 🎨🖼️\n\nWelcome to this recipe! Learn the basic prompt to generate images using Stable Diffusion and Upscaling.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models**:\n\n- Replicate: stability-ai/sdxl\n- Replicate: nightmareai/real-esrgan\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Play around with the Stable Diffusion prompt\n- Hit **Run Recipe**!\n- Enjoy the generated image in the **Chat** box.",
-    "created": 1695920649895,
-    "updated": 1695964684927,
+    "created": 1696220758932,
+    "updated": 1696221604946,
     "tags": [
       "education",
       "art & design"
@@ -95,7 +95,7 @@
           "images": "",
           "prompt": "",
           "replace": null,
-          "source": "{input:prompt} {input:image_type}",
+          "source": "({input:prompt}:1.2), {input:image_type}",
           "x-omni-dynamicInputs": {
             "image_type": {
               "customSocket": "text",
@@ -218,7 +218,7 @@
                       {
                         "applyMaskOn": "change",
                         "autoExpand": false,
-                        "defaultValue": "Ya'll Qaeda on the Barbie Set",
+                        "defaultValue": "Barbie Toy",
                         "description": "💡Hint: The input text (aka Prompt) is used to shape the generation of the image. Brackets can be used to increase the weight of a particular subject, e.g. (sunny) - with more brackets further increasing the weight.",
                         "input": true,
                         "key": "prompt",
@@ -401,8 +401,8 @@
           }
         },
         "position": [
-          -1869.2570998281828,
-          17.112265495979784
+          -1846.413144212337,
+          307.62420677653097
         ],
         "name": "omni-extension-formio:formio.auto_ui"
       },
