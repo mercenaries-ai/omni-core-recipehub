@@ -7,7 +7,10 @@
     "help": "## AI Tutor 🤖🎓\n\nWelcome to this recipe! Experience the future of education with our AI Tutor. This AI-powered tutor will help you understand complex concepts by providing explanations tailored to your learning level and prior knowledge.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Type in the concept or topic you want to understand better.\n- Hit **Run Recipe** to initiate the AI Tutor.\n- Enjoy the personalized explanation provided by the AI Tutor in the **Chat** box.",
     "created": 1695985379145,
     "updated": 1695985945468,
-    "tags": []
+    "tags": [
+      "education",
+      "productivity"
+    ]
   },
   "rete": {
     "id": "mercs@0.1.1",

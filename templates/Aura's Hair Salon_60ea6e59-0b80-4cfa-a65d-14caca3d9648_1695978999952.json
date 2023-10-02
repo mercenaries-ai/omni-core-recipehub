@@ -8,7 +8,10 @@
     "created": 1694601421961,
     "updated": 1695978992493,
     "pictureUrl": "hairsalon.png",
-    "tags": []
+    "tags": [
+      "lifestyle", 
+      "art & design"
+    ]
   },
   "rete": {
     "id": "mercs@0.1.1",
