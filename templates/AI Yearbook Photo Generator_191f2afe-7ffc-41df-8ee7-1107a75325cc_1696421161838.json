@@ -1,12 +1,12 @@
 {
-  "id": "c87e08bf-2b89-4c7e-96f4-a793594c2071",
+  "id": "191f2afe-7ffc-41df-8ee7-1107a75325cc",
   "meta": {
     "name": "AI Yearbook Photo Generator",
     "author": "omnitool.ai team",
-    "description": "Combine text-to-image generation with face-swap to craft a 1980's yearbook photo.",
-    "help": "## AI Yearbook Photo Generator 📚🤖\n\nWelcome to this recipe! Use AI to craft a retro yearbook photo.This recipe uses the Replicate extension and two specific models to create unique and creative yearbook entries.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Replicate: rmokady/clip_prefix_caption\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload your current photo\n- Hit ▶️ Run button!\n- Enjoy your AI-generated yearbook photo in the chat!",
-    "created": 1696390781498,
-    "updated": 1696391720867,
+    "description": "Combine text-to-image generation with face-swap to craft a retro yearbook photo.",
+    "help": "## AI Yearbook Photo Generator 📚🤖\n\nWelcome to AI Yearbook Photo Generator! This recipe uses the Replicate extension and two specific models to craft a retro yearbook photo.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Replicate: rmokady/clip_prefix_caption\n- Replicate: stability-ai/sdxl\n- Replicate: lucataco/faceswap\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload your current photo or simply click on the camera to take a selfie\n- Hit ▶️ Run button!\n- Enjoy your AI-generated yearbook photo in the chat!",
+    "created": 1696420608718,
+    "updated": 1696421159834,
     "pictureUrl": "hairsalon.png",
     "tags": [
       "lifestyle",
@@ -22,7 +22,7 @@
           "enabled": false,
           "function": null,
           "functions": "",
-          "instruction": "You excel at write vivid descriptions for photos. You'll first ONLY extract the person's gender from my prompt, and you'll describe this individual as if they appeared in a 1980 college yearbooks photo. Detail their attire, expression, and gender. Highlight any distinctive features or evident in the photo.",
+          "instruction": "You excel at write vivid descriptions for photos. You'll first ONLY extract the person's gender from my prompt, and you'll describe this individual as if they appeared in a 1990 college yearbooks photo. Detail their attire, expression, and gender. Highlight any distinctive features or evident in the photo.",
           "model": "gpt-3.5-turbo",
           "prompt": "",
           "temperature": 0.5,
@@ -99,6 +99,7 @@
           "enabled": true,
           "swap_image": "https://replicate.delivery/pbxt/JN97ny6RmjfrxizbgyHnPGGP8Kxzw6UI20ekarOg7dbo02Pi/elon.jpg",
           "target_image": "https://replicate.delivery/pbxt/JN97nntkJiijxKQ4iY8JUvVmy9PwY3VETJjBVUczrIqr2pwP/tony.jpg",
+          "x-omni-title": "Replicate: lucataco/faceswap",
           "xOmniEnabled": true
         },
         "inputs": {
@@ -338,7 +339,7 @@
           "enabled": false,
           "function": null,
           "functions": "",
-          "instruction": "You are a helpful assistant interpreting user inputs for a generative image program. I'll provide you a photo description. You output a prompt in a string of keywords that contains the most important features from the description. Ensure to always include gender and age in 20-25 year-old.\n\nYou will always prepend the following string to the prompt: \n\n\"(style of school yearbook photo:1.2), yearbook photo blue background, analog, close-up portrait, analog, retro, faded\"\n\nIf there is only one word, (or even no input at all), be creative and add elements to make a fun interesting prompt yourself.\n\nFor example: \n\"(style of school yearbook photo:1.2), yearbook photo blue background, analog, close-up portrait, analog, retro, faded, male, 20 year-old, vibrant polo shirt, bold horizontal stripes, popped collar, high-waisted jeans, feathered hair, chestnut brown, deep-set hazel eyes, confident smile, high school hallway with lockers, linoleum floor, fluorescent lighting, bustling students\"",
+          "instruction": "You are a helpful assistant interpreting user inputs for a generative image program. I'll provide you a photo description. You output a prompt in a string of keywords that contains the most important features from the description. Ensure to always include gender and age in 20-25 year-old.\n\nYou will always prepend the following string to the prompt: \n\n\"(style of school yearbook photo:1.2), (muslin backdrop background:1.1), analog, close-up portrait, retro, faded\"\n\nIf there is only one word, (or even no input at all), be creative and add elements to make a fun interesting prompt yourself.\n\nFor example: \n\"(style of school yearbook photo:1.2), (muslin backdrop background:1.1), analog, close-up portrait, retro, faded,  male, 20 year-old, vibrant polo shirt, bold horizontal stripes, popped collar, high-waisted jeans, feathered hair, chestnut brown, deep-set hazel eyes, confident smile\"",
           "model": "gpt-3.5-turbo",
           "prompt": "",
           "temperature": 0.3,
@@ -479,9 +480,9 @@
           "author": "omnitool.ai team",
           "button": "",
           "credits": "",
-          "description": "Combine text-to-image generation with face-swap to craft a 1980's yearbook photo.",
-          "help": "## AI Yearbook Photo Generator 📚🤖\n\nWelcome to this recipe! Use AI to craft a retro yearbook photo.This recipe uses the Replicate extension and two specific models to create unique and creative yearbook entries.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Replicate: rmokady/clip_prefix_caption\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload your current photo\n- Hit ▶️ Run button!\n- Enjoy your AI-generated yearbook photo in the chat!",
-          "license": "CC-BY-SA",
+          "description": "Combine text-to-image generation with face-swap to craft a retro yearbook photo.",
+          "help": "## AI Yearbook Photo Generator 📚🤖\n\nWelcome to AI Yearbook Photo Generator! This recipe uses the Replicate extension and two specific models to craft a retro yearbook photo.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Replicate: rmokady/clip_prefix_caption\n- Replicate: stability-ai/sdxl\n- Replicate: lucataco/faceswap\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload your current photo or simply click on the camera to take a selfie\n- Hit ▶️ Run button!\n- Enjoy your AI-generated yearbook photo in the chat!",
+          "license": "CC0",
           "title": "AI Yearbook Photo Generator",
           "xOmniEnabled": true
         },
