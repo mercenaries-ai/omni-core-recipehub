@@ -4,9 +4,9 @@
     "name": "AI Yearbook Photo Generator",
     "author": "omnitool.ai team",
     "description": "Combine text-to-image generation with face-swap to craft a retro yearbook photo.",
-    "help": "## AI Yearbook Photo Generator 📚🤖\n\nWelcome to AI Yearbook Photo Generator! This recipe uses the Replicate extension and two specific models to craft a retro yearbook photo.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Replicate: rmokady/clip_prefix_caption\n- Replicate: stability-ai/sdxl\n- Replicate: lucataco/faceswap\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload your current photo or simply click on the camera to take a selfie\n- Hit ▶️ Run button!\n- Enjoy your AI-generated yearbook photo in the chat!",
-    "created": 1696420608718,
-    "updated": 1696422840103,
+    "help": "## AI Yearbook Photo Generator 📚🤖\n\nWelcome to AI Yearbook Photo Generator! This recipe uses the Replicate extension and two specific models to craft a retro yearbook photo.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Large Language Model\n- Replicate: rmokady/clip_prefix_caption\n- Replicate: stability-ai/sdxl\n- Replicate: lucataco/faceswap\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload your current photo or simply click on the camera to take a selfie\n- Hit ▶️ Run button!\n- Enjoy your AI-generated yearbook photo in the chat!",
+    "created": 1696753026239,
+    "updated": 1696753470930,
     "pictureUrl": "hairsalon.png",
     "tags": [
       "lifestyle",
@@ -16,83 +16,6 @@
   "rete": {
     "id": "mercs@0.1.1",
     "nodes": {
-      "238": {
-        "id": 238,
-        "data": {
-          "enabled": false,
-          "function": null,
-          "functions": "",
-          "instruction": "You excel at write vivid descriptions for photos. You'll first ONLY extract the person's gender from my prompt, and you'll describe this individual as if they appeared in a 1990 college yearbooks photo. Detail their attire, expression, and gender. Highlight any distinctive features or evident in the photo.",
-          "model": "gpt-3.5-turbo",
-          "prompt": "",
-          "temperature": 0.5,
-          "top_p": 1,
-          "x-omni-title": "Generate Photo Description via ChatGPT",
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "model": {
-            "connections": []
-          },
-          "temperature": {
-            "connections": []
-          },
-          "top_p": {
-            "connections": []
-          },
-          "function": {
-            "connections": []
-          },
-          "instruction": {
-            "connections": []
-          },
-          "prompt": {
-            "connections": [
-              {
-                "node": 1340,
-                "output": "answer_text",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "outputs": {
-          "answer_text": {
-            "connections": [
-              {
-                "node": 1033,
-                "input": "prompt",
-                "data": {}
-              },
-              {
-                "node": 1338,
-                "input": "text",
-                "data": {}
-              }
-            ]
-          },
-          "function_call": {
-            "connections": []
-          },
-          "function_arguments_string": {
-            "connections": []
-          },
-          "function_arguments": {
-            "connections": []
-          },
-          "function_name": {
-            "connections": []
-          },
-          "raw_output": {
-            "connections": []
-          }
-        },
-        "position": [
-          684.5789240053058,
-          -2456.2892761891985
-        ],
-        "name": "openai.advancedChatGPT"
-      },
       "701": {
         "id": 701,
         "data": {
@@ -137,8 +60,8 @@
           }
         },
         "position": [
-          2910.067285698205,
-          -1762.3505951845502
+          1588.418666077215,
+          -813.9524930112726
         ],
         "name": "omni-extension-replicate:run.lucataco/faceswap"
       },
@@ -187,39 +110,10 @@
         },
         "outputs": {},
         "position": [
-          3533.528394046565,
-          -1991.9054577544546
+          2087.977574977194,
+          -769.6021512119898
         ],
         "name": "omnitool.chat_output"
-      },
-      "1015": {
-        "id": 1015,
-        "data": {
-          "number": 0,
-          "number_format": "timestamp",
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "number": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "number": {
-            "connections": [
-              {
-                "node": 1018,
-                "input": "seed",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "position": [
-          1653.9298609871234,
-          -2259.55262797205
-        ],
-        "name": "omnitool.number_input"
       },
       "1018": {
         "id": 1018,
@@ -253,13 +147,7 @@
             "connections": []
           },
           "seed": {
-            "connections": [
-              {
-                "node": 1015,
-                "output": "number",
-                "data": {}
-              }
-            ]
+            "connections": []
           },
           "image": {
             "connections": []
@@ -273,8 +161,8 @@
           "prompt": {
             "connections": [
               {
-                "node": 1033,
-                "output": "answer_text",
+                "node": 1342,
+                "output": "Reply",
                 "data": {}
               }
             ]
@@ -328,87 +216,10 @@
           }
         },
         "position": [
-          2207.945635332484,
-          -2221.8135772886226
+          1069.3790428997172,
+          -649.2421601080384
         ],
         "name": "omni-extension-replicate:run.stability-ai/sdxl"
-      },
-      "1033": {
-        "id": 1033,
-        "data": {
-          "enabled": false,
-          "function": null,
-          "functions": "",
-          "instruction": "You are a helpful assistant interpreting user inputs for a generative image program. I'll provide you a photo description. You output a prompt in a string of keywords that contains the most important features from the description. Ensure to always include gender and age in 20-25 year-old.\n\nYou will always prepend the following string to the prompt: \n\n\"Create a school yearbook photo with muslin backdrop background. The photo is analog, close-up portrait, retro, faded.\"\n\nIf there is only one word, (or even no input at all), be creative and add elements to make a fun interesting prompt yourself.\n\nFor example: \n\"Create a school yearbook photo with muslin backdrop background. The photo is analog, close-up portrait, retro, faded. male, 20 year-old, vibrant polo shirt, bold horizontal stripes, popped collar, high-waisted jeans, feathered hair, chestnut brown, deep-set hazel eyes, confident smile\"",
-          "model": "gpt-3.5-turbo",
-          "prompt": "",
-          "temperature": 0.3,
-          "top_p": 1,
-          "x-omni-title": "Generate SDXL Prompt via ChatGPT",
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "model": {
-            "connections": []
-          },
-          "temperature": {
-            "connections": []
-          },
-          "top_p": {
-            "connections": []
-          },
-          "function": {
-            "connections": []
-          },
-          "instruction": {
-            "connections": []
-          },
-          "prompt": {
-            "connections": [
-              {
-                "node": 238,
-                "output": "answer_text",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "outputs": {
-          "answer_text": {
-            "connections": [
-              {
-                "node": 1018,
-                "input": "prompt",
-                "data": {}
-              },
-              {
-                "node": 1338,
-                "input": "text",
-                "data": {}
-              }
-            ]
-          },
-          "function_call": {
-            "connections": []
-          },
-          "function_arguments_string": {
-            "connections": []
-          },
-          "function_arguments": {
-            "connections": []
-          },
-          "function_name": {
-            "connections": []
-          },
-          "raw_output": {
-            "connections": []
-          }
-        },
-        "position": [
-          1195.3933199757953,
-          -2457.6966592954623
-        ],
-        "name": "openai.advancedChatGPT"
       },
       "1326": {
         "id": 1326,
@@ -469,8 +280,8 @@
           }
         },
         "position": [
-          -833.6486194225957,
-          -1943.5153879099785
+          -452.14170336942993,
+          -887.5780898912452
         ],
         "name": "omnitool.chat_input"
       },
@@ -481,7 +292,7 @@
           "button": "",
           "credits": "",
           "description": "Combine text-to-image generation with face-swap to craft a retro yearbook photo.",
-          "help": "## AI Yearbook Photo Generator 📚🤖\n\nWelcome to AI Yearbook Photo Generator! This recipe uses the Replicate extension and two specific models to craft a retro yearbook photo.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Replicate: rmokady/clip_prefix_caption\n- Replicate: stability-ai/sdxl\n- Replicate: lucataco/faceswap\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload your current photo or simply click on the camera to take a selfie\n- Hit ▶️ Run button!\n- Enjoy your AI-generated yearbook photo in the chat!",
+          "help": "## AI Yearbook Photo Generator 📚🤖\n\nWelcome to AI Yearbook Photo Generator! This recipe uses the Replicate extension and two specific models to craft a retro yearbook photo.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Large Language Model\n- Replicate: rmokady/clip_prefix_caption\n- Replicate: stability-ai/sdxl\n- Replicate: lucataco/faceswap\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload your current photo or simply click on the camera to take a selfie\n- Hit ▶️ Run button!\n- Enjoy your AI-generated yearbook photo in the chat!",
           "license": "CC0",
           "title": "AI Yearbook Photo Generator",
           "xOmniEnabled": true
@@ -489,8 +300,8 @@
         "inputs": {},
         "outputs": {},
         "position": [
-          -744.5353118471867,
-          -3055.9395504258096
+          37.284677989686145,
+          -109.9869740662271
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -511,18 +322,8 @@
           "text": {
             "connections": [
               {
-                "node": 238,
-                "output": "answer_text",
-                "data": {}
-              },
-              {
-                "node": 1033,
-                "output": "answer_text",
-                "data": {}
-              },
-              {
-                "node": 1340,
-                "output": "answer_text",
+                "node": 1342,
+                "output": "Reply",
                 "data": {}
               }
             ]
@@ -548,8 +349,8 @@
         },
         "outputs": {},
         "position": [
-          908.2927856716827,
-          -885.6876790558383
+          1578.6338962204654,
+          -144.69731815230185
         ],
         "name": "omnitool.chat_output"
       },
@@ -586,47 +387,32 @@
           "output": {
             "connections": [
               {
-                "node": 1340,
-                "input": "prompt",
+                "node": 1342,
+                "input": "Prompt",
                 "data": {}
               }
             ]
           }
         },
         "position": [
-          -333.6893642090072,
-          -2162.432109977866
+          38.81387794460887,
+          -495.95219424729737
         ],
         "name": "omni-extension-replicate:run.rmokady/clip_prefix_caption"
       },
-      "1340": {
-        "id": 1340,
+      "1342": {
+        "id": 1342,
         "data": {
-          "function": null,
-          "instruction": "You are a helpful bot.  You can help people by answering their questions. Tell me what's the gender of the person in the prompt? \nOnly return gender to me without explanation.",
-          "model": "gpt-3.5-turbo",
-          "prompt": "",
-          "temperature": 0.1,
-          "top_p": 1,
+          "Criteria": "",
+          "Instruction": "You are a helpful assistant interpreting user inputs for a generative image program. I'll provide you a photo description. You output a prompt in a string of keywords that contains the most important features from the description. Ensure to always include gender.\n\nHowever, for this photo, change the age to be in 20-25 year-old.\n\nYou will always prepend the following string to the prompt: \n\n\"Create a school yearbook photo with muslin backdrop background. The photo is analog, close-up portrait, retro, faded.\"\n\nIf there is only one word, or no input, or the input doesn't describe a person, just ignore the input and be creative and add elements to make a fun interesting prompt yourself.\n\nFor example: \n\"Create a school yearbook photo with muslin backdrop background. The photo is analog, close-up portrait, retro, faded. male, 20 year-old, vibrant polo shirt, bold horizontal stripes, popped collar, high-waisted jeans, feathered hair, chestnut brown, deep-set hazel eyes, confident smile\"",
+          "Prompt": "",
           "xOmniEnabled": true
         },
         "inputs": {
-          "model": {
+          "Instruction": {
             "connections": []
           },
-          "temperature": {
-            "connections": []
-          },
-          "top_p": {
-            "connections": []
-          },
-          "function": {
-            "connections": []
-          },
-          "instruction": {
-            "connections": []
-          },
-          "prompt": {
+          "Prompt": {
             "connections": [
               {
                 "node": 1339,
@@ -637,10 +423,10 @@
           }
         },
         "outputs": {
-          "answer_text": {
+          "Reply": {
             "connections": [
               {
-                "node": 238,
+                "node": 1018,
                 "input": "prompt",
                 "data": {}
               },
@@ -650,28 +436,13 @@
                 "data": {}
               }
             ]
-          },
-          "function_call": {
-            "connections": []
-          },
-          "function_arguments_string": {
-            "connections": []
-          },
-          "function_arguments": {
-            "connections": []
-          },
-          "function_name": {
-            "connections": []
-          },
-          "raw_output": {
-            "connections": []
           }
         },
         "position": [
-          179.57491461555622,
-          -2482.9490640606336
+          548.438760123195,
+          -649.519486619786
         ],
-        "name": "openai.advancedChatGPT"
+        "name": "omnitool.large_language_model"
       }
     }
   },
