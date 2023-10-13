@@ -1,12 +1,13 @@
 {
-  "id": "d94f836c-ac36-42cd-a2b9-1bb8e239ed31",
+  "id": "6edd5244-eef4-4594-813d-8daa2c85978c",
   "meta": {
     "name": "App Icon Artist",
     "author": "omnitool.ai",
-    "description": "A skilled artist who transforms your text prompts into captivating App icons",
+    "description": "A skilled artist who transforms your text prompts into captivating RPG-style icons",
+    "category": "General",
     "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
-    "created": 1695920468110,
-    "updated": 1695920507407,
+    "created": 1697188300031,
+    "updated": 1697188698417,
     "pictureUrl": "artist2.png",
     "tags": [
       "gaming",
@@ -41,6 +42,11 @@
                 "node": 2213,
                 "output": "output",
                 "data": {}
+              },
+              {
+                "node": 2509,
+                "output": "output",
+                "data": {}
               }
             ]
           },
@@ -62,8 +68,8 @@
         },
         "outputs": {},
         "position": [
-          1074.0326654258695,
-          -82.93291855583851
+          1414.1645153818608,
+          -173.51186382896844
         ],
         "name": "omnitool.chat_output"
       },
@@ -72,6 +78,7 @@
         "data": {
           "author": "omnitool.ai",
           "button": "",
+          "category": "General",
           "credits": "",
           "description": "A skilled artist who transforms your text prompts into captivating RPG-style icons",
           "enabled": true,
@@ -291,6 +298,11 @@
                 "node": 916,
                 "input": "_prompt",
                 "data": {}
+              },
+              {
+                "node": 2236,
+                "input": "_prompt",
+                "data": {}
               }
             ]
           },
@@ -407,8 +419,8 @@
           }
         },
         "position": [
-          485.68029231761454,
-          -371.2576205821421
+          486.69795258026744,
+          -737.2842690276495
         ],
         "name": "omni-extension-replicate:run.nandycc/sdxl-app-icons"
       },
@@ -440,6 +452,164 @@
           -547.0348037316637
         ],
         "name": "omnitool.number_input"
+      },
+      "2236": {
+        "id": 2236,
+        "data": {
+          "_prompt": "",
+          "button": "",
+          "enabled": true,
+          "images": "",
+          "replace": null,
+          "source": "Create a minimalist icon of {{input: Prompt}} in the style of conminmism",
+          "x-omni-dynamicInputs": {
+            "_prompt": {
+              "customSocket": "text",
+              "name": "_prompt",
+              "title": " Prompt",
+              "type": "string"
+            }
+          },
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "_prompt": {
+            "connections": [
+              {
+                "node": 2192,
+                "output": "_prompt",
+                "data": {}
+              }
+            ]
+          },
+          "source": {
+            "connections": []
+          },
+          "replace": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 2509,
+                "input": "prompt",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          -84.79684086138396,
+          347.6243107852657
+        ],
+        "name": "omnitool.multi_text_replace"
+      },
+      "2509": {
+        "id": 2509,
+        "data": {
+          "apply_watermark": true,
+          "enabled": true,
+          "guidance_scale": 4.96,
+          "height": 1024,
+          "high_noise_frac": 0.8,
+          "image": "",
+          "lora_scale": 1,
+          "mask": "",
+          "negative_prompt": "SOFT, BLURRY, colorful",
+          "num_inference_steps": 50,
+          "num_outputs": 1,
+          "prompt": "Minimalist colorful cricket cover drive ICON in the style of CONMINMISM",
+          "prompt_strength": 0.8,
+          "refine": "expert_ensemble_refiner",
+          "refine_steps": 20,
+          "scheduler": "K_EULER_ANCESTRAL",
+          "seed": 0,
+          "width": 1024,
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "mask": {
+            "connections": []
+          },
+          "enabled": {
+            "connections": []
+          },
+          "seed": {
+            "connections": []
+          },
+          "image": {
+            "connections": []
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "prompt": {
+            "connections": [
+              {
+                "node": 2236,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "refine": {
+            "connections": []
+          },
+          "scheduler": {
+            "connections": []
+          },
+          "lora_scale": {
+            "connections": []
+          },
+          "num_outputs": {
+            "connections": []
+          },
+          "refine_steps": {
+            "connections": []
+          },
+          "guidance_scale": {
+            "connections": []
+          },
+          "apply_watermark": {
+            "connections": []
+          },
+          "high_noise_frac": {
+            "connections": []
+          },
+          "negative_prompt": {
+            "connections": []
+          },
+          "prompt_strength": {
+            "connections": []
+          },
+          "num_inference_steps": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 107,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          510.8164529319257,
+          293.6911345557269
+        ],
+        "name": "omni-extension-replicate:run.galleri5/icons"
       }
     }
   },
