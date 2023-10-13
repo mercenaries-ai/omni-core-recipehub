@@ -1,13 +1,13 @@
 {
-  "id": "8ae854df-8be0-4617-8c6d-4f0faf07524e",
+  "id": "8c8b3e99-0ce0-4086-8d1d-5e44bb39df0a",
   "meta": {
     "name": "App Icon Artist",
     "author": "omnitool.ai",
     "description": "A skilled artist who transforms your text prompts into captivating app icons",
     "category": "General",
-    "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n- Replicate: galleri5/icons\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
-    "created": 1697211663111,
-    "updated": 1697213960132,
+    "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n- Sharp\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n- Replicate: galleri5/icons\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
+    "created": 1697218141954,
+    "updated": 1697221660652,
     "pictureUrl": "artist2.png",
     "tags": [
       "Art & Design"
@@ -62,8 +62,8 @@
         },
         "outputs": {},
         "position": [
-          2065.4252536045715,
-          -198.78461646493218
+          2750.6025996310145,
+          -220.6618172735959
         ],
         "name": "omnitool.chat_output"
       },
@@ -72,11 +72,11 @@
         "data": {
           "author": "omnitool.ai",
           "button": "",
-          "category": "Art & Design",
+          "category": "General",
           "credits": "",
           "description": "A skilled artist who transforms your text prompts into captivating app icons",
           "enabled": true,
-          "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n- Replicate: galleri5/icons\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
+          "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n- Sharp\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n- Replicate: galleri5/icons\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
           "license": "CC0",
           "tags": [
             "Art & Design"
@@ -100,7 +100,7 @@
           "enabled": true,
           "images": "",
           "replace": null,
-          "source": "app icon of {{input: Prompt}}",
+          "source": "In the style of TOK, {{input: Prompt}} app icon",
           "x-omni-dynamicInputs": {
             "_prompt": {
               "customSocket": "text",
@@ -143,15 +143,15 @@
           }
         },
         "position": [
-          -81.85829297462956,
-          -231.57141914903508
+          -57.067048794811086,
+          -528.5901320505808
         ],
         "name": "omnitool.multi_text_replace"
       },
       "2192": {
         "id": 2192,
         "data": {
-          "_prompt": "Music Player",
+          "_prompt": "Music",
           "button": "",
           "editMode": false,
           "enableUI": true,
@@ -196,7 +196,7 @@
                       {
                         "applyMaskOn": "change",
                         "autoExpand": false,
-                        "defaultValue": "Music Player",
+                        "defaultValue": "Music",
                         "input": true,
                         "key": "_prompt",
                         "label": " Prompt",
@@ -391,6 +391,21 @@
                 "node": 2236,
                 "input": "_prompt",
                 "data": {}
+              },
+              {
+                "node": 2564,
+                "input": "_prompt",
+                "data": {}
+              },
+              {
+                "node": 2578,
+                "input": "_prompt",
+                "data": {}
+              },
+              {
+                "node": 2595,
+                "input": "_prompt",
+                "data": {}
               }
             ]
           },
@@ -436,7 +451,7 @@
           "negative_prompt": "",
           "num_inference_steps": 50,
           "num_outputs": 1,
-          "prompt": "Banking app icon",
+          "prompt": "",
           "prompt_strength": 0.8,
           "refine": "no_refiner",
           "refine_steps": 0,
@@ -512,7 +527,7 @@
           "output": {
             "connections": [
               {
-                "node": 2518,
+                "node": 2543,
                 "input": "image",
                 "data": {}
               }
@@ -520,8 +535,8 @@
           }
         },
         "position": [
-          466.3831857486308,
-          -764.2513552638948
+          521.9446581320109,
+          -604.0730885964995
         ],
         "name": "omni-extension-replicate:run.nandycc/sdxl-app-icons"
       },
@@ -533,7 +548,7 @@
           "enabled": true,
           "images": "",
           "replace": null,
-          "source": "Minimalist {{input: Prompt}} ICON in the style of CONMINMISM",
+          "source": "minimalist flat {{input: Prompt}} ICON in the style of CONMINMISM",
           "x-omni-dynamicInputs": {
             "_prompt": {
               "customSocket": "text",
@@ -576,8 +591,8 @@
           }
         },
         "position": [
-          -84.79684086138396,
-          346.9923689075156
+          -68.69198496264377,
+          1057.654177742252
         ],
         "name": "omnitool.multi_text_replace"
       },
@@ -590,7 +605,7 @@
           "height": 1024,
           "high_noise_frac": 0.8,
           "image": "",
-          "lora_scale": 1,
+          "lora_scale": 0.6,
           "mask": "",
           "negative_prompt": "SOFT, BLURRY, colorful",
           "num_inference_steps": 50,
@@ -680,48 +695,10 @@
           }
         },
         "position": [
-          496.76968890246644,
-          86.87046553265938
+          528.2758487107443,
+          259.9972483165858
         ],
         "name": "omni-extension-replicate:run.galleri5/icons"
-      },
-      "2518": {
-        "id": 2518,
-        "data": {
-          "enabled": true,
-          "image": "https://replicate.delivery/pbxt/Ho28olmw8dnOffOz7yjuPK6UGsOPqFUfpCnq1ur8zaAKxiPH/animal-1.jpeg",
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "image": {
-            "connections": [
-              {
-                "node": 2213,
-                "output": "output",
-                "data": {}
-              }
-            ]
-          },
-          "enabled": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "output": {
-            "connections": [
-              {
-                "node": 2519,
-                "input": "images",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "position": [
-          995.998276171495,
-          -488.0559671413791
-        ],
-        "name": "omni-extension-replicate:run.cjwbw/rembg"
       },
       "2519": {
         "id": 2519,
@@ -746,8 +723,8 @@
                 "data": {}
               },
               {
-                "node": 2518,
-                "output": "output",
+                "node": 2520,
+                "output": "images",
                 "data": {}
               }
             ]
@@ -801,10 +778,244 @@
           }
         },
         "position": [
-          1203.61823891494,
-          -7.836930111154384
+          2129.7036601956247,
+          -157.15411943668536
         ],
         "name": "omni-extension-sharp:sharp.resize"
+      },
+      "2520": {
+        "id": 2520,
+        "data": {
+          "background": "#000000",
+          "images": "",
+          "threshold": 10,
+          "trimMode": "Top left Pixel",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "images": {
+            "connections": [
+              {
+                "node": 2543,
+                "output": "output",
+                "data": {}
+              }
+            ]
+          },
+          "trimMode": {
+            "connections": []
+          },
+          "background": {
+            "connections": []
+          },
+          "threshold": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "images": {
+            "connections": [
+              {
+                "node": 2519,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          1602.056792468194,
+          35.48706016695183
+        ],
+        "name": "omni-extension-sharp:omnitool.trim"
+      },
+      "2543": {
+        "id": 2543,
+        "data": {
+          "enabled": true,
+          "image": "https://replicate.delivery/pbxt/Ho28olmw8dnOffOz7yjuPK6UGsOPqFUfpCnq1ur8zaAKxiPH/animal-1.jpeg",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 2213,
+                "output": "output",
+                "data": {}
+              }
+            ]
+          },
+          "enabled": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 2520,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          1080.7300440684169,
+          -254.39099473665863
+        ],
+        "name": "omni-extension-replicate:run.cjwbw/rembg"
+      },
+      "2564": {
+        "id": 2564,
+        "data": {
+          "_prompt": "",
+          "button": "",
+          "enabled": true,
+          "images": "",
+          "replace": null,
+          "source": "{{input: Prompt}} app icon, glassmorphism, squared",
+          "x-omni-dynamicInputs": {
+            "_prompt": {
+              "customSocket": "text",
+              "name": "_prompt",
+              "title": " Prompt",
+              "type": "string"
+            }
+          },
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "_prompt": {
+            "connections": [
+              {
+                "node": 2192,
+                "output": "_prompt",
+                "data": {}
+              }
+            ]
+          },
+          "source": {
+            "connections": []
+          },
+          "replace": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": []
+          }
+        },
+        "position": [
+          -55.86333616270416,
+          -155.79941179739333
+        ],
+        "name": "omnitool.multi_text_replace"
+      },
+      "2578": {
+        "id": 2578,
+        "data": {
+          "_prompt": "",
+          "button": "",
+          "enabled": true,
+          "images": "",
+          "replace": null,
+          "source": "{{input: Prompt}} app icon, minimal, squared",
+          "x-omni-dynamicInputs": {
+            "_prompt": {
+              "customSocket": "text",
+              "name": "_prompt",
+              "title": " Prompt",
+              "type": "string"
+            }
+          },
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "_prompt": {
+            "connections": [
+              {
+                "node": 2192,
+                "output": "_prompt",
+                "data": {}
+              }
+            ]
+          },
+          "source": {
+            "connections": []
+          },
+          "replace": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": []
+          }
+        },
+        "position": [
+          -55.133253547006895,
+          259.9352008359198
+        ],
+        "name": "omnitool.multi_text_replace"
+      },
+      "2595": {
+        "id": 2595,
+        "data": {
+          "_prompt": "",
+          "button": "",
+          "enabled": true,
+          "images": "",
+          "replace": null,
+          "source": "{{input: Prompt}} app icon, material design, squared",
+          "x-omni-dynamicInputs": {
+            "_prompt": {
+              "customSocket": "text",
+              "name": "_prompt",
+              "title": " Prompt",
+              "type": "string"
+            }
+          },
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "_prompt": {
+            "connections": [
+              {
+                "node": 2192,
+                "output": "_prompt",
+                "data": {}
+              }
+            ]
+          },
+          "source": {
+            "connections": []
+          },
+          "replace": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": []
+          }
+        },
+        "position": [
+          -54.1167676676085,
+          625.6111447502734
+        ],
+        "name": "omnitool.multi_text_replace"
       }
     }
   },
