@@ -1,17 +1,16 @@
 {
-  "id": "6edd5244-eef4-4594-813d-8daa2c85978c",
+  "id": "8ae854df-8be0-4617-8c6d-4f0faf07524e",
   "meta": {
     "name": "App Icon Artist",
     "author": "omnitool.ai",
-    "description": "A skilled artist who transforms your text prompts into captivating RPG-style icons",
-    "category": "General",
-    "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
-    "created": 1697188300031,
-    "updated": 1697188698417,
+    "description": "A skilled artist who transforms your text prompts into captivating app icons",
+    "category": "Art & Design",
+    "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n- Replicate: galleri5/icons\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
+    "created": 1697211663111,
+    "updated": 1697213960132,
     "pictureUrl": "artist2.png",
     "tags": [
-      "gaming",
-      "art & design"
+      "Art & Design"
     ]
   },
   "rete": {
@@ -39,13 +38,8 @@
           "images": {
             "connections": [
               {
-                "node": 2213,
-                "output": "output",
-                "data": {}
-              },
-              {
-                "node": 2509,
-                "output": "output",
+                "node": 2519,
+                "output": "images",
                 "data": {}
               }
             ]
@@ -68,8 +62,8 @@
         },
         "outputs": {},
         "position": [
-          1414.1645153818608,
-          -173.51186382896844
+          2065.4252536045715,
+          -198.78461646493218
         ],
         "name": "omnitool.chat_output"
       },
@@ -78,12 +72,15 @@
         "data": {
           "author": "omnitool.ai",
           "button": "",
-          "category": "General",
+          "category": "Art & Design",
           "credits": "",
-          "description": "A skilled artist who transforms your text prompts into captivating RPG-style icons",
+          "description": "A skilled artist who transforms your text prompts into captivating app icons",
           "enabled": true,
-          "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
-          "license": "CC-BY-SA",
+          "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n- Replicate: galleri5/icons\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
+          "license": "CC0",
+          "tags": [
+            "Art & Design"
+          ],
           "title": "App Icon Artist",
           "xOmniEnabled": true
         },
@@ -103,7 +100,7 @@
           "enabled": true,
           "images": "",
           "replace": null,
-          "source": "{{input: Prompt}} app icon",
+          "source": "app icon of {{input: Prompt}}",
           "x-omni-dynamicInputs": {
             "_prompt": {
               "customSocket": "text",
@@ -154,10 +151,11 @@
       "2192": {
         "id": 2192,
         "data": {
-          "_prompt": "",
+          "_prompt": "Music Player",
           "button": "",
           "editMode": false,
           "enableUI": true,
+          "height": 128,
           "source": {
             "components": [
               {
@@ -183,13 +181,12 @@
                     "value": ""
                   }
                 ],
-                "content": "A skilled artist who transforms your text prompts into captivating App icons",
+                "content": "A skilled artist who transforms your text prompts into captivating app icons",
                 "input": false,
                 "key": "x-desc",
                 "label": "Recipe Description",
                 "refreshOnChange": false,
                 "tableView": false,
-                "tag": "p",
                 "type": "htmlelement"
               },
               {
@@ -197,10 +194,50 @@
                   {
                     "components": [
                       {
+                        "applyMaskOn": "change",
+                        "autoExpand": false,
+                        "defaultValue": "Music Player",
                         "input": true,
                         "key": "_prompt",
                         "label": " Prompt",
+                        "tableView": true,
                         "type": "textarea"
+                      },
+                      {
+                        "applyMaskOn": "change",
+                        "defaultValue": 128,
+                        "delimiter": false,
+                        "input": true,
+                        "inputFormat": "plain",
+                        "key": "width",
+                        "label": "Width",
+                        "mask": false,
+                        "requireDecimal": false,
+                        "tableView": false,
+                        "truncateMultipleSpaces": false,
+                        "type": "number",
+                        "validate": {
+                          "max": 8192,
+                          "min": 1
+                        }
+                      },
+                      {
+                        "applyMaskOn": "change",
+                        "defaultValue": 128,
+                        "delimiter": false,
+                        "input": true,
+                        "inputFormat": "plain",
+                        "key": "height",
+                        "label": "Height",
+                        "mask": false,
+                        "requireDecimal": false,
+                        "tableView": false,
+                        "truncateMultipleSpaces": false,
+                        "type": "number",
+                        "validate": {
+                          "max": 8192,
+                          "min": 1
+                        }
                       }
                     ],
                     "key": "x-inputs",
@@ -262,6 +299,7 @@
               }
             ]
           },
+          "width": 128,
           "x-omni-dynamicInputs": {
             "_prompt": {
               "control": {
@@ -271,6 +309,28 @@
               "name": "_prompt",
               "title": " Prompt",
               "type": "string"
+            },
+            "height": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "maximum": 8192,
+              "minimum": 1,
+              "name": "height",
+              "socketOpts": {},
+              "title": "Height",
+              "type": "number"
+            },
+            "width": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "maximum": 8192,
+              "minimum": 1,
+              "name": "width",
+              "socketOpts": {},
+              "title": "Width",
+              "type": "number"
             }
           },
           "x-omni-dynamicOutputs": {
@@ -282,12 +342,40 @@
               "name": "_prompt",
               "title": " Prompt",
               "type": "string"
+            },
+            "height": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "maximum": 8192,
+              "minimum": 1,
+              "name": "height",
+              "socketOpts": {},
+              "title": "Height",
+              "type": "number"
+            },
+            "width": {
+              "control": {
+                "type": "AlpineLabelControl"
+              },
+              "maximum": 8192,
+              "minimum": 1,
+              "name": "width",
+              "socketOpts": {},
+              "title": "Width",
+              "type": "number"
             }
           },
           "xOmniEnabled": true
         },
         "inputs": {
           "_prompt": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "width": {
             "connections": []
           }
         },
@@ -306,13 +394,31 @@
               }
             ]
           },
+          "height": {
+            "connections": [
+              {
+                "node": 2519,
+                "input": "height",
+                "data": {}
+              }
+            ]
+          },
+          "width": {
+            "connections": [
+              {
+                "node": 2519,
+                "input": "width",
+                "data": {}
+              }
+            ]
+          },
           "any": {
             "connections": []
           }
         },
         "position": [
-          -582.0616485523965,
-          -565.6357240746847
+          -627.6411065790944,
+          -545.9978100399809
         ],
         "name": "omni-extension-formio:formio.auto_ui"
       },
@@ -337,6 +443,7 @@
           "scheduler": "K_EULER",
           "seed": 0,
           "width": 1024,
+          "x-omni-comment": "Fine tuned to generate awesome app icons, by aistartupkit.com\n\n***Tips:***\n\n*For optimal performance on the SDXL model, ensure to use **1024x1024** or others with the same pixel count but varying aspect ratios:*\n\n- **1024 x 1024** (1:1)\n- **1152 x 896** (9:7), **896 x 1152** (7:9)\n- **1216 x 832** (19:13), **832 x 1216** (13:19)\n- **1344 x 768** (7:4), **768 x 1344** (4:7)\n- **1536 x 640** (12:5), **640 x 1536** (5:12)",
           "xOmniEnabled": true
         },
         "inputs": {
@@ -347,13 +454,7 @@
             "connections": []
           },
           "seed": {
-            "connections": [
-              {
-                "node": 2229,
-                "output": "number",
-                "data": {}
-              }
-            ]
+            "connections": []
           },
           "image": {
             "connections": []
@@ -411,47 +512,18 @@
           "output": {
             "connections": [
               {
-                "node": 107,
-                "input": "images",
+                "node": 2518,
+                "input": "image",
                 "data": {}
               }
             ]
           }
         },
         "position": [
-          486.69795258026744,
-          -737.2842690276495
+          466.3831857486308,
+          -764.2513552638948
         ],
         "name": "omni-extension-replicate:run.nandycc/sdxl-app-icons"
-      },
-      "2229": {
-        "id": 2229,
-        "data": {
-          "number": 0,
-          "number_format": "timestamp",
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "number": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "number": {
-            "connections": [
-              {
-                "node": 2213,
-                "input": "seed",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "position": [
-          -61.948224633849726,
-          -547.0348037316637
-        ],
-        "name": "omnitool.number_input"
       },
       "2236": {
         "id": 2236,
@@ -461,7 +533,7 @@
           "enabled": true,
           "images": "",
           "replace": null,
-          "source": "Create a minimalist icon of {{input: Prompt}} in the style of conminmism",
+          "source": "Minimalist {{input: Prompt}} ICON in the style of CONMINMISM",
           "x-omni-dynamicInputs": {
             "_prompt": {
               "customSocket": "text",
@@ -505,7 +577,7 @@
         },
         "position": [
           -84.79684086138396,
-          347.6243107852657
+          346.9923689075156
         ],
         "name": "omnitool.multi_text_replace"
       },
@@ -530,6 +602,8 @@
           "scheduler": "K_EULER_ANCESTRAL",
           "seed": 0,
           "width": 1024,
+          "x-omni-comment": "SDXL finetune to generate slick Icons and Flat Pop Constructivist Graphics with thick edges. Trained on Bing Generations\n\n***Tips:***\n\n*For optimal performance on the SDXL model, ensure to use **1024x1024** or others with the same pixel count but varying aspect ratios:*\n\n- **1024 x 1024** (1:1)\n- **1152 x 896** (9:7), **896 x 1152** (7:9)\n- **1216 x 832** (19:13), **832 x 1216** (13:19)\n- **1344 x 768** (7:4), **768 x 1344** (4:7)\n- **1536 x 640** (12:5), **640 x 1536** (5:12)",
+          "x-omni-title": "Replicate: galleri5/icons",
           "xOmniEnabled": true
         },
         "inputs": {
@@ -598,6 +672,127 @@
           "output": {
             "connections": [
               {
+                "node": 2519,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          496.76968890246644,
+          86.87046553265938
+        ],
+        "name": "omni-extension-replicate:run.galleri5/icons"
+      },
+      "2518": {
+        "id": 2518,
+        "data": {
+          "enabled": true,
+          "image": "https://replicate.delivery/pbxt/Ho28olmw8dnOffOz7yjuPK6UGsOPqFUfpCnq1ur8zaAKxiPH/animal-1.jpeg",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "image": {
+            "connections": [
+              {
+                "node": 2213,
+                "output": "output",
+                "data": {}
+              }
+            ]
+          },
+          "enabled": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "node": 2519,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          995.998276171495,
+          -488.0559671413791
+        ],
+        "name": "omni-extension-replicate:run.cjwbw/rembg"
+      },
+      "2519": {
+        "id": 2519,
+        "data": {
+          "background": "#000000",
+          "fastShrinkOnLoad": true,
+          "fit": "cover",
+          "height": 128,
+          "images": "",
+          "kernel": "lanczos3",
+          "position": "centre",
+          "width": 128,
+          "withoutEnlargement": false,
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "images": {
+            "connections": [
+              {
+                "node": 2509,
+                "output": "output",
+                "data": {}
+              },
+              {
+                "node": 2518,
+                "output": "output",
+                "data": {}
+              }
+            ]
+          },
+          "width": {
+            "connections": [
+              {
+                "node": 2192,
+                "output": "width",
+                "data": {}
+              }
+            ]
+          },
+          "height": {
+            "connections": [
+              {
+                "node": 2192,
+                "output": "height",
+                "data": {}
+              }
+            ]
+          },
+          "fit": {
+            "connections": []
+          },
+          "position": {
+            "connections": []
+          },
+          "background": {
+            "connections": []
+          },
+          "kernel": {
+            "connections": []
+          },
+          "withoutEnlargement": {
+            "connections": []
+          },
+          "fastShrinkOnLoad": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "images": {
+            "connections": [
+              {
                 "node": 107,
                 "input": "images",
                 "data": {}
@@ -606,10 +801,10 @@
           }
         },
         "position": [
-          510.8164529319257,
-          293.6911345557269
+          1203.61823891494,
+          -7.836930111154384
         ],
-        "name": "omni-extension-replicate:run.galleri5/icons"
+        "name": "omni-extension-sharp:sharp.resize"
       }
     }
   },
