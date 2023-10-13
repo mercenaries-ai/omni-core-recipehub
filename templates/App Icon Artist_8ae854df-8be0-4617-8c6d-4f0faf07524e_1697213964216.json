@@ -4,7 +4,7 @@
     "name": "App Icon Artist",
     "author": "omnitool.ai",
     "description": "A skilled artist who transforms your text prompts into captivating app icons",
-    "category": "Art & Design",
+    "category": "General",
     "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n- Replicate: galleri5/icons\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
     "created": 1697211663111,
     "updated": 1697213960132,
