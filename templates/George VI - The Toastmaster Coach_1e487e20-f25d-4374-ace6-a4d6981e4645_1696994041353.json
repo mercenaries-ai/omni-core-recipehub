@@ -2,7 +2,7 @@
   "id": "1e487e20-f25d-4374-ace6-a4d6981e4645",
   "meta": {
     "name": "George VI - The Toastmaster Coach",
-    "author": "omnitool.ai team",
+    "author": "Omnitool.ai team",
     "description": "Combining LLM and text-to-speech, this app serves as a personal public speech coach. It provides feedback on your transcripts and offers audio demonstrations to help improve your speaking skills.",
     "help": "## George VI - The Toastmaster Coach 🎙️👑\n\nWelcome to George VI - The Toastmaster Coach! This app is your personal public speech assistant, designed to refine your transcripts and offer engaging audio demonstrations. Dive into the world of eloquent speeches with the help of elevenlabs and LLM.\n\n### Prerequisites:\n**API Keys**:\n- OpenAI\n- Elevenlabs\n\n**Models**:\n\n- Elevenlabs English v1(Monolingual v1)\n- LLM: OpenAI GPT 4\n\n### How to Use:\n\n- Navigate to the custom UI window.\n- Input your current speech transcript.\n- Hit Run Recipe!\n- Receive feedback on your transcript and listen to the engaging audio demo in the chat!",
     "created": 1691747053051,
@@ -539,7 +539,7 @@
       "644": {
         "id": 644,
         "data": {
-          "author": "omnitool.ai team",
+          "author": "Omnitool.ai team",
           "button": "",
           "credits": "",
           "description": "Your personal public speech coach! Here to refine your transcripts and provide engaging audio demos.",

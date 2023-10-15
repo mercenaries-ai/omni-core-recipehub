@@ -2,7 +2,7 @@
   "id": "7618b857-e2c8-4cac-814d-143ade714951",
   "meta": {
     "name": "Chef François Food Photography",
-    "author": "omnitool.ai team",
+    "author": "Omnitool.ai team",
     "description": "Utilise the Large Language Model (LLM) and the Stable Diffusion XL to generate a description and visually appealing food photography based on your culinary idea.",
     "help": "## Chef François Food Photography 📸🍲\n\nWelcome to this recipe! Describe your culinary idea and get a captivating description and image in return.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the custom UI window.\n- Describe the food\n- Hit **Run Recipe** button!\n- Enjoy the generated description and image in the **Chat** box.",
     "created": 1696222081907,
@@ -141,7 +141,7 @@
       "711": {
         "id": 711,
         "data": {
-          "author": "omnitool.ai team",
+          "author": "Omnitool.ai team",
           "button": "",
           "credits": "",
           "description": "Food photography with flourishing presentation and delivery.",

@@ -2,7 +2,7 @@
   "id": "72d9e304-31df-4a4f-9dcc-668ff2cb2803",
   "meta": {
     "name": "Persona Builder",
-    "author": "Anonymous",
+    "author": "Omnitool.ai team",
     "description": "Creates various personas personas tailored to your product's context for your product strategy",
     "help": "## Persona Builder 🤖📝\n\nWelcome to the Persona Builder recipe! Utilize the power of advanced AI to create a persona for your product or service. Input the Product Description, Feature, Value Proposition, and Target Audience, and let the AI do the rest.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input your Product Description, Feature, Value Proposition, and Target Audience.\n- Hit **Run Recipe**!\n- View the generated persona markdown file in the **Chat** box.",
     "created": 1695922689801,
@@ -230,7 +230,7 @@
       "523": {
         "id": 523,
         "data": {
-          "author": "omnitool.ai team",
+          "author": "Omnitool.ai team",
           "button": "",
           "credits": "",
           "description": "Creates various personas personas tailored to your product's context for your product strategy",

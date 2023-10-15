@@ -2,7 +2,7 @@
   "id": "6a89f980-b60b-41d4-bd92-c05a1bd959a8",
   "meta": {
     "name": "Coloring Page Generator",
-    "author": "omnitool.ai team",
+    "author": "Omnitool.ai team",
     "description": "Generate custom coloring pages accompanied by rhymes using a combination of LLM and a fine-tuned Stable Diffusion model. Simply provide a description and enjoy the tailored coloring page with children.",
     "help": "## Coloring Page Generator 🎨✒️\n\nWelcome to the Coloring Page Generator! This recipe utilizes the power of AI to generate coloring pages accompanied by rhymes based on the your description. Follow the instructions below to create your own custom coloring page activity.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models**:\n- Replicate: paappraiser/retro-coloring-book\n\n### How to Use:\n\n1. Navigate to the custom UI window.\n2. Enter a detailed description of the desired coloring page.\n3. Hit **Run Recipe**\n4. Start enjoying your personalized coloring page generated in the **Chat** box!",
     "created": 1695886570340,
@@ -77,7 +77,7 @@
       "711": {
         "id": 711,
         "data": {
-          "author": "omnitool.ai team",
+          "author": "Omnitool.ai team",
           "button": "",
           "credits": "",
           "description": "Creates simple coloring pages based on user input accompanied by rhymes, suitable for children of any age.",

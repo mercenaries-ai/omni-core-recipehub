@@ -2,7 +2,7 @@
   "id": "e63d7b46-09e0-46b0-b7f7-47add869f9cf",
   "meta": {
     "name": "Aura's Hair Salon",
-    "author": "omnitool.ai team",
+    "author": "Omnitool.ai team",
     "description": "Preview your new hairstyle! It combines text-to-image Stable Diffusion XL model with face-swap technique to give you a glimpse of your desired hairstyle. Simply upload your photo and describe the hairstyle you want, including gender and style.",
     "category": "General",
     "help": "## Aura's Hair Salon 💇‍♀️📸\n\nWelcome to this recipe! With Aura's Hair Salon, you can preview your new hairstyle designed by Aura. Simply upload your photo and tell us your desired hairstyle.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Click on the camera icon to take a photo or upload your own photo.\n- Describe your desired hairstyle, including gender and style, in the chat box, and hit Enter!\n- Enjoy the preview of your new hairstyle in the **Chat** box.",
@@ -443,7 +443,7 @@
       "1327": {
         "id": 1327,
         "data": {
-          "author": "omnitool.ai team",
+          "author": "Omnitool.ai team",
           "button": "",
           "category": "General",
           "credits": "",

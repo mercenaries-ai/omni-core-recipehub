@@ -2,7 +2,7 @@
   "id": "93ec3c53-6a47-4676-adc2-1bf358493c3d",
   "meta": {
     "name": "OmniLab: Stable Diffusion 101",
-    "author": "omnitool.ai team",
+    "author": "Omnitool.ai team",
     "description": "A simple Image Generation Demo using Stable Diffusion and Upscaling",
     "category": "General",
     "help": "## Stable Diffusion 101 🎨🖼️\n\nWelcome to this recipe! Learn the basic prompt to generate images using Stable Diffusion and Upscaling.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models**:\n\n- Replicate: stability-ai/sdxl\n- Replicate: nightmareai/real-esrgan\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Play around with the Stable Diffusion prompt\n- Hit **Run Recipe**!\n- Enjoy the generated image in the **Chat** box.",
@@ -20,7 +20,7 @@
       "1": {
         "id": 1,
         "data": {
-          "author": "omnitool.ai team",
+          "author": "Omnitool.ai team",
           "button": "",
           "category": "General",
           "credits": "",

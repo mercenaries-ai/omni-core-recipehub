@@ -2,7 +2,7 @@
   "id": "57eea074-b64d-423f-8e92-a84608af8b2e",
   "meta": {
     "name": "Monica the Librarian",
-    "author": "omnitool.ai team",
+    "author": "Omnitool.ai team",
     "description": "Show her a picture and she will recommend you a novel to read.",
     "help": "## Monica the Librarian 📚🔍\n\nWelcome to the Monica the Librarian recipe! With this AI assistant, you can get book recommendations based an image. Monica is vivacious, sarcastic, and superfluously eloquent, but above all, she is helpful! She will always recommend a good book, even if she personally dislikes aspects of her recommendation.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: rmokady/clip_prefix_caption\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Upload the image you want to get a book recommendation for.\n- Hit **Run Recipe** button!\n- View the generated book recommendation in the **Chat** box. Enjoy your new book recommendation!",
     "created": 1695910443462,
@@ -328,7 +328,7 @@
       "2264": {
         "id": 2264,
         "data": {
-          "author": "omnitool.ai team",
+          "author": "Omnitool.ai team",
           "button": "",
           "credits": "",
           "description": "Show her a picture and she will recommend you a novel to read.",
