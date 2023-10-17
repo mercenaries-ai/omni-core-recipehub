@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-import fs from 'node:fs/promises';  // Importing the promises API
+import fs from 'node:fs/promises';
 import path from 'node:path';
 import { v4 } from 'uuid';
 import { fileURLToPath } from 'url';
@@ -14,15 +14,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 function addMetaTag(doc, tag) {
-    if (!doc.meta.tags.includes(tag)) {  // Simplified using includes
+    if (!doc.meta.tags.includes(tag)) {
         doc.meta.tags.push(tag);
     }
 }
 
-async function run() {
+async function importRecipes() {
     try {
         const templateDir = path.join(__dirname, '../../templates');
-        if (!(await fs.stat(templateDir)).isDirectory()) {  // Check if directory exists
+        if (!(await fs.stat(templateDir)).isDirectory()) { 
             console.error('Directory does not exist:', templateDir);
             return;
         }
@@ -47,6 +47,17 @@ async function run() {
                     doc.id = overrideId;
                     addMetaTag(doc, 'system');
                 }
+            }
+
+            // Update the recipe metadata block with the desired values from 'meta'
+            const metadataNodeKey = Object.keys(doc.rete.nodes).find(key => doc.rete.nodes[key].name === "omnitool.recipe_metadata");
+            if (metadataNodeKey) {
+                const metadataNode = doc.rete.nodes[metadataNodeKey];
+                metadataNode.data.title = doc.meta.name;
+                metadataNode.data.author = doc.meta.author;
+                metadataNode.data.description = doc.meta.description;
+                metadataNode.data.help = doc.meta.help;
+                metadataNode.data.tags = doc.meta.tags;
             }
 
             addMetaTag(doc, 'template');
@@ -95,10 +106,10 @@ const script = {
     name: 'import',
     exec: async function (ctx, payload) {
         console.log('Starting recipe import...');
-        await run();
+        await importRecipes();
         console.log('Recipe import completed.');
         return { status: 'success', message: 'Recipe import completed.' };
     }
 };
 
-export { run, script };
+export { importRecipes, script };
