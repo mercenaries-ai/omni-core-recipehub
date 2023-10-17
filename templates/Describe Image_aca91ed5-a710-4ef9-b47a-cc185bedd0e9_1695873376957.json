@@ -2,7 +2,7 @@
   "id": "aca91ed5-a710-4ef9-b47a-cc185bedd0e9",
   "meta": {
     "name": "Describe Image",
-    "author": "omnitool.ai team",
+    "author": "Omnitool.ai team",
     "description": "Generate textual descriptions for images using the CLIP (Contrastive Language-Image Pre-Training) model. This application allows you to upload an image and receive a description in return.",
     "help": "## Describe Image 🖼️✒️\n\nWelcome to this recipe! Harness the AI to interpret images. Upload an image and receive a description in return.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: rmokady/clip_prefix_caption\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload the image you want to describe.\n- Press ▶️ Run button!\n- View the generated caption in the **Chat** box.",
     "created": 1694515149216,
@@ -18,7 +18,7 @@
       "111": {
         "id": 111,
         "data": {
-          "author": "omnitool.ai team",
+          "author": "Omnitool.ai team",
           "button": "",
           "credits": "",
           "description": "Generate textual descriptions usable with a image generation systems for images.",

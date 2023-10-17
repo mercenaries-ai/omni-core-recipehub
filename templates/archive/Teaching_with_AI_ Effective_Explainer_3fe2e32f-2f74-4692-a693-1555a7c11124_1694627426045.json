@@ -2,7 +2,7 @@
   "id": "3fe2e32f-2f74-4692-a693-1555a7c11124",
   "meta": {
     "name": "Teaching with AI: Effective Explainer",
-    "author": "omnitool.ai team",
+    "author": "Omnitool.ai team",
     "description": "Assist teachers in developing effective explanations using analogies and examples for a specific topic.",
     "help": "",
     "created": 1694626851216,
@@ -17,7 +17,7 @@
       "1": {
         "id": 1,
         "data": {
-          "author": "Nick Yang",
+          "author": "Omnitool.ai team",
           "button": "",
           "credits": "OpenAI",
           "description": "Assist teachers in developing effective explanations using analogies and examples for a specific topic.",
