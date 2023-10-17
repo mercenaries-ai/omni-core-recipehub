@@ -3,11 +3,11 @@
  * All rights reserved.
  */
 
-import { run } from '../scripts/server/import.js';
+import { importRecipes } from '../scripts/server/import.js';
 
 async function init(ctx) {
   console.log('Importing demo recipes...');
-  await run();
+  await importRecipes();
 }
 // TODO: Need to figure out how to get right event to trigger this
 const extensionHooks = {
