@@ -3,7 +3,7 @@
   "meta": {
     "name": "Terrible Teachers Aide",
     "author": "Omnitool.ai team",
-    "description": "A cautionary tale of how one should probably not use LLMs to automate reviewing essays",
+    "description": "A cautionary tale about the potential pitfalls of relying solely on Large Language Models to automate the process of reviewing essays.",
     "category": "General",
     "help": "## Terrible Teachers Aide📝⚠️\n\nWelcome to this recipe! \n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Input the text of the essay you want to review.\n- Hit enter to start the review process.\n- Enjoy the result in the **Chat** box.",
     "created": 1697474090986,
