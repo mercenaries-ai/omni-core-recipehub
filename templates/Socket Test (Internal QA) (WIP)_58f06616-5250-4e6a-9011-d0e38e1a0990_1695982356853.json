@@ -25,7 +25,11 @@
           "description": "A Omnitool smoke test recipe",
           "enabled": true,
           "help": "## Socket Test (Internal QA) 🔌🧪\n\nWelcome to this recipe! This is a socket test recipe that allows you to test and validate your connection with the ElevenLabs and OpenAI services.\n\n### Prerequisites:\n\n**API Keys**:\n\n- ElevenLabs\n- OpenAI\n\n**Extensions**:\n\n- Replicate\n\n**Models:**",
-          "license": "CC-BY-SA",
+          "tags": [
+            "quality assurance",
+            "internal"
+          ],
+          "license": "CC)",
           "title": "Socket Test (Internal QA) (WIP)",
           "xOmniEnabled": true
         },

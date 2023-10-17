@@ -86,10 +86,15 @@
           "author": "Omnitool.ai team",
           "button": "",
           "credits": "",
-          "description": "Creates various personas personas tailored to your product's context for your product strategy",
+          "description": "Create tailored personas for your product strategy. This app utilizes LLM in multiple shots to generate personas based on your product's context. It also saves the results in formatted markdown file.",
           "enabled": true,
           "help": "## Persona Builder 2.0 🤖📝\n\nWelcome to the Persona Builder recipe! Utilize the power of advanced AI to create a persona for your product or service. Input the Product Description, Feature, Value Proposition, and Target Audience, and let the AI do the rest.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input your Product Description, Feature, Value Proposition, and Target Audience.\n- Hit **Run Recipe**!\n- View the generated persona markdown file in the **Chat** box.",
-          "license": "CC-BY-SA",
+          "license": "CC0",
+          "tags": [
+            "business",
+            "marketing",
+            "productivity"
+          ],
           "title": "Persona Builder 2.0",
           "xOmniEnabled": true
         },

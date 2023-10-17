@@ -73,14 +73,17 @@
           "author": "Omnitool.ai team",
           "button": "",
           "credits": "",
-          "description": "A horoscope reader who offers profound spiritual guidance tailored to your name and birth.",
+          "description": "Utilizes the Large Language Model (LLM) to generate personalized horoscope readings based on the user's name and birth. The app offers spiritual guidance and insights by generating horoscope predictions specific to the user.",
           "enabled": true,
           "help": "## Horoscope Reader 🌌🔮\n\nWelcome to this recipe! Unleash the fun of LLM to provide personalised horoscope readings. Enter your first name and birth year to receive profound spiritual guidance tailored just for you.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n\n### How to Use:\n\n- Navigate to the custom UI window.\n- Enter your firstname and birth year.\n- Hit **Run Recipe** to generate your personalized horoscope.\n- Enjoy the spiritual guidance in the Chat window!",
-          "license": "",
-          "title": "Celestia the Horoscope Reader",
+          "license": "CC0",
+          "title": "Horoscope Reader",
           "xOmniEnabled": true,
           "category": "General",
-          "tags": []
+          "tags": [
+            "health & wellness",
+            "lifestyle"
+          ]
         },
         "inputs": {},
         "outputs": {},

@@ -839,7 +839,7 @@
           "button": "",
           "category": "General",
           "credits": "",
-          "description": "Offers a side-by-side comparison, highlighting SDXL model's performance across varying image sizes.",
+          "description": "A side-by-side comparison to experiment the importance of using the right image size to achieve the best performance from the Stable Diffusion XL (SDXL) models.",
           "help": "# Stable Diffusion XL (SDXL) Model Resolutions\n\nThe **Stable Diffusion XL (SDXL)** model was fundamentally trained at a base resolution of **1024 x 1024**. This implies that the generated image will have up to **1,048,576 pixels** - a threshold defining its maximum clarity and detail.\n\nBeyond its base, the model was further fine-tuned on multiple aspect ratios. However, a consistent theme was maintained: the total pixel count doesn't surpass the **1 megapixel** mark (**1,048,576 pixels**).\n\nFor users seeking the best image generation results on the **SDXL model**, consider utilizing the following resolutions and aspect ratios:\n\n- **1024 x 1024** (1:1 Square)\n- **1152 x 896** (9:7)\n- **896 x 1152** (7:9)\n- **1216 x 832** (19:13)\n- **832 x 1216** (13:19)\n- **1344 x 768** (7:4 Horizontal)\n- **768 x 1344** (4:7 Vertical)\n- **1536 x 640** (12:5 Horizontal)\n- **640 x 1536** (5:12 Vertical - closely resembling iPhone resolution)",
           "license": "CC0",
           "tags": [

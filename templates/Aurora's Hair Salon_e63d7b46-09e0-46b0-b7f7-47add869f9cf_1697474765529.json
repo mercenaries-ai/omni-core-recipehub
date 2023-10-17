@@ -10,8 +10,8 @@
     "updated": 1697531249507,
     "pictureUrl": "hairsalon.png",
     "tags": [
-      "lifestyle",
-      "art & design"
+      "Lifestyle",
+      "Art & Design"
     ]
   },
   "rete": {
@@ -234,11 +234,14 @@
           "button": "",
           "category": "General",
           "credits": "",
-          "description": "Combine text-to-image generation with face-swap to craft a preview of your new hairstyle.",
-          "help": "## Aurora's Hair Salon 💇‍♀️📸\n\nWelcome to this recipe! With Aurora's Hair Salon, you can preview your new hairstyle designed by Aurora. Simply upload your photo and tell us your desired hairstyle.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Click on the camera icon to take a photo, upload your own photo, or choose one of the samples in the File Manager.\n- Describe your desired hairstyle, including gender and style, in the chat box, and hit Enter!\n- Enjoy the preview of your new hairstyle in the **Chat** box.",
-          "license": "CC-BY-SA",
-          "tags": [],
-          "title": "Aurora's Hair Salon",
+          "description": "Preview your new hairstyle! It combines text-to-image Stable Diffusion XL model with face-swap technique to give you a glimpse of your desired hairstyle. Simply upload your photo and describe the hairstyle you want, including gender and style.",
+          "help": "## Virtual Hair Salon 💇‍♀️📸\n\nWelcome to this recipe! With Aurora's Hair Salon, you can preview your new hairstyle designed by Aurora. Simply upload your photo and tell us your desired hairstyle.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Click on the camera icon to take a photo, upload your own photo, or choose one of the samples in the File Manager.\n- Describe your desired hairstyle, including gender and style, in the chat box, and hit Enter!\n- Enjoy the preview of your new hairstyle in the **Chat** box.",
+          "license": "CC0",
+          "tags": [
+            "Lifestyle",
+            "Art & Design"
+          ],
+          "title": "Virtual Hair Salon",
           "xOmniEnabled": true
         },
         "inputs": {},

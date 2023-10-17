@@ -480,9 +480,13 @@
           "author": "Omnitool.ai team",
           "button": "",
           "credits": "",
-          "description": "An upbeat, encouraging tutor who helps students understand concepts by explaining ideas tailored to students learning level and prior knowledge!",
+          "description": "Leverage LLM to craft an upbeat, encouraging AI tutor, aiding students in grasping concepts by providing explanations tailored to each student's learning level and prior knowledge.",
           "help": "## AI Tutor 🤖🎓\n\nWelcome to this recipe! Experience the future of education with our AI Tutor. This AI-powered tutor will help you understand complex concepts by providing explanations tailored to your learning level and prior knowledge.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Type in the concept or topic you want to understand better.\n- Hit **Run Recipe** to initiate the AI Tutor.\n- Enjoy the personalized explanation provided by the AI Tutor in the **Chat** box.",
-          "license": "CC-BY-SA",
+          "tags": [
+            "education",
+            "productivity"
+          ],
+          "license": "CC0",
           "title": "Teaching with AI: AI Tutor",
           "xOmniEnabled": true
         },

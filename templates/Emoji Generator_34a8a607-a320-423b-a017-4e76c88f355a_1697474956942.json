@@ -25,11 +25,15 @@
           "button": "",
           "category": "General",
           "credits": "Uses fofr/sdxl-emoji via Replicate.",
-          "description": "Generate High Definition Apple Style Emojis for any subject, with optional background removal.",
+          "description": "Generate custom, high-resolution Apple-style emojis with this small app powered by a fine-tuned Stable Diffusion XL Model. Input your desired emoji details and subject to create personalized emojis with option to remove the background.",
           "enabled": true,
           "help": "## Generate Apple Style Emojis 🍎🎨\n\nWelcome to this recipe! Create high-definition Apple style emojis for any subject, with the option to remove the background. This recipe utilizes the replicate model: fofr/sdxl-emoji.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: fofr/sdxl-emoji\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n1. Navigate to the custom UI window.\n2. Provide input details on how you want the emoji to look like and its subject.\n3. Hit **Run Recipe** or press ▶️ Run button!\n4. View the generated emoji in the **Chat** box.\n5. Enjoy the high-definition Apple style emoji!",
-          "license": "",
-          "tags": [],
+          "license": "CC0",
+          "tags": [
+            "art & design",
+            "communication",
+            "lifestyle"
+          ],
           "title": "Emoji Generator",
           "xOmniEnabled": true
         },
