@@ -10,7 +10,11 @@
     "pictureUrl": "librarian.png",
     "tags": [
       "education", 
-      "books & reference"
+      "books & reference",
+      "#intemediate",
+      "#diffusion",
+      "#audio",
+      "#llm"
     ]
   },
   "rete": {
