@@ -264,7 +264,7 @@
                     "value": ""
                   }
                 ],
-                "content": "Celestia the Horoscope Reader",
+                "content": "Horoscope Reader",
                 "input": false,
                 "key": "x-title",
                 "label": "Recipe Title",

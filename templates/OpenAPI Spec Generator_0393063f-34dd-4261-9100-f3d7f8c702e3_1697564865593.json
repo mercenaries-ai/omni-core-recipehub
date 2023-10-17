@@ -1,19 +1,20 @@
 {
-  "id": "5db5cd6e-b0e6-423d-99ed-1cf714ec37f6",
+  "id": "0393063f-34dd-4261-9100-f3d7f8c702e3",
   "meta": {
     "name": "OpenAPI Spec Generator",
     "author": "Omnitool.ai team",
     "description": "Generate an OpenAPI specification YAML file directly from API documentation using Large Language Model (LLM) with prompt tweaking.",
     "category": "",
     "help": "1. Navigate to the custom UI.\n2. Enter the details of the target API.\n3. Await the result in the Chat, which will be provided as a .txt file.\n4. Use [Swagger Editor](https://editor.swagger.io/) to validate the generated OpenAPI specification.",
-    "created": 1695925160055,
-    "updated": 1697307591741,
+    "created": 1697564650323,
+    "updated": 1697564863231,
     "pictureUrl": "machine_001.png",
     "tags": [
       "productivity",
       "development",
       "#intemediate",
-      "#llm"
+      "#llm",
+      "template"
     ]
   },
   "rete": {
@@ -31,7 +32,10 @@
           "license": "CC0",
           "tags": [
             "productivity",
-            "development"
+            "development",
+            "#intemediate",
+            "#llm",
+            "template"
           ],
           "title": "OpenAPI Spec Generator",
           "xOmniEnabled": true
@@ -39,8 +43,8 @@
         "inputs": {},
         "outputs": {},
         "position": [
-          -1042.1876219652213,
-          -2563.149192668442
+          -1396.3216048654185,
+          -3087.1803869833516
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -371,7 +375,7 @@
       "3037": {
         "id": 3037,
         "data": {
-          "api_doc": "",
+          "api_doc": "Getimg API. \n\nYou need to use API Key to authenticate every request made to the API. You can view and manage your API keys in here. All API keys have the prefix key-.\n\nBe sure to keep your API keys secure! Do not share your secret API keys in publicly accessible areas such as GitHub, client-side code, etc.\n\nAuthentication to the API is performed via Bearer Token. Provide your API key in the Authorization header (e.g. -H \"Authorization: Bearer key-**************\").\n\nAPI requests must be made over HTTPS. Calls made over plain HTTP will fail. Requests without authentication will also fail.\n\nText to Image\nPOST\nhttps://api.getimg.ai/v1/stable-diffusion/text-to-image\nGenerates an image based on given text prompt. Supports different models each capable of producing unique style.\n\nLOG IN TO SEE FULL REQUEST HISTORY\nTIME\tSTATUS\tUSER AGENT\t\nMake a request to see history.\n0 Requests This Month\n\nSEE ALL REQUESTS\nBODY PARAMS\nmodel\nstring\nModel ID supported by this pipeline and family. Use /v1/models?pipeline=text-to-image&family=stable-diffusion to list all available models.\n\nprompt\nstring\nrequired\nText input required to guide the image generation.\n\nnegative_prompt\nstring\nText input that will not guide the image generation.\n\nwidth\ninteger\nThe width of the generated image in pixels. To achieve\nbest results use width specified in model base_resolution.\n\nWidth needs to be multiple of 64.\n\nheight\ninteger\nThe height of the generated image in pixels. To achieve\nbest results use height specified in model base_resolution.\n\nHeight needs to be multiple of 64.\n\nsteps\ninteger\nThe number of denoising steps. More steps usually can produce higher quality images, but take more time to generate.\n\nguidance\nnumber\nGuidance scale as defined in Classifier-Free Diffusion Guidance. Higer guidance forces the model to better follow the prompt, but result in lower quality output.\n\nseed\ninteger\nMakes generation deterministic. Using the same seed and set of parameters will produce identical image each time.\n\nscheduler\nstring\nScheduler used to denoise the encoded image latents.\n\nDefault: dpmsolver++\n\n\noutput_format\nstring\nFile format of the output image\n\nDefault: jpeg\n\n\nRESPONSES\n\n200\nOK\n\n\n400\nBad Request\n\n\n401\nUnauthorized\n\n\n429\nToo Many Requests",
           "button": "",
           "editMode": false,
           "enableUI": true,
