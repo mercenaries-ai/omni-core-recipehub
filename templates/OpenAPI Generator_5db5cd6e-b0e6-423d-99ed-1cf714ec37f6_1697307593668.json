@@ -8,6 +8,7 @@
     "help": "1. Navigate to the custom UI.\n2. Enter the details of the target API.\n3. Await the result in the Chat, which will be provided as a .txt file.\n4. Use [Swagger Editor](https://editor.swagger.io/) to validate the generated OpenAPI specification.",
     "created": 1695925160055,
     "updated": 1697307591741,
+    "pictureUrl": "machine_001.png",
     "tags": [
       "productivity",
       "development"

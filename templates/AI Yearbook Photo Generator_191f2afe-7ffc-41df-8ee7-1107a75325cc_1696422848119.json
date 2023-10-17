@@ -3,7 +3,7 @@
   "meta": {
     "name": "AI Yearbook Photo Generator",
     "author": "omnitool.ai team",
-    "description": "Combine text-to-image generation with face-swap to craft a retro yearbook photo.",
+    "description": "Utilise a combination of LLM, the text-to-image Stable Diffusion XL Model, and face-swap techniques to transform a user's current photo into a retro yearbook image",
     "help": "## AI Yearbook Photo Generator 📚🤖\n\nWelcome to AI Yearbook Photo Generator! This recipe uses the Replicate extension and two specific models to craft a retro yearbook photo.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Large Language Model\n- Replicate: rmokady/clip_prefix_caption\n- Replicate: stability-ai/sdxl\n- Replicate: lucataco/faceswap\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload your current photo or simply click on the camera to take a selfie\n- Hit ▶️ Run button!\n- Enjoy your AI-generated yearbook photo in the chat!",
     "created": 1696753026239,
     "updated": 1696753470930,
