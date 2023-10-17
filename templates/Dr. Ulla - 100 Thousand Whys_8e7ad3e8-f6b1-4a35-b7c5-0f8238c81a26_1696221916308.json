@@ -3,7 +3,7 @@
   "meta": {
     "name": "Dr. Ulla - 100 Thousand Whys",
     "author": "omnitool.ai team",
-    "description": "Drawing inspiration from the Chinese children's science series, "100 Thousand Whys," this recipe creates a small chat bot that answers "why" questions by curious youngsters using a combination of Large Language Model and Stable Diffusion for text and illustration.",
+    "description": "Drawing inspiration from the Chinese children's science series, \"100 Thousand Whys,\" this recipe creates a small chat bot that answers \"why\" questions by curious youngsters using a combination of Large Language Model and Stable Diffusion for text and illustration.",
     "help": "## Dr. Ulla - 100 Thousand Whys 🧪🔬\n\nWelcome to this recipe! Inspired by the popular Chinese children's science book series, \"100 Thousand Whys\", Dr. Ulla uses a combination of LLM and Stable Diffusion to craft engaging answers and illustrations for the 'Why' questions, nurturing a child's thirst for knowledge.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n- Replicate\n\n**Models:**\n- replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Type in your 'Why' question.\n- Hit Run Recipe button!\n- View the generated answer and illustration in the **Chat** box.\n- Enjoy the journey of discovery with Dr. Ulla!",
     "created": 1696221894477,
     "updated": 1696221894478,
