@@ -4,7 +4,7 @@
     "name": "OpenAPI Spec Generator",
     "author": "Omnitool.ai team",
     "description": "Generate an OpenAPI specification YAML file directly from API documentation using Large Language Model (LLM) with prompt tweaking.",
-    "category": "General",
+    "category": "",
     "help": "1. Navigate to the custom UI.\n2. Enter the details of the target API.\n3. Await the result in the Chat, which will be provided as a .txt file.\n4. Use [Swagger Editor](https://editor.swagger.io/) to validate the generated OpenAPI specification.",
     "created": 1695925160055,
     "updated": 1697307591741,
@@ -22,7 +22,7 @@
         "data": {
           "author": "Omnitool.ai team",
           "button": "",
-          "category": "General",
+          "category": "",
           "credits": "",
           "description": "Generate an OpenAPI specification YAML file directly from API documentation using Large Language Model (LLM) with prompt tweaking.",
           "help": "1. Navigate to the custom UI.\n2. Enter the details of the target API.\n3. Await the result in the Chat, which will be provided as a .txt file.\n4. Use [Swagger Editor](https://editor.swagger.io/) to validate the generated OpenAPI specification.",

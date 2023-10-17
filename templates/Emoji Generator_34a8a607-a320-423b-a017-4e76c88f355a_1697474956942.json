@@ -23,7 +23,7 @@
         "data": {
           "author": "Omnitool.ai team",
           "button": "",
-          "category": "General",
+          "category": "",
           "credits": "Uses fofr/sdxl-emoji via Replicate.",
           "description": "Generate custom, high-resolution Apple-style emojis with this small app powered by a fine-tuned Stable Diffusion XL Model. Input your desired emoji details and subject to create personalized emojis with option to remove the background.",
           "enabled": true,
