@@ -1,17 +1,15 @@
 {
-  "id": "60ea6e59-0b80-4cfa-a65d-14caca3d9648",
+  "id": "e63d7b46-09e0-46b0-b7f7-47add869f9cf",
   "meta": {
     "name": "Aura's Hair Salon",
     "author": "omnitool.ai team",
     "description": "Combine text-to-image generation with face-swap to craft a preview of your new hairstyle.",
+    "category": "General",
     "help": "## Aura's Hair Salon 💇‍♀️📸\n\nWelcome to this recipe! With Aura's Hair Salon, you can preview your new hairstyle designed by Aura. Simply upload your photo and tell us your desired hairstyle.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Click on the camera icon to take a photo or upload your own photo.\n- Describe your desired hairstyle, including gender and style, in the chat box, and hit Enter!\n- Enjoy the preview of your new hairstyle in the **Chat** box.",
-    "created": 1694601421961,
-    "updated": 1695978992493,
+    "created": 1697474340167,
+    "updated": 1697474756356,
     "pictureUrl": "hairsalon.png",
-    "tags": [
-      "lifestyle", 
-      "art & design"
-    ]
+    "tags": []
   },
   "rete": {
     "id": "mercs@0.1.1",
@@ -127,7 +125,7 @@
           "prompt": {
             "connections": [
               {
-                "node": 1326,
+                "node": 2742,
                 "output": "text",
                 "data": {}
               }
@@ -178,7 +176,7 @@
           "swap_image": {
             "connections": [
               {
-                "node": 1326,
+                "node": 2742,
                 "output": "images",
                 "data": {}
               }
@@ -209,8 +207,8 @@
           }
         },
         "position": [
-          2891.601590200516,
-          -1926.243901446262
+          2494.7876064737566,
+          -2101.3729211644963
         ],
         "name": "omni-extension-replicate:run.lucataco/faceswap"
       },
@@ -259,39 +257,10 @@
         },
         "outputs": {},
         "position": [
-          3533.528394046565,
-          -1991.9054577544546
+          3171.2042031090946,
+          -2132.0862967577636
         ],
         "name": "omnitool.chat_output"
-      },
-      "1015": {
-        "id": 1015,
-        "data": {
-          "number": 0,
-          "number_format": "timestamp",
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "number": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "number": {
-            "connections": [
-              {
-                "node": 1018,
-                "input": "seed",
-                "data": {}
-              }
-            ]
-          }
-        },
-        "position": [
-          1653.9298609871234,
-          -2259.55262797205
-        ],
-        "name": "omnitool.number_input"
       },
       "1018": {
         "id": 1018,
@@ -304,7 +273,7 @@
           "image": "",
           "lora_scale": 0.6,
           "mask": "",
-          "negative_prompt": "nsfw, sexy, nude, cartoon, illustration, animation",
+          "negative_prompt": "nsfw, sexy, nude, cartoon, illustration, animation, multiple heads, grid",
           "num_inference_steps": 50,
           "num_outputs": 1,
           "prompt": "a portrait style professional photograph, close-up, messy shoulder-length waves hairstyle, chestnut brown hair color, high quality, detailed, sharp focus, vibrant colors, 4k, 8k",
@@ -325,13 +294,7 @@
             "connections": []
           },
           "seed": {
-            "connections": [
-              {
-                "node": 1015,
-                "output": "number",
-                "data": {}
-              }
-            ]
+            "connections": []
           },
           "image": {
             "connections": []
@@ -400,8 +363,8 @@
           }
         },
         "position": [
-          2194.635915413996,
-          -2365.8279336496716
+          1823.9693292113511,
+          -2389.2380054400783
         ],
         "name": "omni-extension-replicate:run.stability-ai/sdxl"
       },
@@ -477,13 +440,36 @@
         ],
         "name": "openai.advancedChatGPT"
       },
-      "1326": {
-        "id": 1326,
+      "1327": {
+        "id": 1327,
+        "data": {
+          "author": "omnitool.ai team",
+          "button": "",
+          "category": "General",
+          "credits": "",
+          "description": "Combine text-to-image generation with face-swap to craft a preview of your new hairstyle.",
+          "help": "## Aura's Hair Salon 💇‍♀️📸\n\nWelcome to this recipe! With Aura's Hair Salon, you can preview your new hairstyle designed by Aura. Simply upload your photo and tell us your desired hairstyle.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Click on the camera icon to take a photo or upload your own photo.\n- Describe your desired hairstyle, including gender and style, in the chat box, and hit Enter!\n- Enjoy the preview of your new hairstyle in the **Chat** box.",
+          "license": "CC-BY-SA",
+          "tags": [],
+          "title": "Aura's Hair Salon",
+          "xOmniEnabled": true
+        },
+        "inputs": {},
+        "outputs": {},
+        "position": [
+          -451.5036512405656,
+          -2786.703809838149
+        ],
+        "name": "omnitool.recipe_metadata"
+      },
+      "2742": {
+        "id": 2742,
         "data": {
           "audio": "",
           "documents": "",
           "images": "",
           "text": "male, bohemian style, brown color",
+          "video": "",
           "xOmniEnabled": true
         },
         "inputs": {
@@ -494,6 +480,9 @@
             "connections": []
           },
           "audio": {
+            "connections": []
+          },
+          "video": {
             "connections": []
           },
           "documents": {
@@ -522,6 +511,9 @@
           "audio": {
             "connections": []
           },
+          "video": {
+            "connections": []
+          },
           "documents": {
             "connections": []
           },
@@ -530,30 +522,10 @@
           }
         },
         "position": [
-          -333.9979819502456,
-          -1791.4149965500194
+          -256.630554510882,
+          -1893.7545611128444
         ],
         "name": "omnitool.chat_input"
-      },
-      "1327": {
-        "id": 1327,
-        "data": {
-          "author": "omnitool.ai team",
-          "button": "",
-          "credits": "",
-          "description": "Combine text-to-image generation with face-swap to craft a preview of your new hairstyle.",
-          "help": "## Aura's Hair Salon 💇‍♀️📸\n\nWelcome to this recipe! With Aura's Hair Salon, you can preview your new hairstyle designed by Aura. Simply upload your photo and tell us your desired hairstyle.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Click on the camera icon to take a photo or upload your own photo.\n- Describe your desired hairstyle, including gender and style, in the chat box, and hit Enter!\n- Enjoy the preview of your new hairstyle in the **Chat** box.",
-          "license": "CC-BY-SA",
-          "title": "Aura's Hair Salon",
-          "xOmniEnabled": true
-        },
-        "inputs": {},
-        "outputs": {},
-        "position": [
-          -451.5036512405656,
-          -2786.703809838149
-        ],
-        "name": "omnitool.recipe_metadata"
       }
     }
   },

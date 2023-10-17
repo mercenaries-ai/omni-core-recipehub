@@ -1,17 +1,15 @@
 {
-  "id": "a07ca53c-3b20-4612-a37a-ddbad1587b30",
+  "id": "f8178dfc-d0b4-4c6b-bf62-486abfb0a19d",
   "meta": {
     "name": "Terrible Teachers Aide",
     "author": "Anonymous",
     "description": "A cautionary tale of how one should probably not use LLMs to automate reviewing essays",
+    "category": "General",
     "help": "## Terrible Teachers Aide📝⚠️\n\nWelcome to this recipe! \n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Input the text of the essay you want to review.\n- Hit enter to start the review process.\n- Enjoy the result in the **Chat** box.",
-    "created": 1691670093550,
-    "updated": 1695982725653,
+    "created": 1697474090986,
+    "updated": 1697474112865,
     "pictureUrl": "teacher2.png",
-    "tags": [
-      "education",
-      "productivity"
-    ]
+    "tags": []
   },
   "rete": {
     "id": "mercs@0.1.1",
@@ -38,7 +36,7 @@
           "prompt": {
             "connections": [
               {
-                "node": 99,
+                "node": 2687,
                 "output": "text",
                 "data": {}
               }
@@ -72,7 +70,7 @@
           "input": {
             "connections": [
               {
-                "node": 99,
+                "node": 2687,
                 "output": "text",
                 "data": {}
               }
@@ -98,63 +96,6 @@
           606.6169649050969
         ],
         "name": "openai.simpleModeration"
-      },
-      "99": {
-        "id": 99,
-        "data": {
-          "audio": "",
-          "documents": "",
-          "images": "",
-          "text": "My old city and my new country are worlds apart. There are things that are the same and some other things that are really different. First, I will talk about all the things that are the same and then I’ll talk about the things that are different between these two places.\n  First, there are many things that are similar between these two places. One of the things that is the same is that we both have people that are black and white. But my new country also has more people from different countries as well. In my old city we had a lot of parks. There were fields where kids could play soccer and hang out. Here there are a lot of parks too although some of these ones have newer playground areas. Both places also have schools. The buildings look similar from the outside but the inside and how the school is organized and taught is completely different.\n  Next, there are a few differences including the houses, transportation and friendship. The houses in my old city are in blocks and are square or rectangle shaped. The houses are attached in rows or apartment buildings. While here in Canada they can be any shape and attached or unattached.\n    Another difference is the transportation system. Passenger trains run all the time and go between most cities. There is a busy metro and bus system in the city too that runs all day and all night. Whereas here in Canada, there are mostly cargo trains between cities. More people use cars here to get around because the metro and bus system don’t go to as many places or run all day and all night. For example my brother needs to buy a car because there is no bus that runs at night to where he works. Another interesting thing is in my old city I walked to school but here I take a yellow school bus. There are no yellow school buses in my old city. \n  The last thing that is different is about my friends. In my old city I had lots of friends that lived nearby. We walked to school together and played soccer together at the park. Here I have one friend who speaks my language. A friend of my mom’s has a son who is my age. We play soccer and talk in our language which is cool. Now I have to make some new friends at school.\n\n   Finally, that is all of the things that are the same and different between my old city and Canada.  Even though I miss my old city I like living in this new one.",
-          "xOmniEnabled": true
-        },
-        "inputs": {
-          "text": {
-            "connections": []
-          },
-          "images": {
-            "connections": []
-          },
-          "audio": {
-            "connections": []
-          },
-          "documents": {
-            "connections": []
-          }
-        },
-        "outputs": {
-          "text": {
-            "connections": [
-              {
-                "node": 11,
-                "input": "input",
-                "data": {}
-              },
-              {
-                "node": 7,
-                "input": "prompt",
-                "data": {}
-              }
-            ]
-          },
-          "images": {
-            "connections": []
-          },
-          "audio": {
-            "connections": []
-          },
-          "documents": {
-            "connections": []
-          },
-          "json": {
-            "connections": []
-          }
-        },
-        "position": [
-          -435.51198733890635,
-          -40.508302310757855
-        ],
-        "name": "omnitool.chat_input"
       },
       "100": {
         "id": 100,
@@ -211,10 +152,12 @@
         "data": {
           "author": "Anonymous",
           "button": "",
+          "category": "General",
           "credits": "",
           "description": "A cautionary tale of how one should probably not use LLMs to automate reviewing essays",
           "help": "## Terrible Teachers Aide📝⚠️\n\nWelcome to this recipe! \n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Input the text of the essay you want to review.\n- Hit enter to start the review process.\n- Enjoy the result in the **Chat** box.",
-          "license": "CC-BY-SA",
+          "license": "CC0",
+          "tags": [],
           "title": "Terrible Teachers Aide",
           "xOmniEnabled": true
         },
@@ -225,6 +168,70 @@
           -229.14941838556277
         ],
         "name": "omnitool.recipe_metadata"
+      },
+      "2687": {
+        "id": 2687,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "images": "",
+          "text": "My old city and my new country are worlds apart. There are things that are the same and some other things that are really different. First, I will talk about all the things that are the same and then I’ll talk about the things that are different between these two places.\n  First, there are many things that are similar between these two places. One of the things that is the same is that we both have people that are black and white. But my new country also has more people from different countries as well. In my old city we had a lot of parks. There were fields where kids could play soccer and hang out. Here there are a lot of parks too although some of these ones have newer playground areas. Both places also have schools. The buildings look similar from the outside but the inside and how the school is organized and taught is completely different.\n  Next, there are a few differences including the houses, transportation and friendship. The houses in my old city are in blocks and are square or rectangle shaped. The houses are attached in rows or apartment buildings. While here in Canada they can be any shape and attached or unattached.\n    Another difference is the transportation system. Passenger trains run all the time and go between most cities. There is a busy metro and bus system in the city too that runs all day and all night. Whereas here in Canada, there are mostly cargo trains between cities. More people use cars here to get around because the metro and bus system don’t go to as many places or run all day and all night. For example my brother needs to buy a car because there is no bus that runs at night to where he works. Another interesting thing is in my old city I walked to school but here I take a yellow school bus. There are no yellow school buses in my old city. \n  The last thing that is different is about my friends. In my old city I had lots of friends that lived nearby. We walked to school together and played soccer together at the park. Here I have one friend who speaks my language. A friend of my mom’s has a son who is my age. We play soccer and talk in our language which is cool. Now I have to make some new friends at school.\n\n   Finally, that is all of the things that are the same and different between my old city and Canada.  Even though I miss my old city I like living in this new one.",
+          "video": "",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "video": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 7,
+                "input": "prompt",
+                "data": {}
+              },
+              {
+                "node": 11,
+                "input": "input",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "video": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "json": {
+            "connections": []
+          }
+        },
+        "position": [
+          -462.87433842390425,
+          -60.73824104859045
+        ],
+        "name": "omnitool.chat_input"
       }
     }
   },

@@ -1,17 +1,19 @@
 {
-  "id": "949b18eb-417d-49df-96d3-8aeb8fc15402",
-  "version": "draft",
+  "id": "b669f8d3-6704-4455-838e-251ca68637d7",
   "meta": {
-    "created": 1691638391064,
-    "description": "A tool to file GPT formatted bugs to the omni repository in chat.",
     "name": "Bugbear",
+    "author": "Anonymous",
+    "description": "A tool to file GPT formatted bugs to the omni repository in chat.",
+    "category": "",
+    "help": "",
+    "created": 1697474829014,
+    "updated": 1697474845366,
     "pictureUrl": "bugbear.png",
     "tags": [
       "productivity",
       "devops",
       "system"
-    ],
-    "updated": 1691669951676
+    ]
   },
   "rete": {
     "id": "mercs@0.1.1",
@@ -22,7 +24,8 @@
           "instruction": "You are a quality assurance specialist. Take the user input and create a well format bug reports and feature requests by fitting them into a predefined format. Your output is purely that format with no explanations and embellishment. If the users includes reproductions steps or indication of frequency, you break them out in your report. You will always add --added by @bugbear at the end of each issue\n\nFor example\n\nExample User input: \n\nThere is a problem with the image control, in some screen sizes it produces a visual artifacts. Specifically when I view the app on a smaller screen like mobile, sometimes the image control may have a red stripe over it. \n\n--added by @bugbear\n\nYour output:\n\nIssue: User reports a a problem with the image control, in some screen sizes it produces a visual artifacts. Specifically when they view the app on a smaller screen like mobile, sometimes the image control may have a red stripe over it. \n\nFrequency: Sometimes\n\nReproduction: View app on mobile.\n\nExample:\n\nI'd love to add support for up to six bots in your chat context that could be addressed using @botname. This would enable the user to simultanously cowork with multiple bot experts. It's a useful feature for helping people visually grok the changes coming to work with AI. The way this could look is a row of little portraits\n\nYour ouput:\n\nFeature: Add up to six bots to the chat and addressing them by @botname to enable users to cowork with multiple bot experts. Maybe through a row of little portraits.\nReason: Help people to visually understand the change coming to work by AI\nPriority: Unspecified\n\n-- added by @bugbear",
           "model": "gpt-3.5-turbo",
           "prompt": "",
-          "temperature": 1
+          "temperature": 1,
+          "xOmniEnabled": true
         },
         "inputs": {
           "model": {
@@ -37,7 +40,7 @@
           "prompt": {
             "connections": [
               {
-                "node": 289,
+                "node": 2766,
                 "output": "text",
                 "data": {}
               }
@@ -67,7 +70,8 @@
           "instruction": "You are a quality assurance specialist. Take the user input and create a concise summary to be used in a bug report title field. Your output is purely that summary with no explanations and embellishment. Stick to 20 words maximum. Prefix your summary with BUG: for bugs and issues and FEATURE: for Feature requests\n\nFor example \n\nExample User input: There is a problem with the image control, in some screen sizes it produces a visual artifacts. Specifically when I view the app on a smaller screen like mobile, sometimes the image control may have a red stripe over it\n\nYour output: BUG: Image control sometimes has visual artifacts on some screen sizes\n\nExample User input: I would like there to be a way to specify a color for users in chat\n\nYour output: FEATURE: A way to specify user color in chat",
           "model": "gpt-3.5-turbo",
           "prompt": "",
-          "temperature": 1
+          "temperature": 1,
+          "xOmniEnabled": true
         },
         "inputs": {
           "model": {
@@ -82,7 +86,7 @@
           "prompt": {
             "connections": [
               {
-                "node": 289,
+                "node": 2766,
                 "output": "text",
                 "data": {}
               }
@@ -118,7 +122,8 @@
           "parameter:owner": "mercenaries-ai",
           "parameter:repo": "omnitool-docs",
           "repo": "omnitool-docs",
-          "title": ""
+          "title": "",
+          "xOmniEnabled": true
         },
         "inputs": {
           "owner": {
@@ -274,13 +279,65 @@
         ],
         "name": "github.mercs_issues_create"
       },
-      "289": {
-        "id": 289,
+      "290": {
+        "id": 290,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "files": "",
+          "images": "",
+          "json": "",
+          "object": null,
+          "text": "",
+          "textType": "text/markdown",
+          "videos": "",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 13,
+                "output": "html_url",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": []
+          },
+          "audio": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "videos": {
+            "connections": []
+          },
+          "files": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          }
+        },
+        "outputs": {},
+        "position": [
+          1735.060496929524,
+          93.68216759082759
+        ],
+        "name": "omnitool.chat_output"
+      },
+      "2766": {
+        "id": 2766,
         "data": {
           "audio": "",
           "documents": "",
           "images": "",
-          "text": ""
+          "text": "",
+          "video": "",
+          "xOmniEnabled": true
         },
         "inputs": {
           "text": {
@@ -290,6 +347,9 @@
             "connections": []
           },
           "audio": {
+            "connections": []
+          },
+          "video": {
             "connections": []
           },
           "documents": {
@@ -317,6 +377,9 @@
           "audio": {
             "connections": []
           },
+          "video": {
+            "connections": []
+          },
           "documents": {
             "connections": []
           },
@@ -325,55 +388,17 @@
           }
         },
         "position": [
-          -66.44782432093712,
-          189.15345866866164
+          -175.05168821423968,
+          35.846081528438404
         ],
         "name": "omnitool.chat_input"
-      },
-      "290": {
-        "id": 290,
-        "data": {
-          "audio": "",
-          "documents": "",
-          "images": "",
-          "json": "",
-          "text": ""
-        },
-        "inputs": {
-          "text": {
-            "connections": [
-              {
-                "node": 13,
-                "output": "html_url",
-                "data": {}
-              }
-            ]
-          },
-          "images": {
-            "connections": []
-          },
-          "audio": {
-            "connections": []
-          },
-          "documents": {
-            "connections": []
-          },
-          "json": {
-            "connections": []
-          }
-        },
-        "outputs": {},
-        "position": [
-          1735.060496929524,
-          93.68216759082759
-        ],
-        "name": "omnitool.chat_output"
       }
     }
   },
   "api": {
     "fields": {}
   },
+  "ui": {},
   "_flags": [
     "owner"
   ]
