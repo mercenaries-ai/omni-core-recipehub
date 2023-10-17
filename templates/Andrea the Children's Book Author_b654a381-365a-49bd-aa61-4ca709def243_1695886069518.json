@@ -1,10 +1,10 @@
 {
   "id": "b654a381-365a-49bd-aa61-4ca709def243",
   "meta": {
-    "name": "Andrea the Children's Book Author",
+    "name": "Children Storybook Creator",
     "author": "Omnitool.ai team",
     "description": "Utilise LLM in conjunction with stable diffusion and text-to-speech to convert basic ideas into visually appealing storybook illustrations and text, accompanied by a spoken narrative.",
-    "help": "# Andrea the Children's Book Author 📖✨\n\nUnleash the power of storytelling by transforming simple ideas into enchanting storybook visuals and texts, accompanied by spoken narrative.\n\n## Prerequisites:\n\n### API Keys:\n- OpenAPI\n- ElevenLabs\n- Replicate\n\n### Extensions:\n- Replicate\n\n### Models:\n- Replicate: stability-ai/sdxl\n\n## How to Use:\n\n1. **Find** the custom UI window box.\n2. **Input** your *Scene Description*. Describe a single scene from your story.\n3. Hit **Run Recipe**.\n4. Find your crafted story in the **Chat** box.",
+    "help": "# Children Storybook Creator 📖✨\n\nUnleash the power of storytelling by transforming simple ideas into enchanting storybook visuals and texts, accompanied by spoken narrative.\n\n## Prerequisites:\n\n### API Keys:\n- OpenAPI\n- ElevenLabs\n- Replicate\n\n### Extensions:\n- Replicate\n\n### Models:\n- Replicate: stability-ai/sdxl\n\n## How to Use:\n\n1. **Find** the custom UI window box.\n2. **Input** your *Scene Description*. Describe a single scene from your story.\n3. Hit **Run Recipe**.\n4. Find your crafted story in the **Chat** box.",
     "created": 1695885643366,
     "updated": 1695886058577,
     "pictureUrl": "librarian.png",

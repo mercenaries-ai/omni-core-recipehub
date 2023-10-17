@@ -1,11 +1,11 @@
 {
   "id": "8c8b3e99-0ce0-4086-8d1d-5e44bb39df0a",
   "meta": {
-    "name": "App Icon Artist",
+    "name": "App Icon Studio",
     "author": "Omnitool.ai team",
     "description": "Use fine-tuned diffusion models to transform your brief description into custom app icons.",
     "category": "General",
-    "help": "## App Icon Artist 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n- Sharp\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n- Replicate: galleri5/icons\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
+    "help": "## App Icon Studio 🎨📱\n\nWelcome to this recipe! With the power of fine-tuned diffusion model, transform your text prompts into captivating app icons. Just provide a brief description of your desired icon and let the AI do the magic.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n- Sharp\n\n**Models:**\n- Replicate: nandycc/sdxl-app-icons\n- Replicate: galleri5/icons\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input the prompt of the app icon you want to create.\n- Hit **Run Recipe**\n- View the generated app icon in the **Chat** box",
     "created": 1697218141954,
     "updated": 1697221660652,
     "pictureUrl": "artist2.png",
