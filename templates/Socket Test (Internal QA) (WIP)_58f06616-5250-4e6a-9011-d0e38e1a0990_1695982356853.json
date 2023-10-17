@@ -7,9 +7,10 @@
     "help": "## Socket Test (Internal QA) 🔌🧪\n\nWelcome to this recipe! This is a socket test recipe that allows you to test and validate your connection with the ElevenLabs and OpenAI services.\n\n### Prerequisites:\n\n**API Keys**:\n\n- ElevenLabs\n- OpenAI\n\n**Extensions**:\n\n- Replicate\n\n**Models:**",
     "created": 1694458802674,
     "updated": 1695982353988,
-    "pictureUrl": "omni.png",
+    "pictureUrl": "machine_002.png",
     "tags": [
-      "quality assurance"
+      "quality assurance",
+      "internal"
     ]
   },
   "rete": {

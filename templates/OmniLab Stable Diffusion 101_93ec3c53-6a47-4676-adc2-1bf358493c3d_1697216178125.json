@@ -8,7 +8,7 @@
     "help": "## Stable Diffusion 101 🎨🖼️\n\nWelcome to this recipe! Learn the basic prompt to generate images using Stable Diffusion and Upscaling.\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models**:\n\n- Replicate: stability-ai/sdxl\n- Replicate: nightmareai/real-esrgan\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Play around with the Stable Diffusion prompt\n- Hit **Run Recipe**!\n- Enjoy the generated image in the **Chat** box.",
     "created": 1697216099080,
     "updated": 1697216169468,
-    "pictureUrl": "lab_001.png",
+    "pictureUrl": "camera_001.png",
     "tags": [
       "education",
       "art & design"
