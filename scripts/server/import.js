@@ -82,7 +82,7 @@ async function reconcilePublishedRecipes(publishedRecipes) {
         pb.autoCancellation(false);
 
         let oldrecords = await pb.collection(MONO_COLLECTION_ID).getFullList(
-            { filter: `omni_id~"wf" && blob.owner="-----public-----"` }
+            { filter: `blob.meta.template=true && omni_id~"wf"` }
         );
         let deleteCmd = oldrecords.map(record => pb.collection(MONO_COLLECTION_ID).delete(record.id));
         await Promise.all(deleteCmd);
