@@ -11,8 +11,8 @@
     "pictureUrl": "butler.png",
     "tags": [
       "productivity",
-      "#beginner",
-      "#llm"
+      "beginner",
+      "LLM"
     ]
   },
   "rete": {
@@ -123,7 +123,7 @@
           "title": "LLM Agent",
           "tags": [
             "productivity",
-            "#beginner"
+            "beginner"
           ]
         },
         "inputs": {},

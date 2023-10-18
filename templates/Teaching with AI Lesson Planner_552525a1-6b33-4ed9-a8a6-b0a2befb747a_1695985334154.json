@@ -4,7 +4,7 @@
     "name": "Teaching with AI: Lesson Planner",
     "author": "Omnitool.ai team",
     "description": "Utilise LLMs to assist educators in streamlining their lesson planning process by specifying the topic to be taught, the grade level of the students, and the learning goal for the lesson.",
-    "category": "Education",
+    "category": "",
     "help": "## Welcome to Our Lesson Planning App!\n\nThis app helps educators to efficiently plan their lessons by specifying the topic to be taught, the grade level of the students, and the learning goal for the lesson.\n\n### Getting Started\n\n1. **Access the User Interface**:\n   - Locate the UI window box on the main screen.\n   - Alternatively, click on the **Generate Interface** button found within the 'Form.io Auto UI' block in the recipe.\n\n2. **Input Your Lesson Details**:\n   - Enter the topic you intend to cover during the lesson.\n   - Specify the grade level of the students who will be attending the lesson.\n   - Set clear learning goals for the lesson to help focus your teaching approach.\n\n3. **Generate Your Lesson Plan**:\n   - After inputting your lesson details, click 'Run Recipe' to generate your lesson plan.\n   - View the generated lesson plan in the **Chat box** to verify the details and make any necessary adjustments.\n\nFeel free to explore the app and streamline your lesson planning process. Happy teaching!",
     "created": 1697605146572,
     "updated": 1697605693239,
@@ -13,7 +13,7 @@
       "education",
       "productivity",
       "intermediate",
-      "llm"
+      "LLM"
     ]
   },
   "rete": {
@@ -24,7 +24,7 @@
         "data": {
           "author": "Omnitool.ai team",
           "button": "",
-          "category": "Education",
+          "category": "",
           "credits": "OpenAI",
           "description": "Utilise LLMs to assist educators in streamlining their lesson planning process by specifying the topic to be taught, the grade level of the students, and the learning goal for the lesson.",
           "enabled": true,
@@ -34,7 +34,7 @@
             "education",
             "productivity",
             "intermediate",
-            "llm"
+            "LLM"
           ],
           "title": "Teaching with AI: Lesson Planner",
           "xOmniEnabled": true

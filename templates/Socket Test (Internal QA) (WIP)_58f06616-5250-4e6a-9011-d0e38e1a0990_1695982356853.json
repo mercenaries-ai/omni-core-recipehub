@@ -10,7 +10,7 @@
     "pictureUrl": "machine_002.png",
     "tags": [
       "quality assurance",
-      "internal"
+      "system"
     ]
   },
   "rete": {
@@ -27,7 +27,7 @@
           "help": "## Socket Test (Internal QA) 🔌🧪\n\nWelcome to this recipe! This is a socket test recipe that allows you to test and validate your connection with the ElevenLabs and OpenAI services.\n\n### Prerequisites:\n\n**API Keys**:\n\n- ElevenLabs\n- OpenAI\n\n**Extensions**:\n\n- Replicate\n\n**Models:**",
           "tags": [
             "quality assurance",
-            "internal"
+            "system"
           ],
           "license": "CC)",
           "title": "Socket Test (Internal QA) (WIP)",

@@ -12,9 +12,8 @@
     "tags": [
       "productivity",
       "development",
-      "#intemediate",
-      "#llm",
-      "template"
+      "intermediate",
+      "LLM"
     ]
   },
   "rete": {
@@ -33,7 +32,7 @@
           "tags": [
             "productivity",
             "development",
-            "#intemediate",
+            "#intermediate",
             "#llm",
             "template"
           ],

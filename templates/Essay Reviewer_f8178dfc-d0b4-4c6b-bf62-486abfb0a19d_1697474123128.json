@@ -12,7 +12,7 @@
     "tags": [
       "education",
       "beginner",
-      "llm"
+      "LLM"
     ]
   },
   "rete": {
@@ -164,7 +164,7 @@
           "tags": [
             "education",
             "beginner",
-            "llm"
+            "LLM"
           ],
           "title": "Essay Reviewer",
           "xOmniEnabled": true

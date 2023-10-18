@@ -12,8 +12,8 @@
       "business",
       "marketing",
       "productivity",
-      "#advanced",
-      "#llm"
+      "advanced",
+      "LLM"
     ]
   },
   "rete": {

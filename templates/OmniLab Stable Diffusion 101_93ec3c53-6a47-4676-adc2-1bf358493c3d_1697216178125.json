@@ -11,9 +11,9 @@
     "pictureUrl": "camera_001.png",
     "tags": [
       "education",
-      "art & design",
-      "#beginner",
-      "#diffusion"
+      "art",
+      "beginner",
+      "diffusion"
     ]
   },
   "rete": {
@@ -32,7 +32,7 @@
           "license": "CC0",
           "tags": [
             "education",
-            "art & design"
+            "art"
           ],
           "title": "OmniLab: Stable Diffusion 101",
           "xOmniEnabled": true

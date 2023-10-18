@@ -4,18 +4,17 @@
     "name": "Kids' Answer Engine - 100 Thousand Whys",
     "author": "omnitool.ai team",
     "description": "Drawing inspiration from the Chinese children's science series, \"100 Thousand Whys,\" this recipe creates a small chat bot that answers \"why\" questions by curious youngsters using a combination of Large Language Model and Stable Diffusion for text and illustration.",
-    "category": "General",
+    "category": "",
     "help": "## Kids' Answer Engine - 100 Thousand Whys 🧪🔬\n\nWelcome to this recipe! Inspired by the popular Chinese children's science book series, \"100 Thousand Whys\", it uses a combination of LLM and Stable Diffusion to craft engaging answers and illustrations for the 'Why' questions, nurturing a child's thirst for knowledge.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n- Replicate\n\n**Models:**\n- replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Type in your 'Why' question.\n- Hit Run Recipe button!\n- View the generated answer and illustration in the **Chat** box.",
     "created": 1697600336257,
     "updated": 1697601480069,
     "pictureUrl": "ulla.png",
     "tags": [
       "education",
-      "books & reference",
-      "#intemediate",
-      "#diffusion",
-      "#llm",
-      "template"
+      "books",
+      "intermediate",
+      "diffusion",
+      "LLM"
     ]
   },
   "rete": {
@@ -368,7 +367,7 @@
         "data": {
           "author": "omnitool.ai team",
           "button": "",
-          "category": "General",
+          "category": "",
           "credits": "",
           "description": "Drawing inspiration from the Chinese children's science series, \"100 Thousand Whys,\" this recipe creates a small chat bot that answers \"why\" questions by curious youngsters using a combination of Large Language Model and Stable Diffusion for text and illustration.",
           "enabled": true,
@@ -376,10 +375,10 @@
           "license": "CC0",
           "tags": [
             "education",
-            "books & reference",
-            "#intemediate",
-            "#diffusion",
-            "#llm",
+            "books",
+            "intermediate",
+            "diffusion",
+            "LLM",
             "template"
           ],
           "title": "Kids' Answer Engine - 100 Thousand Whys",

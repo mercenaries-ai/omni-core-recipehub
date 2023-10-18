@@ -11,10 +11,10 @@
     "pictureUrl": "hairsalon.png",
     "tags": [
       "Lifestyle",
-      "Art & Design",
-      "#faceswap",
-      "#intemediate",
-      "#diffusion"
+      "Art",
+      "faceswap",
+      "intermediate",
+      "diffusion"
     ]
   },
   "rete": {
@@ -242,7 +242,7 @@
           "license": "CC0",
           "tags": [
             "Lifestyle",
-            "Art & Design"
+            "art"
           ],
           "title": "Virtual Hair Salon",
           "xOmniEnabled": true

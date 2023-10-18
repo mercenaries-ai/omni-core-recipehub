@@ -10,10 +10,10 @@
     "updated": 1697470707609,
     "pictureUrl": "dal-lusion.png",
     "tags": [
-      "art & design",
+      "art",
       "marketing",
-      "#beginner",
-      "#diffusion"
+      "beginner",
+      "diffusion"
     ]
   },
   "rete": {
@@ -79,7 +79,7 @@
           "help": "## Illusion Diffusion 🎨🖼️\n\nControlNet acts as an advanced instrument to maneuver the generative process of Stable Diffusion models for image creation. Let's explore the influence of ControlNet by infusing a logo image into an image generated based on your prompt!\n\n### Prerequisites:\n\n**API Keys**:\n\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models**:\n\n- Replicate: lucataco/illusion-diffusion-hq\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload the logo you want to infuse.\n- Enter the image generation prompt.\n- Press ▶️ Run button!\n- View the generated image in the **Chat** box!\n- Adjust the **Controlnet Conditioning Scale** slider to observe the differences in results.",
           "license": "CC0",
           "tags": [
-            "art & design",
+            "art",
             "marketing"
           ],
           "title": "Illusion Diffusion",

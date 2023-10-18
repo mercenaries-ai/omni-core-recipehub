@@ -10,10 +10,10 @@
     "pictureUrl": "ulla.png",
     "tags": [
       "education",
-      "books & reference",
-      "#intemediate",
-      "#diffusion",
-      "#llm"
+      "books",
+      "intermediate",
+      "diffusion",
+      "LLM"
     ]
   },
   "rete": {
@@ -437,7 +437,7 @@
           "help": "## Kids' Answer Engine - 100 Thousand Whys 🧪🔬\n\nWelcome to this recipe! Inspired by the popular Chinese children's science book series, \"100 Thousand Whys\", it uses a combination of LLM and Stable Diffusion to craft engaging answers and illustrations for the 'Why' questions, nurturing a child's thirst for knowledge.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n- Replicate\n\n**Models:**\n- replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Type in your 'Why' question.\n- Hit Run Recipe button!\n- View the generated answer and illustration in the **Chat** box.",
           "tags": [
             "education",
-            "books & reference"
+            "books"
           ],
           "license": "CC0",
           "title": "Kids' Answer Engine - 100 Thousand Whys",

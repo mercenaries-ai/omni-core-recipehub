@@ -10,10 +10,10 @@
     "pictureUrl": "monica.png",
     "tags": [
       "lifestyle",
-      "books & reference",
-      "#beginner",
-      "#img2txt",
-      "#llm"
+      "books",
+      "beginner",
+      "imageToText",
+      "LLM"
     ]
   },
   "rete": {
@@ -339,7 +339,7 @@
           "license": "CC0",
           "tags": [
             "lifestyle",
-            "books & reference"
+            "books"
           ],
           "title": "Book Recommendation",
           "xOmniEnabled": true

@@ -10,10 +10,10 @@
     "pictureUrl": "yearbook_001.jpg",
     "tags": [
             "lifestyle",
-            "art & design",
-            "#faceswap",
-            "#intemediate",
-            "#diffusion"
+            "art",
+            "faceswap",
+            "intermediate",
+            "diffusion"
           ]
   },
   "rete": {
@@ -298,7 +298,7 @@
           "help": "## Yearbook Photo Studio 📚🤖\n\nWelcome to Yearbook Photo Studio! This recipe uses the Replicate extension and two specific models to craft a retro yearbook photo.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Large Language Model\n- Replicate: rmokady/clip_prefix_caption\n- Replicate: stability-ai/sdxl\n- Replicate: lucataco/faceswap\n\n### How to Use:\n\n- Navigate to the **Chat** window.\n- Upload your current photo or simply click on the camera to take a selfie\n- Hit ▶️ Run button!\n- Enjoy your AI-generated yearbook photo in the chat!",
           "tags": [
             "lifestyle",
-            "art & design",
+            "art",
             "faceswap",
             "beginner"
           ],

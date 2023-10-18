@@ -9,9 +9,9 @@
     "updated": 1695873371965,
     "pictureUrl": "eye.png",
     "tags": [
-      "art & design",
-      "#beginner",
-      "#img2txt"
+      "art",
+      "beginner",
+      "imageToText"
     ]
   },
   "rete": {
@@ -29,7 +29,7 @@
           "license": "CC0",
           "title": "Image Caption Generator",
           "tags": [
-            "art & design"
+            "art"
           ],
           "xOmniEnabled": true
         },

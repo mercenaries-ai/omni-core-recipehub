@@ -11,10 +11,10 @@
     "pictureUrl": "camera_002.png",
     "tags": [
       "education",
-      "art & design",
+      "art",
       "photography",
-      "#beginner",
-      "#diffusion"
+      "beginner",
+      "diffusion"
     ]
   },
   "rete": {
@@ -846,7 +846,7 @@
           "license": "CC0",
           "tags": [
             "education",
-            "art & design",
+            "art",
             "photography"
           ],
           "title": "OmniLab: SDXL Image Resolution",

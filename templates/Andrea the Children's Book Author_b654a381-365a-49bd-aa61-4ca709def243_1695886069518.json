@@ -10,11 +10,11 @@
     "pictureUrl": "librarian.png",
     "tags": [
       "education", 
-      "books & reference",
-      "#intemediate",
-      "#diffusion",
-      "#audio",
-      "#llm"
+      "books",
+      "intermediate",
+      "diffusion",
+      "audio",
+      "LLM"
     ]
   },
   "rete": {
@@ -33,7 +33,7 @@
           "title": "Children Storybook Creator",
           "tags": [
             "education", 
-            "books & reference"
+            "books"
           ],
           "xOmniEnabled": true
         },

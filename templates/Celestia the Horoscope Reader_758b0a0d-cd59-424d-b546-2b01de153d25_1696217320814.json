@@ -11,8 +11,8 @@
     "tags": [
       "health & wellness",
       "lifestyle",
-      "#beginner",
-      "#llm"
+      "beginner",
+      "LLM"
     ]
   },
   "rete": {
@@ -81,7 +81,7 @@
           "license": "CC0",
           "title": "Horoscope Reader",
           "xOmniEnabled": true,
-          "category": "General",
+          "category": "",
           "tags": [
             "health & wellness",
             "lifestyle"

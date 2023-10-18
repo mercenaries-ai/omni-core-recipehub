@@ -11,9 +11,9 @@
     "tags": [
       "education",
       "entertainment",
-      "art & design",
-      "#intemediate",
-      "#diffusion"
+      "art",
+      "intermediate",
+      "diffusion"
     ]
   },
   "rete": {
@@ -90,7 +90,7 @@
           "tags": [
             "education",
             "entertainment",
-            "art & design"
+            "art"
           ],
           "xOmniEnabled": true
         },
