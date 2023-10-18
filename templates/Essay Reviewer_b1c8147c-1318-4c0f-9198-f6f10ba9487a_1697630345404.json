@@ -1,13 +1,13 @@
 {
-  "id": "f8178dfc-d0b4-4c6b-bf62-486abfb0a19d",
+  "id": "b1c8147c-1318-4c0f-9198-f6f10ba9487a",
   "meta": {
     "name": "Essay Reviewer",
-    "author": "Omnitool.ai team",
+    "author": "Anonymous",
     "description": "A cautionary tale about the potential pitfalls of relying solely on Large Language Models to automate the process of reviewing essays.",
     "category": "",
     "help": "## Essay Reviewer📝⚠️\n\nWelcome to this recipe! A cautionary take of bias and randomness in Large Language Models.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n\n\n### How to Use:\n\n- Run the recipe.\n- Observe the teaching assistant's response.\n- Now change the the author's name. Some alternate name to try:\n  * Maria Silva\n  * Dmitri Ivanov\n  * Fatima Hassan\n  * Clarence Harrington\n  * Đức Nguyễn\n  * Hiroshi Sato\n  * Anastasia Lavinia Cholmondeley\n  * Jürgen Schröder\n\n- Run the recipe again.\n- See how the teacher's response has changed, even though the only change was the student's name.",
-    "created": 1697601803318,
-    "updated": 1697603798440,
+    "created": 1697630343880,
+    "updated": 1697630343880,
     "pictureUrl": "teacher2.png",
     "tags": [
       "education",
@@ -40,7 +40,7 @@
           "prompt": {
             "connections": [
               {
-                "node": 2687,
+                "node": 2688,
                 "output": "text",
                 "data": {}
               }
@@ -74,7 +74,7 @@
           "input": {
             "connections": [
               {
-                "node": 2687,
+                "node": 2688,
                 "output": "text",
                 "data": {}
               }
@@ -164,7 +164,8 @@
           "tags": [
             "education",
             "beginner",
-            "LLM"
+            "LLM",
+            "template"
           ],
           "title": "Essay Reviewer",
           "xOmniEnabled": true
@@ -177,8 +178,8 @@
         ],
         "name": "omnitool.recipe_metadata"
       },
-      "2687": {
-        "id": 2687,
+      "2688": {
+        "id": 2688,
         "data": {
           "audio": "",
           "documents": "",
@@ -236,8 +237,8 @@
           }
         },
         "position": [
-          -462.87433842390425,
-          -60.73824104859045
+          -450.0560051281218,
+          -16.46626331625714
         ],
         "name": "omnitool.chat_input"
       }
@@ -247,6 +248,7 @@
     "fields": {}
   },
   "ui": {},
+  "blockIds": {},
   "_flags": [
     "owner"
   ]
