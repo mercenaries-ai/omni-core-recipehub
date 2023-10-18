@@ -54,12 +54,13 @@ async function importRecipes() {
             if (metadataNodeKey) {
                 const metadataNode = doc.rete.nodes[metadataNodeKey];
                 metadataNode.data.title = doc.meta.name;
-                metadataNode.data.author = doc.meta.author;
+                metadataNode.data.author = "Omnitool.ai team";
                 metadataNode.data.description = doc.meta.description;
                 metadataNode.data.help = doc.meta.help;
                 metadataNode.data.tags = doc.meta.tags;
             }
             // Flag it as template recipe
+            addMetaTag(doc, 'template');
             doc.meta.template = true;
             doc.meta.org = 'omnitool_core_recipes';
             doc['publishedTo'] = [];
