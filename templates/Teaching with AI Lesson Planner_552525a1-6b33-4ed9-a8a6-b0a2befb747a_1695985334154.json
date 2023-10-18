@@ -570,7 +570,7 @@
         "id": 2753,
         "data": {
           "_duration": "4",
-          "_goal": "- Understand the basic concept of what are the popular generative ai tools and how they work e.g. LLM(GPT, Llama), Diffusion (Stable Diffusion), GAN etc.\n- Prompt Engineering\n- The Generative AI stack (e.g. vector databases, models, tools etc.)\n- Learn how to apply Generative AI tools to solve real world problems.",
+          "_goal": "- Understand the basic concepts of the popular Generative AI tools and how they work e.g. LLM(GPT, Llama), Diffusion (Stable Diffusion), GAN etc.\n- Prompt Engineering\n- The Generative AI stack (e.g. vector databases, models, tools etc.)\n- Learn how to apply Generative AI tools to solve real world problems.",
           "_student_level": "20-30 years old industry professionals.",
           "_topic": "Applied Generative AI 101",
           "button": "",
@@ -627,7 +627,7 @@
                       {
                         "applyMaskOn": "change",
                         "autoExpand": false,
-                        "defaultValue": "- Understand the basic concept of what are the popular generative ai and how it works e.g. LLM(GPT, Llama), Diffusion(Stable Diffusion) etc.\n- Prompt Engineering\n- The Gen ai stack (e.g. vector store, model, tools etc.)\n- Learn how to apply these generative ai to solve their day to day problems",
+                        "defaultValue": "- Understand the basic concepts of the popular Generative AI tools and how they work e.g. LLM(GPT, Llama), Diffusion (Stable Diffusion), GAN etc.\n- Prompt Engineering\n- The Generative AI stack (e.g. vector databases, models, tools etc.)\n- Learn how to apply Generative AI tools to solve real world problems",
                         "description": "💡Hint: What is the intended goal of this lesson? What knowledge or skill do you want the student to acquire by the end of it? Please provide detailed and explicit information.",
                         "input": true,
                         "key": "_goal",
@@ -638,7 +638,7 @@
                       {
                         "applyMaskOn": "change",
                         "autoExpand": false,
-                        "defaultValue": "25 to 30 years old young professionals",
+                        "defaultValue": "20-30 years old industry professionals.",
                         "description": "💡Hint: What is your student's current level of education or expertise? e.g. are they a high school student, a college attendee, or a working professional?",
                         "input": true,
                         "key": "_student_level",
