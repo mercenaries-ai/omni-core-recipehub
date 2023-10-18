@@ -2,7 +2,7 @@
   "id": "b1c8147c-1318-4c0f-9198-f6f10ba9487a",
   "meta": {
     "name": "Essay Reviewer",
-    "author": "Anonymous",
+    "author": "Omnitool.ai team",
     "description": "A cautionary tale about the potential pitfalls of relying solely on Large Language Models to automate the process of reviewing essays.",
     "category": "",
     "help": "## Essay Reviewer📝⚠️\n\nWelcome to this recipe! A cautionary take of bias and randomness in Large Language Models.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n\n\n### How to Use:\n\n- Run the recipe.\n- Observe the teaching assistant's response.\n- Now change the the author's name. Some alternate name to try:\n  * Maria Silva\n  * Dmitri Ivanov\n  * Fatima Hassan\n  * Clarence Harrington\n  * Đức Nguyễn\n  * Hiroshi Sato\n  * Anastasia Lavinia Cholmondeley\n  * Jürgen Schröder\n\n- Run the recipe again.\n- See how the teacher's response has changed, even though the only change was the student's name.",
@@ -10,9 +10,9 @@
     "updated": 1697630343880,
     "pictureUrl": "teacher2.png",
     "tags": [
-      "education",
-      "beginner",
-      "LLM"
+      "#education",
+      "#beginner",
+      "#LLM"
     ]
   },
   "rete": {
