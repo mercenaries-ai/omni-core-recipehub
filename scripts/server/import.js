@@ -29,10 +29,9 @@ async function importRecipes() {
 
         const files = await fs.readdir(templateDir);
         const jsonFiles = files.filter(file => path.extname(file).toLowerCase() === '.json');
-        const demoRecipes = [
-            ['Bugbear', 'c0deba5e-417d-49df-96d3-8aeb8fc15402'],
-            ['Celestia', 'c0deba5e-786a-4d4b-88d9-1694ebc85527'],
-            ['Chef', 'c0deba5e-7634-49ac-a2b7-878f8476057b'],
+        const systemRecipes = [
+            ['Bugbear', 'c0deba5e-417d-49df-96d3-8aeb8fc15402', false],
+            ['Socket', 'c0deba5e-786a-4d4b-88d9-1694ebc85527', false]
         ];
 
         let jsonArray = [];
@@ -42,10 +41,11 @@ async function importRecipes() {
             let doc = JSON.parse(content);
             doc.owner = '-----public-----';
 
-            for (let [fileNamePrefix, overrideId] of demoRecipes) {
+            for (let [fileNamePrefix, overrideId, visible] of systemRecipes) {
                 if (file.startsWith(fileNamePrefix)) {
                     doc.id = overrideId;
                     addMetaTag(doc, 'system');
+                    doc.meta.visible = visible;
                 }
             }
 
@@ -59,8 +59,8 @@ async function importRecipes() {
                 metadataNode.data.help = doc.meta.help;
                 metadataNode.data.tags = doc.meta.tags;
             }
-
-            addMetaTag(doc, 'template');
+            // Flag it as template recipe
+            doc.meta.template = true;
             doc.meta.org = 'omnitool_core_recipes';
             doc['publishedTo'] = [];
             doc['_id'] = `wf:${doc.id}`;
