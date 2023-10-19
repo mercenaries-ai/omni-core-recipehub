@@ -41,6 +41,22 @@ async function importRecipes() {
             let doc = JSON.parse(content);
             doc.owner = '-----public-----';
 
+            for (let nodeId in doc.rete.nodes) {
+                let node = doc.rete.nodes[nodeId];
+                // add chat enabled flag when chat node is present
+                if (node.name === "omnitool.chat_input") {
+                    doc.ui = doc.ui ?? {};
+                    doc.ui.chat = doc.ui.chat ?? {};
+                    doc.ui.chat.enabled = true;
+                }
+                // add formio enabled flag when formio node is present
+                else if (node.name === "omni-extension-formio:formio.auto_ui") {
+                    doc.ui = doc.ui ?? {};
+                    doc.ui.formIO = doc.ui.formIO ?? {};
+                    doc.ui.formIO.enabled = true;
+                }
+            }
+
             for (let [fileNamePrefix, overrideId, visible] of systemRecipes) {
                 if (file.startsWith(fileNamePrefix)) {
                     doc.id = overrideId;
