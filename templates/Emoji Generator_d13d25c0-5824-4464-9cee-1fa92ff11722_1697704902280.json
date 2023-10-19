@@ -1,13 +1,13 @@
 {
-  "id": "34a8a607-a320-423b-a017-4e76c88f355a",
+  "id": "d13d25c0-5824-4464-9cee-1fa92ff11722",
   "meta": {
     "name": "Emoji Generator",
     "author": "Omnitool.ai team",
     "description": "Generate custom, high-resolution Apple-style emojis with this small app powered by a fine-tuned Stable Diffusion XL Model. Input your desired emoji details and subject to create personalized emojis with option to remove the background.",
     "category": "",
     "help": "## Generate Apple Style Emojis 🍎🎨\n\nWelcome to this recipe! Create high-definition Apple style emojis for any subject, with the option to remove the background. This recipe utilizes the replicate model: fofr/sdxl-emoji.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: fofr/sdxl-emoji\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n1. Navigate to the custom UI window.\n2. Provide input details on how you want the emoji to look like and its subject.\n3. Hit **Run Recipe** or press ▶️ Run button!\n4. View the generated emoji in the **Chat** box.\n5. Enjoy the high-definition Apple style emoji!",
-    "created": 1697474950746,
-    "updated": 1697474950746,
+    "created": 1697704580235,
+    "updated": 1697704890814,
     "pictureUrl": "emoji_001.png",
     "tags": [
       "#art",
@@ -32,9 +32,11 @@
           "help": "## Generate Apple Style Emojis 🍎🎨\n\nWelcome to this recipe! Create high-definition Apple style emojis for any subject, with the option to remove the background. This recipe utilizes the replicate model: fofr/sdxl-emoji.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: fofr/sdxl-emoji\n- Replicate: cjwbw/rembg\n\n### How to Use:\n\n1. Navigate to the custom UI window.\n2. Provide input details on how you want the emoji to look like and its subject.\n3. Hit **Run Recipe** or press ▶️ Run button!\n4. View the generated emoji in the **Chat** box.\n5. Enjoy the high-definition Apple style emoji!",
           "license": "CC0",
           "tags": [
-            "art",
-            "communication",
-            "lifestyle"
+            "#art",
+            "#communication",
+            "#lifestyle",
+            "#intermediate",
+            "#diffusion"
           ],
           "title": "Emoji Generator",
           "xOmniEnabled": true
@@ -55,7 +57,7 @@
           "enabled": true,
           "files": "",
           "images": "",
-          "object": null,
+          "object": "",
           "text": "",
           "textType": "text/markdown",
           "videos": "",
@@ -132,13 +134,7 @@
         },
         "outputs": {
           "on": {
-            "connections": [
-              {
-                "node": 760,
-                "input": "image",
-                "data": {}
-              }
-            ]
+            "connections": []
           },
           "off": {
             "connections": [
@@ -160,8 +156,8 @@
           }
         },
         "position": [
-          1375.2052077077303,
-          -1454.9872607731654
+          1052.6595175265716,
+          -1646.612958617581
         ],
         "name": "omnitool.file_switch"
       },
@@ -281,8 +277,8 @@
           "image": {
             "connections": [
               {
-                "node": 524,
-                "output": "on",
+                "node": 769,
+                "output": "output",
                 "data": {}
               }
             ]
@@ -312,7 +308,7 @@
           1969.4646405855367,
           -1544.7181302477275
         ],
-        "name": "omni-extension-replicate:run.cjwbw/rembg"
+        "name": "omni-core-replicate:run.cjwbw/rembg"
       },
       "769": {
         "id": 769,
@@ -416,15 +412,20 @@
                 "node": 524,
                 "input": "files",
                 "data": {}
+              },
+              {
+                "node": 760,
+                "input": "image",
+                "data": {}
               }
             ]
           }
         },
         "position": [
-          1242.8555758498312,
-          -1023.0092171826727
+          1388.2245578688658,
+          -1248.6503375155614
         ],
-        "name": "omni-extension-replicate:run.fofr/sdxl-emoji"
+        "name": "omni-core-replicate:run.fofr/sdxl-emoji"
       },
       "2362": {
         "id": 2362,
@@ -560,7 +561,7 @@
             ]
           },
           "subject": "side profile",
-          "switch": false,
+          "switch": true,
           "x-omni-dynamicInputs": {
             "details": {
               "control": {
@@ -680,6 +681,7 @@
     "fields": {}
   },
   "ui": {},
+  "blockIds": {},
   "_flags": [
     "owner"
   ]
