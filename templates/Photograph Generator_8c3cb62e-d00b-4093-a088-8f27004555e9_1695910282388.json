@@ -5,15 +5,16 @@
     "author": "Omnitool.ai team",
     "description": "Generate stunning photographs with AI. This small app utilizes Stable Diffusion XL model to create a photo based on your input description.",
     "category": "",
-    "help": "## Photograph Generator 📸✒️\n\nWelcome to the Photographer recipe! With this recipe, you can generate a photo based on your input description using diffusion model. Simply follow the instructions below to bring your vision to life.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n1. Find the custom UI window.\n2. Provide a description of the photo you want to generate\n3. Hit **Run Recipe** to start the process.\n4. Enjoy the photo in the **Chat** box!",
-    "created": 1697684619381,
-    "updated": 1697684637416,
+    "help": "## Photograph Generator 📸✒️\n\nWelcome to the Photographer recipe! With this recipe, you can generate a photo realistic image based on your input description using a diffusion model. Simply follow the instructions below to bring your vision to life.\n\n### Prerequisites:\n\n**API Keys**:\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n1. Find the custom UI window.\n2. Provide a description of the photo you want to generate\n3. Click **Run Recipe** to start the process.\n4. Enjoy the photo in the **Chat** box!",
+    "created": 1697684899407,
+    "updated": 1697685567471,
     "pictureUrl": "photographer.png",
     "tags": [
       "#photography",
-      "#art",
       "#beginner",
-      "#diffusion"
+      "#diffusion",
+      "#art",
+      "#design"
     ]
   },
   "rete": {
@@ -65,8 +66,8 @@
         },
         "outputs": {},
         "position": [
-          146.41911670643054,
-          -472.5435934243344
+          173.1711194425497,
+          -222.73430445066833
         ],
         "name": "omnitool.chat_output"
       },
@@ -78,7 +79,7 @@
           "images": "",
           "prompt": "",
           "replace": null,
-          "source": "Photograph of  {input:PROMPT}, (good composition), (in frame), 8k, 4k, detailed, attractive, beautiful, impressive, photorealistic, realistic, cinematic composition, volumetric lighting, high-resolution, vivid, detailed, stunning, professional, lifelike, crisp, flawless, DSLR, 4k, 8k, 16k, 1024, 2048, 4096, detailed, sharp, best quality, high quality, highres, absurdres",
+          "source": "Photograph of  {input:PROMPT}, (good composition), (in frame), 8k, 4k, detailed, attractive, beautiful, impressive, photorealistic, realistic, cinematic composition, volumetric lighting, high-resolution, vivid, detailed, stunning, professional, lifelike, crisp, flawless, DSLR, 4k, 8k, 16k, 2048, 4096, detailed, sharp, best quality, high quality, highres, absurdres",
           "x-omni-dynamicInputs": {
             "prompt": {
               "customSocket": "text",
@@ -121,8 +122,8 @@
           }
         },
         "position": [
-          -857.2966592024867,
-          -508.79116232979226
+          -867.1829015275845,
+          -757.8737702436648
         ],
         "name": "omnitool.multi_text_replace"
       },
@@ -134,11 +135,14 @@
           "credits": "",
           "description": "Generate stunning photographs with AI. This small app utilizes Stable Diffusion XL model to create a photo based on your input description.",
           "enabled": true,
-          "help": "## Photograph Generator 📸✒️\n\nWelcome to the Photographer recipe! With this recipe, you can generate a photo based on your input description using diffusion model. Simply follow the instructions below to bring your vision to life.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n1. Find the custom UI window.\n2. Provide a description of the photo you want to generate\n3. Hit **Run Recipe** to start the process.\n4. Enjoy the photo in the **Chat** box!",
+          "help": "## Photograph Generator 📸✒️\n\nWelcome to the Photographer recipe! With this recipe, you can generate a photo realistic image based on your input description using a diffusion model. Simply follow the instructions below to bring your vision to life.\n\n### Prerequisites:\n\n**API Keys**:\n- Replicate\n\n**Models:**\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n1. Find the custom UI window.\n2. Provide a description of the photo you want to generate\n3. Click **Run Recipe** to start the process.\n4. Enjoy the photo in the **Chat** box!",
           "license": "CC0",
           "tags": [
-            "photography",
-            "art & design"
+            "#photography",
+            "#beginner",
+            "#diffusion",
+            "#art",
+            "#design"
           ],
           "title": "Photograph Generator",
           "xOmniEnabled": true
@@ -146,8 +150,8 @@
         "inputs": {},
         "outputs": {},
         "position": [
-          -1990.9035965429891,
-          -940.8982740366497
+          -1984.7521510728832,
+          -768.1145329892666
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -162,7 +166,7 @@
           "image": "",
           "lora_scale": 0.6,
           "mask": "",
-          "negative_prompt": "(bad composition), (out of frame), (nsfw), (nude), (sexual), off center, drawing, anime, art, cartoon, painting, drawing, anime, art, cartoon, painting, drawing, anime, art, cartoon, painting, Low quality, worst quality, bad anatomy, bad gun anatomy, 144p, blurry, censored, artifacts, jpeg artifact, oversaturation, watermark, signature, EasyNegative, , verybadimagenegative, bad hand, duplicates, distortion",
+          "negative_prompt": "(bad composition), (out of frame), (nsfw), (nude), (sexual), off center, drawing, anime, art, cartoon, painting, drawing, sketch, Low quality, worst quality, bad anatomy, fake, blurry, censored, artifacts, jpeg artifact, oversaturation, text, watermark, EasyNegative, glitch, signature, dull, verybadimagenegative, bad hand, duplicates, distortion",
           "num_inference_steps": 32,
           "num_outputs": 1,
           "prompt": "An astronaut riding a rainbow unicorn, cinematic, dramatic",
@@ -251,8 +255,8 @@
           }
         },
         "position": [
-          -360.7884754139411,
-          -822.274911866494
+          -344.9366786086389,
+          -758.0227064112696
         ],
         "name": "omni-core-replicate:run.stability-ai/sdxl"
       },
@@ -414,8 +418,8 @@
           }
         },
         "position": [
-          -1452.3717223419917,
-          -499.75254547415665
+          -1424.301536314692,
+          -758.704658957788
         ],
         "name": "omni-extension-formio:formio.auto_ui"
       }
@@ -425,6 +429,7 @@
     "fields": {}
   },
   "ui": {},
+  "blockIds": {},
   "_flags": [
     "owner"
   ]
