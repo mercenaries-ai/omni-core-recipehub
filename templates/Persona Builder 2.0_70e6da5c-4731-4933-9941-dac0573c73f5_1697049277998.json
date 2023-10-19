@@ -5,8 +5,8 @@
     "author": "Omnitool.ai team",
     "description": "Create tailored personas for your product strategy. This app utilizes LLM in multiple shots to generate personas based on your product's context. It also saves the results in formatted markdown file.",
     "help": "## Persona Builder 2.0 🤖📝\n\nWelcome to the Persona Builder recipe! Utilize the power of advanced AI to create a persona for your product or service. Input the Product Description, Feature, Value Proposition, and Target Audience, and let the AI do the rest.\n\n### Prerequisites:\n\n**API Keys**:\n\n- OpenAI\n- Replicate\n\n**Extensions**:\n\n- Replicate\n\n**Models:**\n\n- Replicate: stability-ai/sdxl\n\n### How to Use:\n\n- Navigate to the custom **UI** window.\n- Input your Product Description, Feature, Value Proposition, and Target Audience.\n- Hit **Run Recipe**!\n- View the generated persona markdown file in the **Chat** box.",
-    "created": 1696931416086,
-    "updated": 1697049272515,
+    "created": 1697686150895,
+    "updated": 1697686150895,
     "pictureUrl": "personas.png",
     "tags": [
       "#business",
@@ -28,7 +28,7 @@
           "files": "",
           "images": "",
           "json": "",
-          "object": null,
+          "object": "",
           "text": "🚀 Persona generated, please click the file below to view it  🚀",
           "textType": "text/markdown",
           "videos": "",
@@ -691,7 +691,6 @@
           "refine_steps": 0,
           "replicate_weights": "",
           "scheduler": "DDIM",
-          "seed": 0,
           "width": 1024,
           "xOmniEnabled": true
         },
@@ -785,7 +784,7 @@
           -485.39075905199275,
           -1355.569797593861
         ],
-        "name": "omni-extension-replicate:run.stability-ai/sdxl"
+        "name": "omni-core-replicate:run.stability-ai/sdxl"
       },
       "2151": {
         "id": 2151,
@@ -1772,7 +1771,7 @@
           "documents": "",
           "files": "",
           "images": "",
-          "object": null,
+          "object": "",
           "text": "",
           "textType": "text/markdown",
           "videos": "",
@@ -1820,6 +1819,7 @@
     "fields": {}
   },
   "ui": {},
+  "blockIds": {},
   "_flags": [
     "owner"
   ]
