@@ -141,7 +141,6 @@
           "refine_steps": 0,
           "replicate_weights": "",
           "scheduler": "K_EULER",
-          "seed": 0,
           "width": 1024,
           "x-omni-comment": "A text-to-image generative AI model that creates beautiful images\n\n**In this recipe**, we utilize the SDXL model to create a retro yearbook photo as our base image. This is derived from the prompt we generated earlier, and we also use negative prompt to enhance the result. For more insights, hover over the parameters to see the tooltips, or refer to [https://replicate.com/stability-ai/sdxl](https://replicate.com/stability-ai/sdxl).",
           "xOmniEnabled": true
