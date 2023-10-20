@@ -76,7 +76,7 @@ async function importRecipes() {
                 metadataNode.data.tags = doc.meta.tags;
             }
             // Flag it as template recipe
-            addMetaTag(doc, '#template');
+            // addMetaTag(doc, '#template');
             doc.meta.template = true;
             doc.meta.author = 'Omnitool.ai team';
             doc.meta.org = 'omnitool_core_recipes';
