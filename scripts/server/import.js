@@ -41,6 +41,11 @@ async function importRecipes() {
             let doc = JSON.parse(content);
             doc.owner = '-----public-----';
 
+            // Hack to update timestamp if recipe is "Yearbook Photo Studio" to make it on top
+            if (doc.meta.name === "Yearbook Photo Studio") {
+                doc.meta.updated = Date.now();
+            }
+
             for (let nodeId in doc.rete.nodes) {
                 let node = doc.rete.nodes[nodeId];
                 // add chat enabled flag when chat node is present
