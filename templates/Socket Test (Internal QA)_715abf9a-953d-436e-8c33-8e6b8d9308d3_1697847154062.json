@@ -1,12 +1,13 @@
 {
-  "id": "e62c3516-f380-46ad-a1da-b259c5d9b7b6",
+  "id": "715abf9a-953d-436e-8c33-8e6b8d9308d3",
   "meta": {
     "name": "Socket Test (Internal QA)",
     "author": "Nick Yang",
     "description": "A Omnitool smoke test recipe",
+    "category": "",
     "help": "# Prerequisites\n\nBefore proceeding, ensure you have the following in place:\n\n1. **Stability DreamStudio Key**\n   - Alternatively, you can replace the Text To Image block with a static image or another image generation block.\n\n2. **Google TTS Oauth**\n   - To leverage the Google Text-to-Speech service, ensure you've passed google-tts OAuth in the Settings page. Alternatively, you can replace this with a static audio file or another audio generation block.\n\n3. **OpenAI Key**\n   - Ensure you have a valid API key for integrating with OpenAI services.",
-    "created": 1693814821993,
-    "updated": 1697728736762,
+    "created": 1697845545649,
+    "updated": 1697847148622,
     "pictureUrl": "omni.png",
     "tags": []
   },
@@ -30,8 +31,8 @@
         "inputs": {},
         "outputs": {},
         "position": [
-          556.4712258076042,
-          -2654.607220435009
+          435.22041467612627,
+          -3217.615100671207
         ],
         "name": "omnitool.recipe_metadata"
       },
@@ -44,7 +45,7 @@
           "files": "",
           "images": "",
           "object": "",
-          "persistData": "Permanent",
+          "persistData": "Expiring",
           "text": "",
           "textType": "text/plain",
           "videos": "",
@@ -139,8 +140,8 @@
         },
         "outputs": {},
         "position": [
-          3481.7131453268257,
-          -2228.173503194136
+          3482.6898040070887,
+          -2307.077243941708
         ],
         "name": "omnitool.chat_output"
       },
@@ -196,7 +197,13 @@
             "connections": []
           },
           "string": {
-            "connections": []
+            "connections": [
+              {
+                "node": 1486,
+                "output": "text",
+                "data": {}
+              }
+            ]
           },
           "number": {
             "connections": []
@@ -219,8 +226,8 @@
           "image": {
             "connections": [
               {
-                "node": 588,
-                "output": "img",
+                "node": 1486,
+                "output": "images",
                 "data": {}
               }
             ]
@@ -228,8 +235,8 @@
           "audio": {
             "connections": [
               {
-                "node": 593,
-                "output": "result",
+                "node": 1486,
+                "output": "audio",
                 "data": {}
               }
             ]
@@ -273,7 +280,7 @@
           "audioArray": {
             "connections": [
               {
-                "node": 593,
+                "node": 1487,
                 "output": "result",
                 "data": {}
               }
@@ -319,6 +326,11 @@
                 "node": 574,
                 "input": "text",
                 "data": {}
+              },
+              {
+                "node": 1526,
+                "input": "string",
+                "data": {}
               }
             ]
           },
@@ -346,6 +358,11 @@
               {
                 "node": 574,
                 "input": "text",
+                "data": {}
+              },
+              {
+                "node": 1526,
+                "input": "number",
                 "data": {}
               }
             ]
@@ -466,6 +483,11 @@
                 "node": 578,
                 "input": "object",
                 "data": {}
+              },
+              {
+                "node": 1526,
+                "input": "array",
+                "data": {}
               }
             ]
           },
@@ -473,6 +495,11 @@
             "connections": [
               {
                 "node": 584,
+                "input": "object",
+                "data": {}
+              },
+              {
+                "node": 1526,
                 "input": "object",
                 "data": {}
               }
@@ -536,7 +563,7 @@
           "files": "",
           "images": "",
           "object": "",
-          "persistData": "Permanent",
+          "persistData": "Expiring",
           "text": "",
           "textType": "text/markdown",
           "videos": "",
@@ -606,8 +633,8 @@
         },
         "outputs": {},
         "position": [
-          3524.296947045527,
-          -680.2223955385924
+          3485.7155672816516,
+          -405.2665957247151
         ],
         "name": "omnitool.chat_output"
       },
@@ -620,7 +647,7 @@
           "files": "",
           "images": "",
           "object": "",
-          "persistData": "Permanent",
+          "persistData": "Expiring",
           "text": "",
           "textType": "text/markdown",
           "videos": "",
@@ -715,8 +742,8 @@
         },
         "outputs": {},
         "position": [
-          3478.3984165813326,
-          -1905.2804760578542
+          3477.36309550719,
+          -1827.6952478981852
         ],
         "name": "omnitool.chat_output"
       },
@@ -729,7 +756,7 @@
           "files": "",
           "images": "",
           "object": "",
-          "persistData": "Permanent",
+          "persistData": "Expiring",
           "text": "",
           "textType": "text/markdown-code",
           "videos": "",
@@ -770,8 +797,8 @@
         },
         "outputs": {},
         "position": [
-          3473.866532207806,
-          -1590.712462638582
+          3489.7786302815516,
+          -1451.2331564436993
         ],
         "name": "omnitool.chat_output"
       },
@@ -819,8 +846,8 @@
           }
         },
         "position": [
-          2675.9511822803493,
-          -445.1852560031364
+          2638.6522438318625,
+          -215.09708913025273
         ],
         "name": "omnitool.jsonata"
       },
@@ -948,8 +975,8 @@
           }
         },
         "position": [
-          2669.567490283233,
-          -45.54835963252856
+          2658.3614689071533,
+          133.61729991971708
         ],
         "name": "omnitool.jsonata"
       },
@@ -1002,7 +1029,7 @@
           "files": "",
           "images": "",
           "object": "",
-          "persistData": "Permanent",
+          "persistData": "Expiring",
           "text": "",
           "textType": "text/markdown",
           "videos": "",
@@ -1048,8 +1075,8 @@
         },
         "outputs": {},
         "position": [
-          3502.4197816914902,
-          -1097.6038350809936
+          3473.622327860168,
+          -994.456348617945
         ],
         "name": "omnitool.chat_output"
       },
@@ -1109,11 +1136,6 @@
             "connections": [
               {
                 "node": 567,
-                "input": "image",
-                "data": {}
-              },
-              {
-                "node": 567,
                 "input": "imageArray",
                 "data": {}
               },
@@ -1126,6 +1148,11 @@
                 "node": 567,
                 "input": "imageB64",
                 "data": {}
+              },
+              {
+                "node": 1504,
+                "input": "images",
+                "data": {}
               }
             ]
           },
@@ -1137,18 +1164,106 @@
           }
         },
         "position": [
-          1266.5696035115905,
-          -1889.7648540692662
+          -126.0939903450634,
+          -1833.7943127040348
         ],
         "name": "omnitool.input_static_image"
       },
-      "593": {
-        "id": 593,
+      "1486": {
+        "id": 1486,
+        "data": {
+          "audio": "",
+          "documents": "",
+          "images": "",
+          "text": "this is text string from chat input",
+          "video": "",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "text": {
+            "connections": []
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 1505,
+                "output": "file",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": [
+              {
+                "node": 1487,
+                "output": "result",
+                "data": {}
+              }
+            ]
+          },
+          "video": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "text": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "string",
+                "data": {}
+              },
+              {
+                "node": 1506,
+                "input": "string",
+                "data": {}
+              }
+            ]
+          },
+          "images": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "image",
+                "data": {}
+              }
+            ]
+          },
+          "audio": {
+            "connections": [
+              {
+                "node": 567,
+                "input": "audio",
+                "data": {}
+              }
+            ]
+          },
+          "video": {
+            "connections": []
+          },
+          "documents": {
+            "connections": []
+          },
+          "json": {
+            "connections": []
+          }
+        },
+        "position": [
+          1205.226474337646,
+          -2143.0836311622184
+        ],
+        "name": "omnitool.chat_input"
+      },
+      "1487": {
+        "id": 1487,
         "data": {
           "model_id": "eleven_monolingual_v1",
           "output_format": "mp3_44100_128",
           "style": 0.5,
-          "text": "Hello Omnitool",
+          "text": "this audio is generated by elevanlabs through omnitool",
           "voice_id": "EXAVITQu4vr4xnSDxMaL",
           "xOmniEnabled": true
         },
@@ -1173,23 +1288,244 @@
           "result": {
             "connections": [
               {
-                "node": 567,
-                "input": "audioArray",
+                "node": 1486,
+                "input": "audio",
                 "data": {}
               },
               {
                 "node": 567,
-                "input": "audio",
+                "input": "audioArray",
                 "data": {}
               }
             ]
           }
         },
         "position": [
-          1267.695711550909,
-          -664.4189835964726
+          493.24807030188816,
+          -2468.4119401334483
         ],
         "name": "elevenlabs.simpletts"
+      },
+      "1504": {
+        "id": 1504,
+        "data": {
+          "background": "#000000",
+          "fastShrinkOnLoad": true,
+          "fit": "cover",
+          "height": 128,
+          "images": "",
+          "kernel": "lanczos3",
+          "position": "centre",
+          "width": 128,
+          "withoutEnlargement": false,
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "images": {
+            "connections": [
+              {
+                "node": 588,
+                "output": "img",
+                "data": {}
+              }
+            ]
+          },
+          "width": {
+            "connections": []
+          },
+          "height": {
+            "connections": []
+          },
+          "fit": {
+            "connections": []
+          },
+          "position": {
+            "connections": []
+          },
+          "background": {
+            "connections": []
+          },
+          "kernel": {
+            "connections": []
+          },
+          "withoutEnlargement": {
+            "connections": []
+          },
+          "fastShrinkOnLoad": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "images": {
+            "connections": [
+              {
+                "node": 1505,
+                "input": "file",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          476.83331110886945,
+          -1925.6945060182672
+        ],
+        "name": "omni-extension-sharp:sharp.resize"
+      },
+      "1505": {
+        "id": 1505,
+        "data": {
+          "file": "",
+          "fileName": "this_image_resized_by_sharp_and_send_via_chatinput",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "file": {
+            "connections": [
+              {
+                "node": 1504,
+                "output": "images",
+                "data": {}
+              }
+            ]
+          },
+          "fileName": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "file": {
+            "connections": [
+              {
+                "node": 1486,
+                "input": "images",
+                "data": {}
+              }
+            ]
+          }
+        },
+        "position": [
+          727.537342447866,
+          -1269.8318455791505
+        ],
+        "name": "omnitool.file_metadata_writer"
+      },
+      "1506": {
+        "id": 1506,
+        "data": {
+          "array": null,
+          "assert": {
+            "string": "this is text string from chat input"
+          },
+          "boolean": false,
+          "object": null,
+          "string": "",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "string": {
+            "connections": [
+              {
+                "node": 1486,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "boolean": {
+            "connections": []
+          },
+          "number": {
+            "connections": []
+          },
+          "array": {
+            "connections": []
+          },
+          "object": {
+            "connections": []
+          },
+          "assert": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "validationReport": {
+            "connections": []
+          }
+        },
+        "position": [
+          1787.8680893811463,
+          -2655.2695723402794
+        ],
+        "name": "omnitool.validator"
+      },
+      "1526": {
+        "id": 1526,
+        "data": {
+          "array": null,
+          "assert": {
+            "number": 1,
+            "string": "this is text input\n\n integerSelector: 1001\n\n stringSelector: this is selector string2"
+          },
+          "boolean": false,
+          "object": null,
+          "string": "",
+          "xOmniEnabled": true
+        },
+        "inputs": {
+          "string": {
+            "connections": [
+              {
+                "node": 567,
+                "output": "text",
+                "data": {}
+              }
+            ]
+          },
+          "boolean": {
+            "connections": []
+          },
+          "number": {
+            "connections": [
+              {
+                "node": 567,
+                "output": "number",
+                "data": {}
+              }
+            ]
+          },
+          "array": {
+            "connections": [
+              {
+                "node": 567,
+                "output": "textArray",
+                "data": {}
+              }
+            ]
+          },
+          "object": {
+            "connections": [
+              {
+                "node": 567,
+                "output": "objectArray",
+                "data": {}
+              }
+            ]
+          },
+          "assert": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "validationReport": {
+            "connections": []
+          }
+        },
+        "position": [
+          2677.086881092904,
+          -981.2247069392047
+        ],
+        "name": "omnitool.validator"
       }
     }
   },
